@@ -11,13 +11,14 @@
 @implementation TPMAppDelegate
 
 @synthesize window = _window;
+@synthesize appConfiguration = _appConfiguration;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    self.appConfiguration = [[NSMutableDictionary alloc] init];
+    self.appConfiguration.RSSlink = [[NSURL alloc] initWithString:@"http://www.techpoweredmath.com/feed"];
+    self.appConfiguration.defaultLocalPathImageForTableViewCell = @"TPM_Small_Icon.jpg";
+    self.appConfiguration.appName = @"Tech Powered Math";
     return YES;
 }
 
