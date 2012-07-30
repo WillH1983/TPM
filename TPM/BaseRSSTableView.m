@@ -10,6 +10,7 @@
 #import "XMLReader.h"
 #import "WebViewController.h"
 #import "NSMutableDictionary+appConfiguration.h"
+#import "NSString+HTML.h"
 #import "TPMAppDelegate.h"
 
 @interface BaseRSSTableView ()
@@ -169,7 +170,10 @@
     {
         //Pull the main and detail text label out of the corresponding dictionary
         mainTextLabel = [self mainCellTextLabelForSelectedCellDictionary:dictionaryForCell];
+        mainTextLabel = [mainTextLabel stringByDecodingXMLEntities];
+        
         detailTextLabel = [self detailCellTextLabelForSelectedCellDictionary:dictionaryForCell];
+        detailTextLabel = [detailTextLabel stringByDecodingXMLEntities];
     }
     
     

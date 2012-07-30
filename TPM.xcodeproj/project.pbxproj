@@ -19,6 +19,7 @@
 		BE72312715C5FA8F002EE577 /* TPM_Small_Icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BE72311F15C5FA8F002EE577 /* TPM_Small_Icon.jpg */; };
 		BE72312815C5FA8F002EE577 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE72312115C5FA8F002EE577 /* WebViewController.m */; };
 		BE72312915C5FA8F002EE577 /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = BE72312315C5FA8F002EE577 /* XMLReader.m */; };
+		BE8EFA2F15C62CC400A383FD /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8EFA2E15C62CC400A383FD /* NSString+HTML.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,8 @@
 		BE72312115C5FA8F002EE577 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		BE72312215C5FA8F002EE577 /* XMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLReader.h; sourceTree = "<group>"; };
 		BE72312315C5FA8F002EE577 /* XMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLReader.m; sourceTree = "<group>"; };
+		BE8EFA2D15C62CC400A383FD /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
+		BE8EFA2E15C62CC400A383FD /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,8 @@
 		BE72310A15C5FA72002EE577 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BE8EFA2D15C62CC400A383FD /* NSString+HTML.h */,
+				BE8EFA2E15C62CC400A383FD /* NSString+HTML.m */,
 				BE72310B15C5FA72002EE577 /* TPM-Info.plist */,
 				BE72310C15C5FA72002EE577 /* InfoPlist.strings */,
 				BE72310F15C5FA72002EE577 /* main.m */,
@@ -186,6 +191,7 @@
 				BE72312615C5FA8F002EE577 /* NSMutableDictionary+appConfiguration.m in Sources */,
 				BE72312815C5FA8F002EE577 /* WebViewController.m in Sources */,
 				BE72312915C5FA8F002EE577 /* XMLReader.m in Sources */,
+				BE8EFA2F15C62CC400A383FD /* NSString+HTML.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +295,7 @@
 				BE72311915C5FA72002EE577 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
