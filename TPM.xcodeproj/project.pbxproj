@@ -23,6 +23,7 @@
 		BE8EFA3315C634C300A383FD /* TPM - iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = BE8EFA3215C634C300A383FD /* TPM - iPhone.png */; };
 		BE8EFA3515C635BF00A383FD /* TPM_Default_Cell_Image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE8EFA3415C635BF00A383FD /* TPM_Default_Cell_Image@2x.png */; };
 		BE8EFA3715C635CD00A383FD /* TPM_Default_Cell_Image.png in Resources */ = {isa = PBXBuildFile; fileRef = BE8EFA3615C635CD00A383FD /* TPM_Default_Cell_Image.png */; };
+		BE8EFA3A15C63B6400A383FD /* TPMRSSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8EFA3915C63B6400A383FD /* TPMRSSViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,8 @@
 		BE8EFA3215C634C300A383FD /* TPM - iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TPM - iPhone.png"; sourceTree = "<group>"; };
 		BE8EFA3415C635BF00A383FD /* TPM_Default_Cell_Image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TPM_Default_Cell_Image@2x.png"; sourceTree = "<group>"; };
 		BE8EFA3615C635CD00A383FD /* TPM_Default_Cell_Image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TPM_Default_Cell_Image.png; sourceTree = "<group>"; };
+		BE8EFA3815C63B6400A383FD /* TPMRSSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPMRSSViewController.h; sourceTree = "<group>"; };
+		BE8EFA3915C63B6400A383FD /* TPMRSSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPMRSSViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,13 +104,13 @@
 			children = (
 				BE72311215C5FA72002EE577 /* TPMAppDelegate.h */,
 				BE72311315C5FA72002EE577 /* TPMAppDelegate.m */,
-				BE72311A15C5FA8F002EE577 /* BaseRSSTableView.h */,
-				BE72311B15C5FA8F002EE577 /* BaseRSSTableView.m */,
 				BE72311C15C5FA8F002EE577 /* iPhone.storyboard */,
 				BE72311D15C5FA8F002EE577 /* NSMutableDictionary+appConfiguration.h */,
 				BE72311E15C5FA8F002EE577 /* NSMutableDictionary+appConfiguration.m */,
 				BE72312015C5FA8F002EE577 /* WebViewController.h */,
 				BE72312115C5FA8F002EE577 /* WebViewController.m */,
+				BE8EFA3815C63B6400A383FD /* TPMRSSViewController.h */,
+				BE8EFA3915C63B6400A383FD /* TPMRSSViewController.m */,
 				BE72312215C5FA8F002EE577 /* XMLReader.h */,
 				BE72312315C5FA8F002EE577 /* XMLReader.m */,
 				BE72310A15C5FA72002EE577 /* Supporting Files */,
@@ -118,6 +121,8 @@
 		BE72310A15C5FA72002EE577 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BE72311A15C5FA8F002EE577 /* BaseRSSTableView.h */,
+				BE72311B15C5FA8F002EE577 /* BaseRSSTableView.m */,
 				BE8EFA3415C635BF00A383FD /* TPM_Default_Cell_Image@2x.png */,
 				BE8EFA3615C635CD00A383FD /* TPM_Default_Cell_Image.png */,
 				BE8EFA2D15C62CC400A383FD /* NSString+HTML.h */,
@@ -204,6 +209,7 @@
 				BE72312815C5FA8F002EE577 /* WebViewController.m in Sources */,
 				BE72312915C5FA8F002EE577 /* XMLReader.m in Sources */,
 				BE8EFA2F15C62CC400A383FD /* NSString+HTML.m in Sources */,
+				BE8EFA3A15C63B6400A383FD /* TPMRSSViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

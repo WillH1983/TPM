@@ -22,6 +22,7 @@
 
 @implementation BaseRSSTableView
 @synthesize mainRSSLink = _mainRSSLink;
+@synthesize tableView = _tableView;
 @synthesize RSSDataArray = _RSSDataArray;
 @synthesize activityIndicator = _activityIndicator;
 @synthesize oldBarButtonItem = _oldBarButtonItem;
@@ -55,6 +56,7 @@
 
 - (void)viewDidUnload
 {
+    [self setTableView:nil];
     [self setTableView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.

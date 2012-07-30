@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BaseRSSTableView : UITableViewController
+@interface BaseRSSTableView : UIViewController
 @property (strong, nonatomic) NSURL *mainRSSLink;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
