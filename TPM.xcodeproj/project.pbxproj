@@ -16,10 +16,13 @@
 		BE72312415C5FA8F002EE577 /* BaseRSSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE72311B15C5FA8F002EE577 /* BaseRSSTableView.m */; };
 		BE72312515C5FA8F002EE577 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE72311C15C5FA8F002EE577 /* iPhone.storyboard */; };
 		BE72312615C5FA8F002EE577 /* NSMutableDictionary+appConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BE72311E15C5FA8F002EE577 /* NSMutableDictionary+appConfiguration.m */; };
-		BE72312715C5FA8F002EE577 /* TPM_Small_Icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BE72311F15C5FA8F002EE577 /* TPM_Small_Icon.jpg */; };
 		BE72312815C5FA8F002EE577 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE72312115C5FA8F002EE577 /* WebViewController.m */; };
 		BE72312915C5FA8F002EE577 /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = BE72312315C5FA8F002EE577 /* XMLReader.m */; };
 		BE8EFA2F15C62CC400A383FD /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8EFA2E15C62CC400A383FD /* NSString+HTML.m */; };
+		BE8EFA3115C6349400A383FD /* TPM - iPhone - Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = BE8EFA3015C6349400A383FD /* TPM - iPhone - Retina.png */; };
+		BE8EFA3315C634C300A383FD /* TPM - iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = BE8EFA3215C634C300A383FD /* TPM - iPhone.png */; };
+		BE8EFA3515C635BF00A383FD /* TPM_Default_Cell_Image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE8EFA3415C635BF00A383FD /* TPM_Default_Cell_Image@2x.png */; };
+		BE8EFA3715C635CD00A383FD /* TPM_Default_Cell_Image.png in Resources */ = {isa = PBXBuildFile; fileRef = BE8EFA3615C635CD00A383FD /* TPM_Default_Cell_Image.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,13 +41,16 @@
 		BE72311C15C5FA8F002EE577 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
 		BE72311D15C5FA8F002EE577 /* NSMutableDictionary+appConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+appConfiguration.h"; sourceTree = "<group>"; };
 		BE72311E15C5FA8F002EE577 /* NSMutableDictionary+appConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+appConfiguration.m"; sourceTree = "<group>"; };
-		BE72311F15C5FA8F002EE577 /* TPM_Small_Icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TPM_Small_Icon.jpg; sourceTree = "<group>"; };
 		BE72312015C5FA8F002EE577 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		BE72312115C5FA8F002EE577 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		BE72312215C5FA8F002EE577 /* XMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLReader.h; sourceTree = "<group>"; };
 		BE72312315C5FA8F002EE577 /* XMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLReader.m; sourceTree = "<group>"; };
 		BE8EFA2D15C62CC400A383FD /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
 		BE8EFA2E15C62CC400A383FD /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
+		BE8EFA3015C6349400A383FD /* TPM - iPhone - Retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TPM - iPhone - Retina.png"; sourceTree = "<group>"; };
+		BE8EFA3215C634C300A383FD /* TPM - iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TPM - iPhone.png"; sourceTree = "<group>"; };
+		BE8EFA3415C635BF00A383FD /* TPM_Default_Cell_Image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TPM_Default_Cell_Image@2x.png"; sourceTree = "<group>"; };
+		BE8EFA3615C635CD00A383FD /* TPM_Default_Cell_Image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TPM_Default_Cell_Image.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,8 @@
 		BE7230F415C5FA71002EE577 = {
 			isa = PBXGroup;
 			children = (
+				BE8EFA3215C634C300A383FD /* TPM - iPhone.png */,
+				BE8EFA3015C6349400A383FD /* TPM - iPhone - Retina.png */,
 				BE72310915C5FA72002EE577 /* TPM */,
 				BE72310215C5FA72002EE577 /* Frameworks */,
 				BE72310015C5FA72002EE577 /* Products */,
@@ -98,7 +106,6 @@
 				BE72311C15C5FA8F002EE577 /* iPhone.storyboard */,
 				BE72311D15C5FA8F002EE577 /* NSMutableDictionary+appConfiguration.h */,
 				BE72311E15C5FA8F002EE577 /* NSMutableDictionary+appConfiguration.m */,
-				BE72311F15C5FA8F002EE577 /* TPM_Small_Icon.jpg */,
 				BE72312015C5FA8F002EE577 /* WebViewController.h */,
 				BE72312115C5FA8F002EE577 /* WebViewController.m */,
 				BE72312215C5FA8F002EE577 /* XMLReader.h */,
@@ -111,6 +118,8 @@
 		BE72310A15C5FA72002EE577 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BE8EFA3415C635BF00A383FD /* TPM_Default_Cell_Image@2x.png */,
+				BE8EFA3615C635CD00A383FD /* TPM_Default_Cell_Image.png */,
 				BE8EFA2D15C62CC400A383FD /* NSString+HTML.h */,
 				BE8EFA2E15C62CC400A383FD /* NSString+HTML.m */,
 				BE72310B15C5FA72002EE577 /* TPM-Info.plist */,
@@ -174,7 +183,10 @@
 			files = (
 				BE72310E15C5FA72002EE577 /* InfoPlist.strings in Resources */,
 				BE72312515C5FA8F002EE577 /* iPhone.storyboard in Resources */,
-				BE72312715C5FA8F002EE577 /* TPM_Small_Icon.jpg in Resources */,
+				BE8EFA3115C6349400A383FD /* TPM - iPhone - Retina.png in Resources */,
+				BE8EFA3315C634C300A383FD /* TPM - iPhone.png in Resources */,
+				BE8EFA3515C635BF00A383FD /* TPM_Default_Cell_Image@2x.png in Resources */,
+				BE8EFA3715C635CD00A383FD /* TPM_Default_Cell_Image.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
