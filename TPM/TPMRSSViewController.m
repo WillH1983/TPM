@@ -20,6 +20,7 @@
 @synthesize pageImages = _pageImages;
 @synthesize pageViews = _pageViews;
 @synthesize FeaturedStories = _FeaturedStories;
+@synthesize featuredStoriesLabel = _featuredStoriesLabel;
 
 - (NSMutableArray *)FeaturedStories
 {
@@ -88,6 +89,7 @@
     }];
     
     self.scrollView.delegate = self;
+    self.featuredStoriesLabel.userInteractionEnabled = NO;
 }
 
 - (void)loadPageControls
@@ -117,6 +119,7 @@
 {
     [self setScrollView:nil];
     [self setPageControl:nil];
+    [self setFeaturedStoriesLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -133,7 +136,9 @@
     
     // Update the page control
     self.pageControl.currentPage = page;
-    
+
+    NSString *titleString = [[self.FeaturedStories objectAtIndex:page] valueForKeyPath:@"title.text"];
+    self.featuredStoriesLabel.text = titleString;
     // Work out which pages you want to load
     NSInteger firstPage = page - 1;
     NSInteger lastPage = page + 1;
@@ -224,12 +229,13 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    [[[self navigationController] navigationBar] setTintColor:[UIColor lightGrayColor]];
 
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [self loadVisiblePages];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
