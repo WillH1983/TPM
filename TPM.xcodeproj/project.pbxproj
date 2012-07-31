@@ -111,8 +111,6 @@
 				BE72312115C5FA8F002EE577 /* WebViewController.m */,
 				BE8EFA3815C63B6400A383FD /* TPMRSSViewController.h */,
 				BE8EFA3915C63B6400A383FD /* TPMRSSViewController.m */,
-				BE72312215C5FA8F002EE577 /* XMLReader.h */,
-				BE72312315C5FA8F002EE577 /* XMLReader.m */,
 				BE72310A15C5FA72002EE577 /* Supporting Files */,
 			);
 			path = TPM;
@@ -131,6 +129,8 @@
 				BE72310C15C5FA72002EE577 /* InfoPlist.strings */,
 				BE72310F15C5FA72002EE577 /* main.m */,
 				BE72311115C5FA72002EE577 /* TPM-Prefix.pch */,
+				BE72312215C5FA8F002EE577 /* XMLReader.h */,
+				BE72312315C5FA8F002EE577 /* XMLReader.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";

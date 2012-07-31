@@ -78,7 +78,7 @@
                 gotNumber = [scanner scanInt:(int*)&charCode];
             }
             if (gotNumber) {
-                [result appendFormat:@"%C", charCode];
+                [result appendFormat:@"%u", charCode];
             }
             else {
                 NSString *unknownEntity = @"";

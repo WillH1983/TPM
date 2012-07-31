@@ -8,6 +8,7 @@
 
 #import "TPMRSSViewController.h"
 #import "NSString+HTML.h"
+#import "WebViewController.h"
 
 @interface TPMRSSViewController ()
 
@@ -84,9 +85,6 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             [bself loadPageControls];
         });
-        
-        NSLog(@"%@", self.FeaturedStories);
-        NSLog(@"%d", [self.FeaturedStories count]);
     }];
     
     self.scrollView.delegate = self;
@@ -170,6 +168,24 @@
     }
 }
 
+- (UIImage *) getScaledImage:(UIImage *)img insideButton:(UIButton *)btn 
+{
+    
+    // Check which dimension (width or height) to pay respect to and
+    // calculate the scale factor
+    CGFloat imgRatio = img.size.width / img.size.height,
+    btnRatio = btn.frame.size.width / btn.frame.size.height,
+    scaleFactor = (imgRatio > btnRatio
+                   ? img.size.width / btn.frame.size.width
+                   : img.size.height / btn.frame.size.height);
+                   
+                   // Create image using scale factor
+    UIImage *scaledImg = [UIImage imageWithCGImage:[img CGImage] 
+                                             scale:scaleFactor 
+                                       orientation:UIImageOrientationUp];
+    return scaledImg;
+}
+
 - (void)loadPage:(NSInteger)page {
     if (page < 0 || page >= self.pageImages.count) {
         // If it's outside the range of what you have to display, then do nothing
@@ -185,13 +201,24 @@
         frame.origin.y = 0.0f;
         
         // 3
-        UIImageView *newPageView = [[UIImageView alloc] initWithImage:[self.pageImages objectAtIndex:page]];
-        newPageView.contentMode = UIViewContentModeScaleAspectFit;
-        newPageView.frame = frame;
-        [self.scrollView addSubview:newPageView];
+        UIButton *buttonView = [UIButton buttonWithType:UIButtonTypeCustom];
+        buttonView.frame = frame;
+        buttonView.imageView.contentMode = UIViewContentModeScaleAspectFit;
+        UIImage *scaledImage = [self getScaledImage:[self.pageImages objectAtIndex:page] insideButton:buttonView];
+        [buttonView setImage:scaledImage forState:UIControlStateNormal];
+        [buttonView addTarget:self action:@selector(featuredStoriesSelected:) forControlEvents:UIControlEventTouchUpInside];
+        [self.scrollView addSubview:buttonView];
         // 4
-        [self.pageViews replaceObjectAtIndex:page withObject:newPageView];
+        [self.pageViews replaceObjectAtIndex:page withObject:buttonView];
     }
+}
+
+- (void)featuredStoriesSelected:(id)sender
+{
+    WebViewController *wvc = [[WebViewController alloc] init];
+    NSURL *url = [[NSURL alloc] initWithString:[[self.FeaturedStories objectAtIndex:[self.pageControl currentPage]] valueForKeyPath:@"link.text"]];
+    [wvc setUrlToLoad:url];
+    [[self navigationController] pushViewController:wvc animated:YES];
 }
 
 - (void)viewWillAppear:(BOOL)animated
