@@ -10,6 +10,28 @@
 
 @implementation NSString (HTML)
 
+- (NSURL *)imageFromHTMLString
+{
+    NSString *url = nil;
+    NSScanner *theScanner = [NSScanner scannerWithString:self];
+    // find start of IMG tag
+    [theScanner scanUpToString:@"<img" intoString:nil];
+    if (![theScanner isAtEnd]) {
+        [theScanner scanUpToString:@"src" intoString:nil];
+        NSCharacterSet *charset = [NSCharacterSet characterSetWithCharactersInString:@"\"'"];
+        [theScanner scanUpToCharactersFromSet:charset intoString:nil];
+        [theScanner scanCharactersFromSet:charset intoString:nil];
+        [theScanner scanUpToCharactersFromSet:charset intoString:&url];
+        // "url" now contains the URL of the img
+    }
+    if (url)
+    {
+        return [[NSURL alloc] initWithString:url];
+    }
+    else return nil;
+    
+}
+
 - (NSString *)stringByDecodingXMLEntities {
     NSUInteger myLength = [self length];
     NSUInteger ampIndex = [self rangeOfString:@"&" options:NSLiteralSearch].location;

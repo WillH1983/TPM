@@ -14,7 +14,6 @@
 #import "TPMAppDelegate.h"
 
 @interface BaseRSSTableView ()
-@property (strong, nonatomic) NSArray *RSSDataArray;
 @property (strong, nonatomic) UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, strong) UIBarButtonItem *oldBarButtonItem;
 @property (nonatomic, strong) NSMutableDictionary *appConfiguration;
@@ -27,11 +26,14 @@
 @synthesize activityIndicator = _activityIndicator;
 @synthesize oldBarButtonItem = _oldBarButtonItem;
 @synthesize appConfiguration = _appConfiguration;
+@synthesize finishblock = _finishblock;
 
 - (void)setRSSDataArray:(NSArray *)RSSDataArray
 {
     _RSSDataArray = RSSDataArray;
-    [self.tableView reloadData];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.tableView reloadData];
+    });
 }
 
 - (void)viewDidLoad
@@ -52,6 +54,8 @@
     
     //Set the right navigation bar button item to the activity indicator
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.activityIndicator];
+    
+    [self downloadData];
 }
 
 - (void)viewDidUnload
@@ -94,19 +98,22 @@
                         [alertView show];
                     });
                 }
-            }
-
-            dispatch_async(dispatch_get_main_queue(), ^{
-                id tmp = [xmlDictionary valueForKeyPath:@"rss.channel.item"];
-                if ([tmp isKindOfClass:[NSArray class]])
+                else 
                 {
+                    id tmp = [xmlDictionary valueForKeyPath:@"rss.channel.item"];
                     self.RSSDataArray = tmp;
+                    if ([tmp isKindOfClass:[NSArray class]])
+                    {
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            [self.activityIndicator stopAnimating];
+                            self.navigationItem.rightBarButtonItem = self.oldBarButtonItem;
+                            //[self performSelector:@selector(stopLoading) withObject:nil afterDelay:0];
+                        });
+                    }
+                    NSLog(@"%@", self.RSSDataArray);
+                    if (self.finishblock) self.finishblock();
                 }
-                [self.activityIndicator stopAnimating];
-                self.navigationItem.rightBarButtonItem = self.oldBarButtonItem;
-                //[self performSelector:@selector(stopLoading) withObject:nil afterDelay:0];
-                NSLog(@"%@", tmp);
-            });
+            }
         });
         dispatch_release(downloadQueue);
     }
@@ -115,7 +122,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self downloadData];
     
 }
 

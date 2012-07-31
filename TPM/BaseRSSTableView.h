@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^RSSDownloadCompletionBlock)(void);
 @interface BaseRSSTableView : UIViewController
+
 @property (strong, nonatomic) NSURL *mainRSSLink;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
+@property (nonatomic, strong) RSSDownloadCompletionBlock finishblock;
+@property (copy, nonatomic) NSArray *RSSDataArray;
 @end

@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface NSString (HTML)
+@property (nonatomic, readonly) NSURL *imageFromHTMLString;
 - (NSString *)stringByDecodingXMLEntities;
 @end
