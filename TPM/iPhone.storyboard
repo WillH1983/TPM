@@ -12,7 +12,7 @@
                     <view key="view" contentMode="scaleToFill" id="TFb-vW-r8a">
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.30477303832116787" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Facebook" id="YqB-FR-HhE"/>
                 </viewController>
@@ -142,22 +142,6 @@
             <point key="canvasLocation" x="-43" y="239"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="BaseRSSTableView" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BaseRSSTableView.h"/>
-            <relationships>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="TPMRSSViewController" superclassName="BaseRSSTableView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TPMRSSViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="featuredStoriesLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="pageControl" candidateClass="UIPageControl"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

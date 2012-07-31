@@ -19,6 +19,8 @@
     self.appConfiguration.RSSlink = [[NSURL alloc] initWithString:@"http://www.techpoweredmath.com/feed"];
     self.appConfiguration.defaultLocalPathImageForTableViewCell = @"TPM_Default_Cell_Image";
     self.appConfiguration.appName = @"Tech Powered Math";
+    
+    application.statusBarStyle = UIStatusBarStyleBlackOpaque;
     return YES;
 }
 

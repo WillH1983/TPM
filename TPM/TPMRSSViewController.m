@@ -230,7 +230,7 @@
 {
     [super viewWillAppear:animated];
     
-    [[[self navigationController] navigationBar] setTintColor:[UIColor lightGrayColor]];
+    [[[self navigationController] navigationBar] setTintColor:[UIColor colorWithHue:0 saturation:0 brightness:0.30 alpha:1.0]];
 
 }
 
