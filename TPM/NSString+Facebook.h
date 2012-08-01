@@ -15,4 +15,5 @@
 @property (nonatomic, readonly) CGRect mainCommentsButtonFrameForPhotoPost;
 @property (nonatomic, readonly) CGRect mainCommentsButtonFrameForDefaultPost;
 @property (nonatomic, readonly) CGSize size;
+
 @end

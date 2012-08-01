@@ -36,6 +36,7 @@
 		BE8EFA3515C635BF00A383FD /* TPM_Default_Cell_Image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE8EFA3415C635BF00A383FD /* TPM_Default_Cell_Image@2x.png */; };
 		BE8EFA3715C635CD00A383FD /* TPM_Default_Cell_Image.png in Resources */ = {isa = PBXBuildFile; fileRef = BE8EFA3615C635CD00A383FD /* TPM_Default_Cell_Image.png */; };
 		BE8EFA3A15C63B6400A383FD /* TPMRSSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8EFA3915C63B6400A383FD /* TPMRSSViewController.m */; };
+		BEE911B215C9B90200A9A784 /* UITextView+Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE911B115C9B90200A9A784 /* UITextView+Facebook.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +98,8 @@
 		BE8EFA3615C635CD00A383FD /* TPM_Default_Cell_Image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TPM_Default_Cell_Image.png; sourceTree = "<group>"; };
 		BE8EFA3815C63B6400A383FD /* TPMRSSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPMRSSViewController.h; sourceTree = "<group>"; };
 		BE8EFA3915C63B6400A383FD /* TPMRSSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPMRSSViewController.m; sourceTree = "<group>"; };
+		BEE911B015C9B90200A9A784 /* UITextView+Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Facebook.h"; sourceTree = "<group>"; };
+		BEE911B115C9B90200A9A784 /* UITextView+Facebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Facebook.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +145,8 @@
 		BE4C4A8B15C8B91E0091E3C1 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				BEE911B015C9B90200A9A784 /* UITextView+Facebook.h */,
+				BEE911B115C9B90200A9A784 /* UITextView+Facebook.m */,
 				BE4C4AB315C8E4060091E3C1 /* NSString+Facebook.h */,
 				BE4C4AB415C8E4060091E3C1 /* NSString+Facebook.m */,
 				BE72311D15C5FA8F002EE577 /* NSMutableDictionary+appConfiguration.h */,
@@ -320,6 +325,7 @@
 				BE4C4AB515C8E4060091E3C1 /* NSString+Facebook.m in Sources */,
 				BE4C4AB815C8F8620091E3C1 /* TPMFacebookTableViewController.m in Sources */,
 				BE4C4AC615C9005E0091E3C1 /* SocialMediaDetailViewController.m in Sources */,
+				BEE911B215C9B90200A9A784 /* UITextView+Facebook.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

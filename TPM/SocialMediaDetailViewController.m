@@ -9,6 +9,7 @@
 #import "SocialMediaDetailViewController.h"
 #import "ImageViewController.h"
 #import "WebViewController.h"
+#import "UITextView+Facebook.h"
 
 @interface SocialMediaDetailViewController ()
 @property (nonatomic, strong) NSArray *commentsArray;
@@ -122,45 +123,31 @@
     //for the table row.  The output of this function is a cell that displays one comment
     //from one facebook person, and the name of that person
     
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell;
+    static NSString *CellIdentifier = @"CommentCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
+    UIImageView *profileImageView = nil;
+    UILabel *name = nil;
+    UITextView *comment = nil;
     
     //If there is no reusable cell of this type, create a new one
     if (!cell)
     {
         //Initialize a UITableViewCell of type Subtitle
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-        
-        //Set the selection style of the cell to be gray
-        cell.selectionStyle = UITableViewCellSelectionStyleGray;
-        
-        //Set the cell to be in word wrap mode to allow for long strings
-        cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
-        cell.textLabel.numberOfLines = 0;
-        
-        //Set the font of the label to be a known size and font type
-        cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:17.0];
-        
-        //Set the default imageView to be the facebook logo
-        cell.imageView.image = [UIImage imageNamed:@"f_logo.png"];
-        
-        //Set the cell background color to be clear so the background image
-        //can be seen
-        //cell.backgroundColor = [UIColor clearColor];
     }
-    
-    //Set the cell main text label, and detail text label to be the standard color
-    cell.textLabel.textColor = [UIColor colorWithRed:0.29803 green:0.1529 blue:0.0039 alpha:1];
-    cell.detailTextLabel.textColor = [UIColor colorWithRed:0.2666 green:0.2666 blue:0.2666 alpha:1];
+    profileImageView = (UIImageView *)[cell.contentView viewWithTag:3];
+    name = (UILabel *)[cell.contentView viewWithTag:1];
+    comment = (UITextView *)[cell.contentView viewWithTag:2];
     
     //Retrieve the corresponding dictionary for the cell, retrieve the main and detail text
     //label, and set the cell labels
     NSDictionary *dictionaryForCell = [self.commentsArray objectAtIndex:[indexPath row]];
     NSString *mainTextLabel = [dictionaryForCell valueForKeyPath:@"message"];
     NSString *detailTextLabel = [dictionaryForCell valueForKeyPath:@"from.name"];
-    cell.textLabel.text = mainTextLabel;
-    cell.detailTextLabel.text = detailTextLabel;
+    comment.text = mainTextLabel;
+    [comment resizeHeightBasedOnString];
+    name.text = detailTextLabel;
     
     return cell;
     
@@ -190,7 +177,8 @@
             //Verify the index path the image was downloaded for is still visible
             //in the tableview.  If it is still visible set the cell imageView
             NSArray *tmpArray = [self.tableView indexPathsForVisibleRows];
-            if ([tmpArray containsObject:indexPath]) [cell.imageView setImage:image];
+            UIImageView *profileImageView = (UIImageView *)[cell.contentView viewWithTag:3];
+            if ([tmpArray containsObject:indexPath]) [profileImageView setImage:image];
         });
     });
     dispatch_release(downloadQueue);
