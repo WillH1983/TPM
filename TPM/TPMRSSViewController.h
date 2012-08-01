@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "BaseRSSTableView.h"
+#import "RSSTableView.h"
 
-@interface TPMRSSViewController : BaseRSSTableView <UIScrollViewDelegate>
+@interface TPMRSSViewController : RSSTableView <UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 

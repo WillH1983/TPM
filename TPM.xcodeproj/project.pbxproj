@@ -13,7 +13,7 @@
 		BE72310E15C5FA72002EE577 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE72310C15C5FA72002EE577 /* InfoPlist.strings */; };
 		BE72311015C5FA72002EE577 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE72310F15C5FA72002EE577 /* main.m */; };
 		BE72311415C5FA72002EE577 /* TPMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE72311315C5FA72002EE577 /* TPMAppDelegate.m */; };
-		BE72312415C5FA8F002EE577 /* BaseRSSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE72311B15C5FA8F002EE577 /* BaseRSSTableView.m */; };
+		BE72312415C5FA8F002EE577 /* RSSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE72311B15C5FA8F002EE577 /* RSSTableView.m */; };
 		BE72312515C5FA8F002EE577 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE72311C15C5FA8F002EE577 /* iPhone.storyboard */; };
 		BE72312615C5FA8F002EE577 /* NSMutableDictionary+appConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BE72311E15C5FA8F002EE577 /* NSMutableDictionary+appConfiguration.m */; };
 		BE72312815C5FA8F002EE577 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE72312115C5FA8F002EE577 /* WebViewController.m */; };
@@ -37,8 +37,8 @@
 		BE72311115C5FA72002EE577 /* TPM-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TPM-Prefix.pch"; sourceTree = "<group>"; };
 		BE72311215C5FA72002EE577 /* TPMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPMAppDelegate.h; sourceTree = "<group>"; };
 		BE72311315C5FA72002EE577 /* TPMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPMAppDelegate.m; sourceTree = "<group>"; };
-		BE72311A15C5FA8F002EE577 /* BaseRSSTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseRSSTableView.h; sourceTree = "<group>"; };
-		BE72311B15C5FA8F002EE577 /* BaseRSSTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseRSSTableView.m; sourceTree = "<group>"; };
+		BE72311A15C5FA8F002EE577 /* RSSTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; path = RSSTableView.h; sourceTree = "<group>"; };
+		BE72311B15C5FA8F002EE577 /* RSSTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSTableView.m; sourceTree = "<group>"; };
 		BE72311C15C5FA8F002EE577 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
 		BE72311D15C5FA8F002EE577 /* NSMutableDictionary+appConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+appConfiguration.h"; sourceTree = "<group>"; };
 		BE72311E15C5FA8F002EE577 /* NSMutableDictionary+appConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+appConfiguration.m"; sourceTree = "<group>"; };
@@ -70,6 +70,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE4C4A8915C8B8E20091E3C1 /* Base Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BE72312015C5FA8F002EE577 /* WebViewController.h */,
+				BE72312115C5FA8F002EE577 /* WebViewController.m */,
+				BE72312215C5FA8F002EE577 /* XMLReader.h */,
+				BE72312315C5FA8F002EE577 /* XMLReader.m */,
+				BE72311A15C5FA8F002EE577 /* RSSTableView.h */,
+				BE72311B15C5FA8F002EE577 /* RSSTableView.m */,
+			);
+			name = "Base Classes";
+			sourceTree = "<group>";
+		};
+		BE4C4A8B15C8B91E0091E3C1 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				BE72311D15C5FA8F002EE577 /* NSMutableDictionary+appConfiguration.h */,
+				BE72311E15C5FA8F002EE577 /* NSMutableDictionary+appConfiguration.m */,
+				BE8EFA2D15C62CC400A383FD /* NSString+HTML.h */,
+				BE8EFA2E15C62CC400A383FD /* NSString+HTML.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		BE7230F415C5FA71002EE577 = {
 			isa = PBXGroup;
 			children = (
@@ -105,10 +129,6 @@
 				BE72311215C5FA72002EE577 /* TPMAppDelegate.h */,
 				BE72311315C5FA72002EE577 /* TPMAppDelegate.m */,
 				BE72311C15C5FA8F002EE577 /* iPhone.storyboard */,
-				BE72311D15C5FA8F002EE577 /* NSMutableDictionary+appConfiguration.h */,
-				BE72311E15C5FA8F002EE577 /* NSMutableDictionary+appConfiguration.m */,
-				BE72312015C5FA8F002EE577 /* WebViewController.h */,
-				BE72312115C5FA8F002EE577 /* WebViewController.m */,
 				BE8EFA3815C63B6400A383FD /* TPMRSSViewController.h */,
 				BE8EFA3915C63B6400A383FD /* TPMRSSViewController.m */,
 				BE72310A15C5FA72002EE577 /* Supporting Files */,
@@ -119,18 +139,14 @@
 		BE72310A15C5FA72002EE577 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BE72311A15C5FA8F002EE577 /* BaseRSSTableView.h */,
-				BE72311B15C5FA8F002EE577 /* BaseRSSTableView.m */,
+				BE4C4A8B15C8B91E0091E3C1 /* Categories */,
+				BE4C4A8915C8B8E20091E3C1 /* Base Classes */,
 				BE8EFA3415C635BF00A383FD /* TPM_Default_Cell_Image@2x.png */,
 				BE8EFA3615C635CD00A383FD /* TPM_Default_Cell_Image.png */,
-				BE8EFA2D15C62CC400A383FD /* NSString+HTML.h */,
-				BE8EFA2E15C62CC400A383FD /* NSString+HTML.m */,
 				BE72310B15C5FA72002EE577 /* TPM-Info.plist */,
 				BE72310C15C5FA72002EE577 /* InfoPlist.strings */,
 				BE72310F15C5FA72002EE577 /* main.m */,
 				BE72311115C5FA72002EE577 /* TPM-Prefix.pch */,
-				BE72312215C5FA8F002EE577 /* XMLReader.h */,
-				BE72312315C5FA8F002EE577 /* XMLReader.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -204,7 +220,7 @@
 			files = (
 				BE72311015C5FA72002EE577 /* main.m in Sources */,
 				BE72311415C5FA72002EE577 /* TPMAppDelegate.m in Sources */,
-				BE72312415C5FA8F002EE577 /* BaseRSSTableView.m in Sources */,
+				BE72312415C5FA8F002EE577 /* RSSTableView.m in Sources */,
 				BE72312615C5FA8F002EE577 /* NSMutableDictionary+appConfiguration.m in Sources */,
 				BE72312815C5FA8F002EE577 /* WebViewController.m in Sources */,
 				BE72312915C5FA8F002EE577 /* XMLReader.m in Sources */,
