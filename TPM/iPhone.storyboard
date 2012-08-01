@@ -21,11 +21,11 @@
             </objects>
             <point key="canvasLocation" x="441" y="-67"/>
         </scene>
-        <!--Face Book Table View Controller - Tech Powered Math-->
+        <!--Facebook Table View Controller - Tech Powered Math-->
         <scene sceneID="Qdd-tS-H2w">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QCo-WS-BGt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="RXx-su-17j" customClass="FaceBookTableViewController" sceneMemberID="viewController">
+                <tableViewController id="RXx-su-17j" customClass="TPMFacebookTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Wve-SQ-K3o">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -197,6 +197,9 @@
             <relationships>
                 <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
             </relationships>
+        </class>
+        <class className="TPMFacebookTableViewController" superclassName="FaceBookTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TPMFacebookTableViewController.h"/>
         </class>
         <class className="TPMRSSViewController" superclassName="RSSTableView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TPMRSSViewController.h"/>

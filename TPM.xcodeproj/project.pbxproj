@@ -14,9 +14,10 @@
 		BE4C4AA915C8C5690091E3C1 /* SocialMediaDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4C4AA815C8C5680091E3C1 /* SocialMediaDetailViewController.m */; };
 		BE4C4AAC15C8C5B90091E3C1 /* ImagoDeiTextEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4C4AAB15C8C5B90091E3C1 /* ImagoDeiTextEntryViewController.m */; };
 		BE4C4AAE15C8C7F90091E3C1 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4C4AAD15C8C7F90091E3C1 /* CoreImage.framework */; };
-		BE4C4AB015C8D1720091E3C1 /* FacebookButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE4C4AAF15C8D1720091E3C1 /* FacebookButton@2x.png */; };
 		BE4C4AB215C8E1F00091E3C1 /* 112-group.png in Resources */ = {isa = PBXBuildFile; fileRef = BE4C4AB115C8E1F00091E3C1 /* 112-group.png */; };
 		BE4C4AB515C8E4060091E3C1 /* NSString+Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4C4AB415C8E4060091E3C1 /* NSString+Facebook.m */; };
+		BE4C4AB815C8F8620091E3C1 /* TPMFacebookTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4C4AB715C8F8620091E3C1 /* TPMFacebookTableViewController.m */; };
+		BE4C4ABC15C8FD1A0091E3C1 /* FacebookButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE4C4ABB15C8FD1A0091E3C1 /* FacebookButton@2x.png */; };
 		BE72310415C5FA72002EE577 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE72310315C5FA72002EE577 /* UIKit.framework */; };
 		BE72310615C5FA72002EE577 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE72310515C5FA72002EE577 /* Foundation.framework */; };
 		BE72310815C5FA72002EE577 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE72310715C5FA72002EE577 /* CoreGraphics.framework */; };
@@ -61,10 +62,12 @@
 		BE4C4AAA15C8C5B90091E3C1 /* ImagoDeiTextEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagoDeiTextEntryViewController.h; sourceTree = "<group>"; };
 		BE4C4AAB15C8C5B90091E3C1 /* ImagoDeiTextEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagoDeiTextEntryViewController.m; sourceTree = "<group>"; };
 		BE4C4AAD15C8C7F90091E3C1 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
-		BE4C4AAF15C8D1720091E3C1 /* FacebookButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FacebookButton@2x.png"; sourceTree = "<group>"; };
 		BE4C4AB115C8E1F00091E3C1 /* 112-group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "112-group.png"; sourceTree = "<group>"; };
 		BE4C4AB315C8E4060091E3C1 /* NSString+Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Facebook.h"; sourceTree = "<group>"; };
 		BE4C4AB415C8E4060091E3C1 /* NSString+Facebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Facebook.m"; sourceTree = "<group>"; };
+		BE4C4AB615C8F8610091E3C1 /* TPMFacebookTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPMFacebookTableViewController.h; sourceTree = "<group>"; };
+		BE4C4AB715C8F8620091E3C1 /* TPMFacebookTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPMFacebookTableViewController.m; sourceTree = "<group>"; };
+		BE4C4ABB15C8FD1A0091E3C1 /* FacebookButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FacebookButton@2x.png"; sourceTree = "<group>"; };
 		BE7230FF15C5FA72002EE577 /* TPM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TPM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE72310315C5FA72002EE577 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BE72310515C5FA72002EE577 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -113,7 +116,7 @@
 		BE4C4A8915C8B8E20091E3C1 /* Base Classes */ = {
 			isa = PBXGroup;
 			children = (
-				BE4C4AAF15C8D1720091E3C1 /* FacebookButton@2x.png */,
+				BE4C4ABB15C8FD1A0091E3C1 /* FacebookButton@2x.png */,
 				BE4C4A8C15C8BA770091E3C1 /* FaceBookTableViewController.h */,
 				BE4C4A8D15C8BA770091E3C1 /* FaceBookTableViewController.m */,
 				BE72312015C5FA8F002EE577 /* WebViewController.h */,
@@ -206,6 +209,8 @@
 				BE72311C15C5FA8F002EE577 /* iPhone.storyboard */,
 				BE8EFA3815C63B6400A383FD /* TPMRSSViewController.h */,
 				BE8EFA3915C63B6400A383FD /* TPMRSSViewController.m */,
+				BE4C4AB615C8F8610091E3C1 /* TPMFacebookTableViewController.h */,
+				BE4C4AB715C8F8620091E3C1 /* TPMFacebookTableViewController.m */,
 				BE72310A15C5FA72002EE577 /* Supporting Files */,
 			);
 			path = TPM;
@@ -285,8 +290,8 @@
 				BE8EFA3515C635BF00A383FD /* TPM_Default_Cell_Image@2x.png in Resources */,
 				BE8EFA3715C635CD00A383FD /* TPM_Default_Cell_Image.png in Resources */,
 				BE4C4A9F15C8BE1E0091E3C1 /* FBDialog.bundle in Resources */,
-				BE4C4AB015C8D1720091E3C1 /* FacebookButton@2x.png in Resources */,
 				BE4C4AB215C8E1F00091E3C1 /* 112-group.png in Resources */,
+				BE4C4ABC15C8FD1A0091E3C1 /* FacebookButton@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +315,7 @@
 				BE4C4AA915C8C5690091E3C1 /* SocialMediaDetailViewController.m in Sources */,
 				BE4C4AAC15C8C5B90091E3C1 /* ImagoDeiTextEntryViewController.m in Sources */,
 				BE4C4AB515C8E4060091E3C1 /* NSString+Facebook.m in Sources */,
+				BE4C4AB815C8F8620091E3C1 /* TPMFacebookTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
