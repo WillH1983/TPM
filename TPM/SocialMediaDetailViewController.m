@@ -53,6 +53,11 @@
     //Pull the full comments dictionary from the delegate to use as our Model
     [self.socialMediaDelegate SocialMediaDetailViewController:self dictionaryForFacebookGraphAPIString:[self.shortCommentsDictionaryModel objectForKey:@"id"]];
     
+    //initialize the activity indicator, set it to the center top of the view, and
+    //start it animating
+    self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+	self.activityIndicator.hidesWhenStopped = YES;
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -142,7 +147,7 @@
         
         //Set the cell background color to be clear so the background image
         //can be seen
-        cell.backgroundColor = [UIColor clearColor];
+        //cell.backgroundColor = [UIColor clearColor];
     }
     
     //Set the cell main text label, and detail text label to be the standard color
@@ -276,7 +281,7 @@
         //[self performSelector:@selector(stopLoading) withObject:nil afterDelay:0];
         //Since the RSS file has been loaded, stop animating the activity indicator
         [self.activityIndicator stopAnimating];
-        
+        NSLog(@"%@", self.oldBarButtonItem);
         //If there is a right bar button item, put it back
         self.navigationItem.rightBarButtonItem = self.oldBarButtonItem;
     }
@@ -291,8 +296,9 @@
     //so the delegate can be set to nill when the view disappears
     self.facebookRequest = request;
     
-     [self.activityIndicator startAnimating];
+    [self.activityIndicator startAnimating];
     
+    self.oldBarButtonItem = self.navigationItem.rightBarButtonItem;
     //Set the right navigation bar button item to the activity indicator
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.activityIndicator];
 }

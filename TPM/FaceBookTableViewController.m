@@ -198,7 +198,7 @@
     UITableViewCell *cell = (UITableViewCell *)[contentView superview];
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
     NSDictionary *dictionaryData = [self.facebookArrayTableData objectAtIndex:indexPath.row];
-    [self performSegueWithIdentifier:@"photo" sender:[dictionaryData valueForKeyPath:@"object_id"]];
+    [self performSegueWithIdentifier:@"Photo" sender:[dictionaryData valueForKeyPath:@"object_id"]];
 }
 
 - (void)mainCommentsButtonPushed:(id)sender
@@ -480,7 +480,7 @@
             [segue.destinationViewController setSocialMediaDelegate:self];
         }
     }
-    else if ([segue.identifier isEqualToString:@"photo"])
+    else if ([segue.identifier isEqualToString:@"Photo"])
     {
         if ([sender isKindOfClass:[NSString class]])
         {

@@ -42,6 +42,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="rgA-dr-sSp" kind="modal" identifier="comment" id="vSi-FH-l32"/>
+                    </connections>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="1464" y="541"/>
@@ -81,6 +84,8 @@
                     </navigationItem>
                     <connections>
                         <segue destination="AYI-80-p8y" kind="push" identifier="detailView" id="5ZW-OI-56m"/>
+                        <segue destination="BdT-yz-PwX" kind="modal" identifier="Photo" id="JLI-W0-NPj"/>
+                        <segue destination="rgA-dr-sSp" kind="modal" identifier="textInput" id="0Th-a7-vgz"/>
                     </connections>
                 </tableViewController>
             </objects>
@@ -212,6 +217,99 @@
             </objects>
             <point key="canvasLocation" x="-43" y="239"/>
         </scene>
+        <!--Image View Controller-->
+        <scene sceneID="3LD-pG-t86">
+            <objects>
+                <viewController id="BdT-yz-PwX" customClass="ImageViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8tQ-UE-7Zd">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.20000000298023224" maximumZoomScale="5" id="seE-n0-ykw">
+                                <rect key="frame" x="0.0" y="44" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="c8v-Q4-dsp">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </scrollView>
+                            <navigationBar contentMode="scaleToFill" id="OAY-39-CrC">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.29748168587684631" green="0.29753881692886353" blue="0.29747211933135986" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Photo" id="rgH-kV-Dfk">
+                                        <barButtonItem key="leftBarButtonItem" title="Done" id="nAR-5z-wyW">
+                                            <connections>
+                                                <action selector="doneButtonPressed:" destination="BdT-yz-PwX" id="8sD-k5-gMM"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OJA-b8-ahq"/>
+                    <connections>
+                        <outlet property="imageView" destination="c8v-Q4-dsp" id="UFn-iC-HT7"/>
+                        <outlet property="navigationBar" destination="OAY-39-CrC" id="jvX-kM-4Iv"/>
+                        <outlet property="scrollView" destination="seE-n0-ykw" id="fKW-eW-goy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ljb-te-Qsi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1464" y="-67"/>
+        </scene>
+        <!--Imago Dei Text Entry View Controller-->
+        <scene sceneID="mcp-bR-9HD">
+            <objects>
+                <viewController id="rgA-dr-sSp" customClass="ImagoDeiTextEntryViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iVf-Hz-aNG">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="sMb-91-DBJ">
+                                <rect key="frame" x="20" y="62" width="280" height="114"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <navigationBar contentMode="scaleToFill" id="GfJ-l8-RLW">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.29748168587684631" green="0.29753881692886353" blue="0.29747211933135986" alpha="0.22" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Comment" id="y2k-UJ-pDt">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="g86-Q8-QBa">
+                                            <connections>
+                                                <action selector="cancelButtonPressed:" destination="rgA-dr-sSp" id="ZQp-hM-42Q"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Post" id="ILL-BP-9fo">
+                                            <connections>
+                                                <action selector="postButtonPushed:" destination="rgA-dr-sSp" id="KnZ-gO-d2d"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YEO-cj-E7K"/>
+                    <connections>
+                        <outlet property="postButton" destination="ILL-BP-9fo" id="DNa-vx-8bm"/>
+                        <outlet property="textView" destination="sMb-91-DBJ" id="QK9-NA-crh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GVO-nH-Xbx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2018" y="541"/>
+        </scene>
     </scenes>
     <resources>
         <image name="112-group.png" width="32" height="21"/>
@@ -219,6 +317,21 @@
     <classes>
         <class className="FaceBookTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FaceBookTableViewController.h"/>
+        </class>
+        <class className="ImageViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ImageViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="navigationBar" candidateClass="UINavigationBar"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="ImagoDeiTextEntryViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ImagoDeiTextEntryViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="postButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
         </class>
         <class className="RSSTableView" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RSSTableView.h"/>
@@ -251,4 +364,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="vSi-FH-l32"/>
+    </inferredMetricsTieBreakers>
 </document>
