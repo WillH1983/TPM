@@ -445,18 +445,17 @@
         }
     }
     
-    CGSize stringSize = mainTextLabel.size;
+    CGSize stringSize = CGSizeZero;
     
     if ([typeOfPost isEqualToString:@"photo"])
     {
-        stringSize.height += FACEBOOK_MARGIN_BETWEEN_COMMENTS_BUTTONS + FACEBOOK_PHOTO_HEIGHT;
-        stringSize.height += FACEBOOK_MARGIN_BETWEEN_COMMENTS_BUTTONS + FACEBOOK_COMMENTS_BUTTON_HEIGHT;
+        stringSize.height = mainTextLabel.mainCommentsButtonFrameForPhotoPost.origin.y + mainTextLabel.commentsButtonFrameForPhotoPost.size.height;
     }
     else
     {
-        stringSize.height += FACEBOOK_MARGIN_BETWEEN_COMMENTS_BUTTONS + FACEBOOK_COMMENTS_BUTTON_HEIGHT;
+        stringSize.height = mainTextLabel.mainCommentsButtonFrameForDefaultPost.origin.y + mainTextLabel.mainCommentsButtonFrameForPhotoPost.size.height;
     }
-    return stringSize.height + FACEBOOK_TEXTVIEW_TOP_MARGIN + FACEBOOK_TEXTVIEW_POSITION_FROM_TOP;
+    return stringSize.height + FACEBOOK_TEXTVIEW_TOP_MARGIN;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
