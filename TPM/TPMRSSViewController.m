@@ -94,6 +94,14 @@
     
     self.scrollView.delegate = self;
     self.featuredStoriesLabel.userInteractionEnabled = NO;
+    [self.pageControl addTarget:self action:@selector(pageControlChanged:) forControlEvents:UIControlEventValueChanged];
+}
+
+- (void)pageControlChanged:(id)sender
+{
+    //This doesn't do anything for now
+    
+    [self loadVisiblePages];
 }
 
 - (void)loadPageControls
