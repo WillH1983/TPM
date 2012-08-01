@@ -188,20 +188,21 @@
 {
     //This function calculates a approprate height based up on length of the text that will
     //be displayed in the cell
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CommentCell"];
     
-    NSDictionary *tmpDictionary = [self.commentsArray objectAtIndex:[indexPath row]];
-    NSString *text = [tmpDictionary valueForKeyPath:@"message"];
+    if (cell)
+    {
+        NSDictionary *tmpDictionary = [self.commentsArray objectAtIndex:[indexPath row]];
+        NSString *dictionaryText = [tmpDictionary valueForKeyPath:@"message"];
+        
+        UITextView *comment = (UITextView *)[cell.contentView viewWithTag:2];
+        comment.text = dictionaryText;
+        [comment resizeHeightBasedOnString];
+        CGSize size = CGSizeMake(comment.frame.size.height, comment.frame.origin.y + comment.frame.size.height);
+        return size.height + 5;
+    }
+    else return 44;
     
-    // Get the text so we can measure it
-    // Get a CGSize for the width and, effectively, unlimited height
-    CGSize constraint = CGSizeMake(CELL_CONTENT_WIDTH - (CELL_CONTENT_MARGIN * 2), 20000.0f);
-    // Get the size of the text given the CGSize we just made as a constraint
-    CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:FONT_SIZE] constrainedToSize:constraint lineBreakMode:UILineBreakModeWordWrap];
-    // Get the height of our measurement, with a minimum of 44 (standard cell size)
-    CGFloat height = MAX(size.height, 44.0f);
-    // return the height, with a bit of extra padding in
-    return height + (CELL_CONTENT_MARGIN * 2);
-
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -210,31 +211,36 @@
     //The cell as the header view
     
     //Pull the main and detail text label out of the corresponding dictionary
-    NSString *mainTextLabel = [self.fullCommentsDictionaryModel valueForKeyPath:@"message"];
     
-    //Determine the max height required for the UITextView with the comments string
-    CGSize maxSize = CGSizeMake(320 - FACEBOOK_DETAIL_FONT_SIZE, CGFLOAT_MAX);
-    CGSize size = [mainTextLabel sizeWithFont:[UIFont systemFontOfSize:FACEBOOK_DETAIL_FONT_SIZE]  constrainedToSize:maxSize lineBreakMode:UILineBreakModeWordWrap];
-    size.height += FACEBOOK_DETAIL_FONT_SIZE; 
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CommentHeaderCell"];
+    if (cell)
+    {
+        UILabel *name = (UILabel *)[cell.contentView viewWithTag:1];
+        UITextView *comment = (UITextView *)[cell.contentView viewWithTag:2];
+        
+        name.text = [self.fullCommentsDictionaryModel valueForKeyPath:@"from.name"];
+        comment.text = [self.fullCommentsDictionaryModel valueForKeyPath:@"message"];
+        [comment resizeHeightBasedOnString];
+        dispatch_queue_t downloadQueue = dispatch_queue_create("Profile Image Downloader", NULL);
+        dispatch_async(downloadQueue, ^{
     
-    //Setup the UITextView for the standard font, no scrolling, not editable,
-    //detects URLs, sets the background to a clearcolor, and a frame height to match the size of the string
-    UITextView *textView = [[UITextView alloc] initWithFrame:CGRectZero];
-    textView.font = [UIFont systemFontOfSize:FACEBOOK_DETAIL_FONT_SIZE];
-    textView.scrollEnabled = NO;
-    textView.editable = NO;
-    textView.tag = 1;
-    textView.dataDetectorTypes = UIDataDetectorTypeLink;
-    textView.backgroundColor = [UIColor clearColor];
-    textView.frame = CGRectMake(0, 0, 320, size.height);
-    
-    //Create a UITableViewCell with the same height as the textview
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithFrame:CGRectMake(0, 0, 320, size.height)];
-    [cell.contentView addSubview:textView];
-    
-    //Set the cell text label's based upon the table contents array location
-    textView.text = mainTextLabel;
-    cell.backgroundColor = [UIColor clearColor];
+            //Create a URL based upon the facebook graph API
+            NSString *profileFromId = [self.fullCommentsDictionaryModel valueForKeyPath:@"from.id"];
+            NSString *urlString = [[NSString alloc] initWithFormat:@"https://graph.facebook.com/%@/picture", profileFromId];
+            NSURL *url = [[NSURL alloc] initWithString:urlString];
+            
+            //Create an image based upon the downloaded NSData from the Facebook graph URL
+            //created above
+            UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:url]];
+            NSLog(@"Loading Web Data");
+            dispatch_async(dispatch_get_main_queue(), ^{
+                //Verify the index path the image was downloaded for is still visible
+                //in the tableview.  If it is still visible set the cell imageView
+                UIImageView *profileImageView = (UIImageView *)[cell.contentView viewWithTag:3];
+                [profileImageView setImage:image];
+            });
+        });
+    }
     
     return cell;
 }
@@ -245,14 +251,18 @@
     //upon the size of the text string
     
     //Pull the main and detail text label out of the corresponding dictionary
-    NSString *mainTextLabel = [self.fullCommentsDictionaryModel valueForKeyPath:@"message"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CommentHeaderCell"];
     
-    CGSize maxSize = CGSizeMake(320 - FACEBOOK_DETAIL_FONT_SIZE, CGFLOAT_MAX);
-    CGSize size = [mainTextLabel sizeWithFont:[UIFont systemFontOfSize:FACEBOOK_DETAIL_FONT_SIZE]  constrainedToSize:maxSize lineBreakMode:UILineBreakModeWordWrap];
-    
-    tableView.tableHeaderView.backgroundColor = [UIColor redColor];
-    
-    return size.height + FACEBOOK_DETAIL_FONT_SIZE;
+    if (cell)
+    {
+        UITextView *comment = (UITextView *)[cell.contentView viewWithTag:2];
+        
+        comment.text = [self.fullCommentsDictionaryModel valueForKeyPath:@"message"];
+        [comment resizeHeightBasedOnString];
+        CGSize size = CGSizeMake(comment.frame.size.height, comment.frame.origin.y + comment.frame.size.height);
+        return size.height;
+    }
+    else return 44;
 }
 
 #pragma mark - Facebook Request Delegate Methods
