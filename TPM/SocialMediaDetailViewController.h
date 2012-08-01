@@ -26,4 +26,5 @@
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (nonatomic, strong) UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, strong) UIBarButtonItem *oldBarButtonItem;
+
 @end

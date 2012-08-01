@@ -7,17 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE0C9C1615C9077000A457CD /* f_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BE0C9C1515C9077000A457CD /* f_logo.png */; };
 		BE4C4A8E15C8BA770091E3C1 /* FaceBookTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4C4A8D15C8BA770091E3C1 /* FaceBookTableViewController.m */; };
 		BE4C4A9F15C8BE1E0091E3C1 /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BE4C4A9215C8BE1E0091E3C1 /* FBDialog.bundle */; };
 		BE4C4AA015C8BE1E0091E3C1 /* libfacebook_ios_sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4C4A9815C8BE1E0091E3C1 /* libfacebook_ios_sdk.a */; };
 		BE4C4AA315C8C4840091E3C1 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4C4AA215C8C4840091E3C1 /* ImageViewController.m */; };
-		BE4C4AA915C8C5690091E3C1 /* SocialMediaDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4C4AA815C8C5680091E3C1 /* SocialMediaDetailViewController.m */; };
 		BE4C4AAC15C8C5B90091E3C1 /* ImagoDeiTextEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4C4AAB15C8C5B90091E3C1 /* ImagoDeiTextEntryViewController.m */; };
 		BE4C4AAE15C8C7F90091E3C1 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4C4AAD15C8C7F90091E3C1 /* CoreImage.framework */; };
 		BE4C4AB215C8E1F00091E3C1 /* 112-group.png in Resources */ = {isa = PBXBuildFile; fileRef = BE4C4AB115C8E1F00091E3C1 /* 112-group.png */; };
 		BE4C4AB515C8E4060091E3C1 /* NSString+Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4C4AB415C8E4060091E3C1 /* NSString+Facebook.m */; };
 		BE4C4AB815C8F8620091E3C1 /* TPMFacebookTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4C4AB715C8F8620091E3C1 /* TPMFacebookTableViewController.m */; };
 		BE4C4ABC15C8FD1A0091E3C1 /* FacebookButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE4C4ABB15C8FD1A0091E3C1 /* FacebookButton@2x.png */; };
+		BE4C4AC615C9005E0091E3C1 /* SocialMediaDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4C4AC515C9005E0091E3C1 /* SocialMediaDetailViewController.m */; };
 		BE72310415C5FA72002EE577 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE72310315C5FA72002EE577 /* UIKit.framework */; };
 		BE72310615C5FA72002EE577 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE72310515C5FA72002EE577 /* Foundation.framework */; };
 		BE72310815C5FA72002EE577 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE72310715C5FA72002EE577 /* CoreGraphics.framework */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE0C9C1515C9077000A457CD /* f_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = f_logo.png; sourceTree = "<group>"; };
 		BE4C4A8C15C8BA770091E3C1 /* FaceBookTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceBookTableViewController.h; sourceTree = "<group>"; };
 		BE4C4A8D15C8BA770091E3C1 /* FaceBookTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceBookTableViewController.m; sourceTree = "<group>"; };
 		BE4C4A9015C8BD380091E3C1 /* FBConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBConnect.h; sourceTree = "<group>"; };
@@ -57,8 +59,6 @@
 		BE4C4A9E15C8BE1E0091E3C1 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		BE4C4AA115C8C4840091E3C1 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
 		BE4C4AA215C8C4840091E3C1 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
-		BE4C4AA715C8C5680091E3C1 /* SocialMediaDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialMediaDetailViewController.h; sourceTree = "<group>"; };
-		BE4C4AA815C8C5680091E3C1 /* SocialMediaDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialMediaDetailViewController.m; sourceTree = "<group>"; };
 		BE4C4AAA15C8C5B90091E3C1 /* ImagoDeiTextEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagoDeiTextEntryViewController.h; sourceTree = "<group>"; };
 		BE4C4AAB15C8C5B90091E3C1 /* ImagoDeiTextEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagoDeiTextEntryViewController.m; sourceTree = "<group>"; };
 		BE4C4AAD15C8C7F90091E3C1 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
@@ -68,6 +68,8 @@
 		BE4C4AB615C8F8610091E3C1 /* TPMFacebookTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPMFacebookTableViewController.h; sourceTree = "<group>"; };
 		BE4C4AB715C8F8620091E3C1 /* TPMFacebookTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPMFacebookTableViewController.m; sourceTree = "<group>"; };
 		BE4C4ABB15C8FD1A0091E3C1 /* FacebookButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FacebookButton@2x.png"; sourceTree = "<group>"; };
+		BE4C4AC415C9005D0091E3C1 /* SocialMediaDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialMediaDetailViewController.h; sourceTree = "<group>"; };
+		BE4C4AC515C9005E0091E3C1 /* SocialMediaDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialMediaDetailViewController.m; sourceTree = "<group>"; };
 		BE7230FF15C5FA72002EE577 /* TPM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TPM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE72310315C5FA72002EE577 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BE72310515C5FA72002EE577 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -127,11 +129,12 @@
 				BE72311B15C5FA8F002EE577 /* RSSTableView.m */,
 				BE4C4AA115C8C4840091E3C1 /* ImageViewController.h */,
 				BE4C4AA215C8C4840091E3C1 /* ImageViewController.m */,
-				BE4C4AA715C8C5680091E3C1 /* SocialMediaDetailViewController.h */,
-				BE4C4AA815C8C5680091E3C1 /* SocialMediaDetailViewController.m */,
 				BE4C4AAA15C8C5B90091E3C1 /* ImagoDeiTextEntryViewController.h */,
 				BE4C4AAB15C8C5B90091E3C1 /* ImagoDeiTextEntryViewController.m */,
 				BE4C4AB115C8E1F00091E3C1 /* 112-group.png */,
+				BE4C4AC415C9005D0091E3C1 /* SocialMediaDetailViewController.h */,
+				BE4C4AC515C9005E0091E3C1 /* SocialMediaDetailViewController.m */,
+				BE0C9C1515C9077000A457CD /* f_logo.png */,
 			);
 			name = "Base Classes";
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				BE4C4A9F15C8BE1E0091E3C1 /* FBDialog.bundle in Resources */,
 				BE4C4AB215C8E1F00091E3C1 /* 112-group.png in Resources */,
 				BE4C4ABC15C8FD1A0091E3C1 /* FacebookButton@2x.png in Resources */,
+				BE0C9C1615C9077000A457CD /* f_logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,10 +316,10 @@
 				BE8EFA3A15C63B6400A383FD /* TPMRSSViewController.m in Sources */,
 				BE4C4A8E15C8BA770091E3C1 /* FaceBookTableViewController.m in Sources */,
 				BE4C4AA315C8C4840091E3C1 /* ImageViewController.m in Sources */,
-				BE4C4AA915C8C5690091E3C1 /* SocialMediaDetailViewController.m in Sources */,
 				BE4C4AAC15C8C5B90091E3C1 /* ImagoDeiTextEntryViewController.m in Sources */,
 				BE4C4AB515C8E4060091E3C1 /* NSString+Facebook.m in Sources */,
 				BE4C4AB815C8F8620091E3C1 /* TPMFacebookTableViewController.m in Sources */,
+				BE4C4AC615C9005E0091E3C1 /* SocialMediaDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

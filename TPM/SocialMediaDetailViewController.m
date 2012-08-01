@@ -273,7 +273,7 @@
             self.fullCommentsDictionaryModel = result;
             [self loadSocialMediaView];
         }
-        [self performSelector:@selector(stopLoading) withObject:nil afterDelay:0];
+        //[self performSelector:@selector(stopLoading) withObject:nil afterDelay:0];
         //Since the RSS file has been loaded, stop animating the activity indicator
         [self.activityIndicator stopAnimating];
         

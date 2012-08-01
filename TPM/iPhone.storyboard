@@ -21,6 +21,31 @@
             </objects>
             <point key="canvasLocation" x="441" y="-67"/>
         </scene>
+        <!--Social Media Detail View Controller-->
+        <scene sceneID="P7K-8k-roX">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8wY-CH-zFE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="AYI-80-p8y" customClass="SocialMediaDetailViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="VFy-Q7-MY1">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="AYI-80-p8y" id="xGc-4N-SSB"/>
+                            <outlet property="delegate" destination="AYI-80-p8y" id="X5z-cJ-byo"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="U8n-eq-Hid">
+                        <barButtonItem key="rightBarButtonItem" title="Comment" id="lMA-g6-s3I">
+                            <connections>
+                                <action selector="commentButtonPressed:" destination="AYI-80-p8y" id="G6P-eN-FgW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="1464" y="541"/>
+        </scene>
         <!--Facebook Table View Controller - Tech Powered Math-->
         <scene sceneID="Qdd-tS-H2w">
             <objects>
@@ -54,6 +79,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="AYI-80-p8y" kind="push" identifier="detailView" id="5ZW-OI-56m"/>
+                    </connections>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="913" y="541"/>
@@ -196,6 +224,13 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RSSTableView.h"/>
             <relationships>
                 <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="SocialMediaDetailViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SocialMediaDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="profilePictureImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
             </relationships>
         </class>
         <class className="TPMFacebookTableViewController" superclassName="FaceBookTableViewController">
