@@ -16,6 +16,7 @@
 @property (nonatomic, strong) NSMutableArray *pageViews;
 @property (nonatomic, strong) NSMutableArray *FeaturedStories;
 @property (weak, nonatomic) IBOutlet UILabel *featuredStoriesLabel;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *featureStoriesActivityIndicator;
 
 - (void)loadVisiblePages;
 - (void)loadPage:(NSInteger)page;

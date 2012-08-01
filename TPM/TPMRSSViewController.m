@@ -21,6 +21,7 @@
 @synthesize pageViews = _pageViews;
 @synthesize FeaturedStories = _FeaturedStories;
 @synthesize featuredStoriesLabel = _featuredStoriesLabel;
+@synthesize featureStoriesActivityIndicator = _featureStoriesActivityIndicator;
 
 - (NSMutableArray *)FeaturedStories
 {
@@ -47,6 +48,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    [self.featureStoriesActivityIndicator startAnimating];
     
     __block typeof(self) bself = self;
     [self setFinishblock:^{
@@ -85,6 +88,7 @@
        }
         dispatch_async(dispatch_get_main_queue(), ^{
             [bself loadPageControls];
+            [self.featureStoriesActivityIndicator stopAnimating];
         });
     }];
     
@@ -120,6 +124,7 @@
     [self setScrollView:nil];
     [self setPageControl:nil];
     [self setFeaturedStoriesLabel:nil];
+    [self setFeatureStoriesActivityIndicator:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
