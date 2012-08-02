@@ -11,7 +11,6 @@
 #import "Facebook.h"
 #import "WebViewController.h"
 #import "ImageViewController.h"
-#import "NSString+Facebook.h"
 #import "UITextView+Facebook.h"
 
 @interface FaceBookTableViewController ()
