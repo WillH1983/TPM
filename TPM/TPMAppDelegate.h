@@ -21,4 +21,6 @@
 @property (strong, nonatomic) NSMutableDictionary *appConfiguration;
 @property (retain, nonatomic) Facebook *facebook;
 
+- (BOOL)openURL:(NSURL *)url;
+
 @end

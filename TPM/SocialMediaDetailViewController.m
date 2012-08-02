@@ -69,6 +69,8 @@
                                              selector:@selector(presentWebView:) 
                                                  name:@"urlSelected"
                                                object:nil];
+    
+    [self.tableView reloadData];
 }
 
 - (void)viewWillDisappear:(BOOL)animated

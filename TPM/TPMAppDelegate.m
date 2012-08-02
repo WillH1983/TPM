@@ -64,4 +64,13 @@
     return [facebook handleOpenURL:url]; 
 }
 
+-(BOOL)openURL:(NSURL *)url
+{
+    [[NSNotificationCenter defaultCenter] 
+     postNotificationName:@"urlSelected"
+     object:url];
+    
+    return YES;
+}
+
 @end
