@@ -399,7 +399,7 @@
                         <outlet property="featureStoriesActivityIndicator" destination="rCK-Kx-7gM" id="7Z9-Gg-be7"/>
                         <outlet property="featuredStoriesLabel" destination="oW5-57-yqe" id="nKH-PY-wDY"/>
                         <outlet property="pageControl" destination="GnA-tK-a96" id="3xg-aT-pr1"/>
-                        <outlet property="scrollView" destination="6Ii-CI-GQs" id="3Xb-3j-FwX"/>
+                        <outlet property="pagingScrollView" destination="6Ii-CI-GQs" id="Z4f-uG-Jk4"/>
                         <outlet property="tableView" destination="fXQ-mF-bYn" id="XF4-0I-tuS"/>
                     </connections>
                 </viewController>

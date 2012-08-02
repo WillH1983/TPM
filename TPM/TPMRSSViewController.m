@@ -15,7 +15,7 @@
 @end
 
 @implementation TPMRSSViewController
-@synthesize scrollView;
+@synthesize pagingScrollView;
 @synthesize pageControl;
 @synthesize pageImages = _pageImages;
 @synthesize pageViews = _pageViews;
@@ -92,7 +92,7 @@
         });
     }];
     
-    self.scrollView.delegate = self;
+    self.pagingScrollView.delegate = self;
     self.featuredStoriesLabel.userInteractionEnabled = NO;
     [self.pageControl addTarget:self action:@selector(pageControlChanged:) forControlEvents:UIControlEventValueChanged];
 }
@@ -120,8 +120,8 @@
     }
     
     // 4
-    CGSize pagesScrollViewSize = self.scrollView.frame.size;
-    self.scrollView.contentSize = CGSizeMake(pagesScrollViewSize.width * self.pageImages.count, pagesScrollViewSize.height);
+    CGSize pagesScrollViewSize = self.pagingScrollView.frame.size;
+    self.pagingScrollView.contentSize = CGSizeMake(pagesScrollViewSize.width * self.pageImages.count, pagesScrollViewSize.height);
     
     // 5
     [self loadVisiblePages];
@@ -129,7 +129,7 @@
 
 - (void)viewDidUnload
 {
-    [self setScrollView:nil];
+    [self setPagingScrollView:nil];
     [self setPageControl:nil];
     [self setFeaturedStoriesLabel:nil];
     [self setFeatureStoriesActivityIndicator:nil];
@@ -139,13 +139,14 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     // Load the pages that are now on screen
-    [self loadVisiblePages];
+    BOOL test = scrollView.pagingEnabled;
+    if (test) [self loadVisiblePages];
 }
 
 - (void)loadVisiblePages {
     // First, determine which page is currently visible
-    CGFloat pageWidth = self.scrollView.frame.size.width;
-    NSInteger page = (NSInteger)floor((self.scrollView.contentOffset.x * 2.0f + pageWidth) / (pageWidth * 2.0f));
+    CGFloat pageWidth = self.pagingScrollView.frame.size.width;
+    NSInteger page = (NSInteger)floor((self.pagingScrollView.contentOffset.x * 2.0f + pageWidth) / (pageWidth * 2.0f));
     
     // Update the page control
     self.pageControl.currentPage = page;
@@ -214,7 +215,7 @@
     UIView *pageView = [self.pageViews objectAtIndex:page];
     if ((NSNull*)pageView == [NSNull null]) {
         // 2
-        CGRect frame = self.scrollView.bounds;
+        CGRect frame = self.pagingScrollView.bounds;
         frame.origin.x = frame.size.width * page;
         frame.origin.y = 0.0f;
         
@@ -225,7 +226,7 @@
         UIImage *scaledImage = [self getScaledImage:[self.pageImages objectAtIndex:page] insideButton:buttonView];
         [buttonView setImage:scaledImage forState:UIControlStateNormal];
         [buttonView addTarget:self action:@selector(featuredStoriesSelected:) forControlEvents:UIControlEventTouchUpInside];
-        [self.scrollView addSubview:buttonView];
+        [self.pagingScrollView addSubview:buttonView];
         // 4
         [self.pageViews replaceObjectAtIndex:page withObject:buttonView];
     }
@@ -247,9 +248,7 @@
 
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-}
+
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
