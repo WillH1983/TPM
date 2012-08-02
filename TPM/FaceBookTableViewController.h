@@ -17,6 +17,7 @@
 @property (nonatomic, strong) NSArray *facebookArrayTableData;
 @property (nonatomic, strong) UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, strong) UIBarButtonItem *oldBarButtonItem;
+@property (nonatomic, strong) NSString *userNameID;
 
 #define FACEBOOK_CONTENT_TITLE @"message"
 #define FACEBOOK_CONTENT_DESCRIPTION @"from.name"

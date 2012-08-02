@@ -27,6 +27,7 @@
 @synthesize facebookArrayTableData = _facebookArrayTableData;
 @synthesize activityIndicator = _activityIndicator;
 @synthesize oldBarButtonItem = _oldBarButtonItem;
+@synthesize userNameID = _userNameID;
 
 - (NSMutableDictionary *)photoDictionary
 {
@@ -141,8 +142,6 @@
                                                  name:@"urlSelected"
                                                object:nil];
     
-    if ([self.facebookArrayTableData count] > 0) return;
-    
     //Init the facebook session
     [self facebookInit];
     
@@ -210,6 +209,29 @@
     [self performSegueWithIdentifier:@"textInput" sender:dictionaryData];
 }
 
+- (void)likeButtonPressed:(id)sender
+{
+    UIView *contentView = [sender superview];
+    UITableViewCell *cell = (UITableViewCell *)[contentView superview];
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    NSDictionary *dictionaryData = [self.facebookArrayTableData objectAtIndex:indexPath.row];
+    
+    NSString *graphAPIString = [NSString stringWithFormat:@"%@/likes", [dictionaryData valueForKeyPath:@"id"]];
+    UIButton *likeButton = sender;
+    NSLog(@"%@", likeButton.currentTitle);
+    if ([likeButton.titleLabel.text isEqualToString:@"Like"])
+    {
+        [self.facebook requestWithGraphPath:graphAPIString andParams:[[NSMutableDictionary alloc]init] andHttpMethod:@"POST" andDelegate:self];
+        [likeButton setTitle:@"Unlike" forState:UIControlStateNormal]; 
+        
+    }
+    else {
+        [self.facebook requestWithGraphPath:graphAPIString andParams:[[NSMutableDictionary alloc] init] andHttpMethod:@"DELETE" andDelegate:self];
+        [likeButton setTitle:@"Like" forState:UIControlStateNormal];
+    }
+    
+}
+
 - (void)textView:(UITextView *)sender didFinishWithString:(NSString *)string withDictionaryForComment:(NSDictionary *)dictionary;
 {
     NSString *graphAPIString = [NSString stringWithFormat:@"%@/comments", [dictionary valueForKeyPath:@"id"]];
@@ -222,6 +244,7 @@
 {
     //Retrieve the corresponding dictionary to the index row requested
     NSDictionary *dictionaryForCell = [self.facebookArrayTableData objectAtIndex:[indexPath row]];
+    NSLog(@"%@", dictionaryForCell);
     
     NSString *typeOfPost = [dictionaryForCell valueForKeyPath:@"type"];
     UITableViewCell *cell = nil;
@@ -259,6 +282,12 @@
         [buttonImage addTarget:self action:@selector(postImageButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
         
         likeButton = (UIButton *)[cell.contentView viewWithTag:7];
+        [likeButton addTarget:self action:@selector(likeButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+        [likeButton setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
+        [likeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateDisabled];
+        [likeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [likeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateApplication];
+
     }
     
     //Pull the main and detail text label out of the corresponding dictionary
@@ -285,6 +314,26 @@
     
     id fromName = [dictionaryForCell valueForKeyPath:@"from.name"];
     if ([fromName isKindOfClass:[NSString class]]) postedByLabel.text = fromName;
+    
+    BOOL matchFound = NO;
+    
+    id likes = [dictionaryForCell valueForKeyPath:@"likes.data.id"];
+    if ([likes isKindOfClass:[NSArray class]])
+    {
+        NSArray *likesArray = likes;
+        for (NSString *items in likesArray)
+        {
+            if ([items isEqualToString:self.userNameID])
+            {
+                [likeButton setTitle:@"Unlike" forState:UIControlStateNormal]; 
+                matchFound = YES;
+            }
+        }
+    }
+    if (matchFound == NO)
+    {
+        [likeButton setTitle:@"Like" forState:UIControlStateNormal];
+    }
     
     //Set the cell text label's based upon the table contents array location
     textView.text = mainTextLabel;
@@ -489,7 +538,6 @@
 
     //Set the local facebook property to point to the appDelegate facebook property
     self.facebook = appDelegate.facebook;
-    NSLog(@"%@", self.facebook);
     
     //Set the facebook session delegate to this class
     self.facebook.sessionDelegate = self;
@@ -500,10 +548,12 @@
     //If the User defaults contain the facebook access tokens, save them into the
     //facebook instance
     if ([defaults objectForKey:@"FBAccessTokenKey"] 
-        && [defaults objectForKey:@"FBExpirationDateKey"]) 
+        && [defaults objectForKey:@"FBExpirationDateKey"]
+        && [defaults objectForKey:@"userNameID"]) 
     {
         self.facebook.accessToken = [defaults objectForKey:@"FBAccessTokenKey"];
         self.facebook.expirationDate = [defaults objectForKey:@"FBExpirationDateKey"];
+        self.userNameID = [defaults objectForKey:@"userNameID"];
     }
 }
 
@@ -513,11 +563,16 @@
 {
     NSMutableDictionary* params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                    FACEBOOK_APP_ID, @"app_id",
-                                   @"Post to Imago Dei's Wall", @"description",
-                                   @"imagodeichurch", @"to",
+                                   @"Post to Tech Powered Math's Wall", @"description",
+                                   @"techpoweredmath", @"to",
                                    nil];
     
     [self.facebook dialog:@"feed" andParams:params andDelegate:self];
+}
+
+- (void)dialogDidComplete:(FBDialog *)dialog
+{
+    [self.facebook requestWithGraphPath:FACEBOOK_FEED_TO_REQUEST andDelegate:self];
 }
 
 #pragma mark - Facebook Request Delegate Methods
@@ -559,8 +614,9 @@
     //Since the facebook request is complete, and setting the delegate to nil
     //will not be required if the view disappears, set the request to nil
     self.facebookRequest = nil;
+    NSString *lastPath = [request.url lastPathComponent];
     
-    if ([request.httpMethod isEqualToString:@"GET"])
+    if ([request.httpMethod isEqualToString:@"GET"] & [lastPath isEqualToString:@"feed"])
     {
         //Verify the result from the facebook class is actually a dictionary
         if ([result isKindOfClass:[NSDictionary class]])
@@ -582,7 +638,20 @@
             //[self performSelector:@selector(stopLoading) withObject:nil afterDelay:0];
         });
     }
-    else {
+    else if ([lastPath isEqualToString:@"me"])
+    {
+        //Retireve the User Defaults
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        
+        //Pull the accessToken, and expirationDate from the facebook instance, and
+        //save them to the user defaults
+        [defaults setObject:[result valueForKey:@"id"] forKey:@"userNameID"];
+        [defaults synchronize];
+        
+        [self.facebook requestWithGraphPath:FACEBOOK_FEED_TO_REQUEST andDelegate:self];
+    }
+    else 
+    {
         [self.facebook requestWithGraphPath:FACEBOOK_FEED_TO_REQUEST andDelegate:self];
     }
     
@@ -610,7 +679,8 @@
     
     //This method will request the full comments array from the delegate and
     //the facebook class will call request:request didLoad:result when complete
-    [self.facebook requestWithGraphPath:FACEBOOK_FEED_TO_REQUEST andDelegate:self];
+    //[self.facebook requestWithGraphPath:FACEBOOK_FEED_TO_REQUEST andDelegate:self];
+    [self.facebook requestWithGraphPath:@"me" andDelegate:self];
 }
 
 - (void)fbDidNotLogin:(BOOL)cancelled
