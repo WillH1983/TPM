@@ -232,6 +232,7 @@
     UILabel *postedByLabel = nil;
     UIButton *addCommentButton = nil;
     UIImageView *profileImageView = nil;
+    UIButton *likeButton = nil;
     
     if ([typeOfPost isEqualToString:@"photo"])
     {
@@ -252,9 +253,12 @@
         
         addCommentButton = (UIButton *)[cell.contentView viewWithTag:5];
         [addCommentButton addTarget:self action:@selector(mainCommentsButtonPushed:) forControlEvents:UIControlEventTouchUpInside];
+        [addCommentButton setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
         
         buttonImage = (UIButton *)[cell.contentView viewWithTag:6];
         [buttonImage addTarget:self action:@selector(postImageButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+        
+        likeButton = (UIButton *)[cell.contentView viewWithTag:7];
     }
     
     //Pull the main and detail text label out of the corresponding dictionary
@@ -299,12 +303,14 @@
         buttonImage.frame = CGRectMake(buttonImage.frame.origin.x, buttonImage.frame.origin.y + heightChange, buttonImage.frame.size.width, buttonImage.frame.size.height);
         commentButton.frame = CGRectMake(commentButton.frame.origin.x, commentButton.frame.origin.y + heightChange, commentButton.frame.size.width, commentButton.frame.size.height);
         addCommentButton.frame = CGRectMake(addCommentButton.frame.origin.x, addCommentButton.frame.origin.y + heightChange, addCommentButton.frame.size.width, addCommentButton.frame.size.height);
+        likeButton.frame = CGRectMake(likeButton.frame.origin.x, likeButton.frame.origin.y + heightChange, likeButton.frame.size.width, likeButton.frame.size.height);
     }
     else
     {
         
         commentButton.frame = CGRectMake(commentButton.frame.origin.x, commentButton.frame.origin.y + heightChange, commentButton.frame.size.width, commentButton.frame.size.height);
         addCommentButton.frame = CGRectMake(addCommentButton.frame.origin.x, addCommentButton.frame.origin.y + heightChange, addCommentButton.frame.size.width, addCommentButton.frame.size.height);
+        likeButton.frame = CGRectMake(likeButton.frame.origin.x, likeButton.frame.origin.y + heightChange, likeButton.frame.size.width, likeButton.frame.size.height);
         
     }
     return cell;
@@ -324,7 +330,7 @@
     __block NSData *profilePictureData = [self.photoDictionary objectForKey:profileFromId];
     
     NSString *urlStringForProfilePicture = [[NSString alloc] initWithFormat:@"https://graph.facebook.com/%@/picture/type=small", profileFromId];
-    NSString *urlStringForPicture = [[NSString alloc] initWithFormat:@"https://graph.facebook.com/%@/picture?type=album", pictureID];
+    NSString *urlStringForPicture = [[NSString alloc] initWithFormat:@"https://graph.facebook.com/%@/picture?type=normal", pictureID];
     
     dispatch_queue_t downloadQueue = dispatch_queue_create("Profile Image Downloader", NULL);
     dispatch_async(downloadQueue, ^{
@@ -357,7 +363,8 @@
             {
                 UIButton *buttonImage = (UIButton *)[cell.contentView viewWithTag:6];
                 UIImage *image = [UIImage imageWithData:picture];
-                [buttonImage setBackgroundImage:image forState:UIControlStateNormal];
+                buttonImage.contentMode = UIViewContentModeScaleAspectFit;
+                [buttonImage setImage:image forState:UIControlStateNormal];
                 
                 UIImageView *profileImageView = (UIImageView *)[cell.contentView viewWithTag:1];
                 [profileImageView setImage:[UIImage imageWithData:profilePictureData]];
