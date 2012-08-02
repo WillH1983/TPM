@@ -140,6 +140,8 @@
     name = (UILabel *)[cell.contentView viewWithTag:1];
     comment = (UITextView *)[cell.contentView viewWithTag:2];
     
+    profileImageView.image = nil;
+    
     //Retrieve the corresponding dictionary for the cell, retrieve the main and detail text
     //label, and set the cell labels
     NSDictionary *dictionaryForCell = [self.commentsArray objectAtIndex:[indexPath row]];
@@ -195,11 +197,14 @@
         NSDictionary *tmpDictionary = [self.commentsArray objectAtIndex:[indexPath row]];
         NSString *dictionaryText = [tmpDictionary valueForKeyPath:@"message"];
         
-        UITextView *comment = (UITextView *)[cell.contentView viewWithTag:2];
-        comment.text = dictionaryText;
-        [comment resizeHeightBasedOnString];
-        CGSize size = CGSizeMake(comment.frame.size.height, comment.frame.origin.y + comment.frame.size.height);
-        return size.height + 5;
+        //Set the cell text label's based upon the table contents array location
+        UITextView *textView = (UITextView *)[cell.contentView viewWithTag:2];
+        textView.text = dictionaryText;
+        CGFloat oldSizeHeight = textView.frame.size.height;
+        [textView resizeHeightBasedOnString];
+        CGFloat heightChange = textView.frame.size.height - oldSizeHeight;
+        CGFloat height = cell.frame.size.height + heightChange;
+        return height;
     }
     else return 44;
     

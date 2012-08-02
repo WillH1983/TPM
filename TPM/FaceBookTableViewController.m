@@ -12,6 +12,7 @@
 #import "WebViewController.h"
 #import "ImageViewController.h"
 #import "NSString+Facebook.h"
+#import "UITextView+Facebook.h"
 
 @interface FaceBookTableViewController ()
 @property (nonatomic, strong) FBRequest *facebookRequest;
@@ -220,87 +221,42 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //Set the cell identifier to the same as the prototype cell in the story board
-    static NSString *CellIdentifier = @"Facebook Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    UITextView *textView = nil;
-    UIButton *commentsButton = nil;
-    UIButton *buttonImage = nil;
-    UIImageView *profileImageView = nil;
-    UILabel *postedByLabel = nil;
-    UIButton *mainCommentButton = nil;
-    
-    //If there is no reusable cell of this type, create a new one
-    if (!cell)
-    {
-        //Set the atributes of the main page cell
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-        cell.backgroundColor = [UIColor clearColor];
-        
-        textView = [[UITextView alloc] initWithFrame:CGRectZero];
-        textView.font = [UIFont systemFontOfSize:FACEBOOK_FONT_SIZE];
-        textView.scrollEnabled = NO;
-        textView.editable = NO;
-        textView.tag = 1;
-        textView.dataDetectorTypes = UIDataDetectorTypeLink;
-        textView.backgroundColor = [UIColor clearColor];
-        textView.frame = CGRectMake(0, FACEBOOK_TEXTVIEW_POSITION_FROM_TOP, 320, 0);
-        [cell.contentView addSubview:textView];
-        
-        commentsButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        commentsButton.frame = CGRectMake(0, 0,FACEBOOK_COMMENTS_BUTTON_WIDTH, FACEBOOK_COMMENTS_BUTTON_HEIGHT);
-        commentsButton.backgroundColor = [UIColor clearColor];
-        commentsButton.titleLabel.font = [UIFont systemFontOfSize:FACEBOOK_COMMENTS_BUTTON_FONT_SIZE];
-        commentsButton.tag = 2;
-        [commentsButton addTarget:self action:@selector(commentsButtonPushed:) forControlEvents:UIControlEventTouchUpInside];
-        commentsButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
-        commentsButton.contentEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 5);
-        UIImage *commentsButtonImage = [UIImage imageNamed:@"FacebookButton.png"];
-        UIEdgeInsets commentsButtonImageEdge = UIEdgeInsetsMake(12, 12, 12, 12);
-        UIImage *stretchableCommentsButtonImage = [commentsButtonImage resizableImageWithCapInsets:commentsButtonImageEdge];
-        [commentsButton setBackgroundImage:stretchableCommentsButtonImage forState:UIControlStateNormal];
-        [cell.contentView addSubview:commentsButton];
-        
-        buttonImage = [[UIButton alloc] initWithFrame:CGRectZero];
-        [buttonImage addTarget:self action:@selector(postImageButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-        buttonImage.tag = 3;
-        [cell.contentView addSubview:buttonImage];
-        
-        profileImageView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 5, 40, 40)];
-        profileImageView.tag = 4;
-        [cell.contentView addSubview:profileImageView];
-        
-        postedByLabel = [[UILabel alloc] initWithFrame:CGRectMake(50, 5, 250, 20)];
-        postedByLabel.backgroundColor = [UIColor clearColor];
-        postedByLabel.font = [UIFont boldSystemFontOfSize:FACEBOOK_FONT_SIZE];
-        postedByLabel.tag = 5;
-        [cell.contentView addSubview:postedByLabel];
-        
-        mainCommentButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        mainCommentButton.backgroundColor = [UIColor clearColor];
-        mainCommentButton.titleLabel.font = [UIFont systemFontOfSize:FACEBOOK_COMMENTS_BUTTON_FONT_SIZE];
-        mainCommentButton.tag = 6;
-        [mainCommentButton addTarget:self action:@selector(mainCommentsButtonPushed:) forControlEvents:UIControlEventTouchUpInside];
-        [cell.contentView addSubview:mainCommentButton];
-        
-    }
-    else 
-    {
-        textView = (UITextView *)[cell.contentView viewWithTag:1];
-        commentsButton = (UIButton *)[cell.contentView viewWithTag:2];
-        buttonImage = (UIButton *)[cell.contentView viewWithTag:3];
-        profileImageView = (UIImageView *)[cell.contentView viewWithTag:4];
-        postedByLabel = (UILabel *)[cell.contentView viewWithTag:5];
-        mainCommentButton = (UIButton *)[cell.contentView viewWithTag:6];
-    }
-    
-    [buttonImage setBackgroundImage:nil forState:UIControlStateNormal];
-    profileImageView.image = [UIImage imageWithCIImage:[CIImage emptyImage]];
-    
     //Retrieve the corresponding dictionary to the index row requested
     NSDictionary *dictionaryForCell = [self.facebookArrayTableData objectAtIndex:[indexPath row]];
     
     NSString *typeOfPost = [dictionaryForCell valueForKeyPath:@"type"];
+    UITableViewCell *cell = nil;
+    
+    UITextView *textView = nil;
+    UIButton *commentButton = nil;
+    UIButton *buttonImage = nil;
+    UILabel *postedByLabel = nil;
+    UIButton *addCommentButton = nil;
+    UIImageView *profileImageView = nil;
+    
+    if ([typeOfPost isEqualToString:@"photo"])
+    {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"photoFacebookCell"];
+    }
+    else 
+    {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"defaultFacebookCell"];
+    }
+    
+    if (cell)
+    {
+        profileImageView = (UIImageView *)[cell.contentView viewWithTag:1];
+        postedByLabel = (UILabel *)[cell.contentView viewWithTag:2];
+        textView = (UITextView *)[cell.contentView viewWithTag:3];
+        commentButton = (UIButton *)[cell.contentView viewWithTag:4];
+        [commentButton addTarget:self action:@selector(commentsButtonPushed:) forControlEvents:UIControlEventTouchUpInside];
+        
+        addCommentButton = (UIButton *)[cell.contentView viewWithTag:5];
+        [addCommentButton addTarget:self action:@selector(mainCommentsButtonPushed:) forControlEvents:UIControlEventTouchUpInside];
+        
+        buttonImage = (UIButton *)[cell.contentView viewWithTag:6];
+        [buttonImage addTarget:self action:@selector(postImageButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    }
     
     //Pull the main and detail text label out of the corresponding dictionary
     NSString *mainTextLabel = [dictionaryForCell valueForKeyPath:[self keyForMainCellLabelText]];
@@ -329,32 +285,28 @@
     
     //Set the cell text label's based upon the table contents array location
     textView.text = mainTextLabel;
+    CGFloat oldSizeHeight = textView.frame.size.height;
+    [textView resizeHeightBasedOnString];
+    CGFloat heightChange = textView.frame.size.height - oldSizeHeight;
     
-    textView.frame = CGRectMake(textView.frame.origin.x, textView.frame.origin.y, textView.frame.size.width, mainTextLabel.size.height);
     NSNumber *count = [dictionaryForCell valueForKeyPath:@"comments.count"];
-    
+    NSString *commentsString = [[NSString alloc] initWithFormat:@"%@ Comments", count];
+    [commentButton setTitle:commentsString forState:UIControlStateNormal];
+    profileImageView.image = nil;
     
     if ([typeOfPost isEqualToString:@"photo"])
     {
-        buttonImage.frame = mainTextLabel.buttonImageFrameForPhotoPost;
-        [buttonImage setImage:[UIImage imageWithCIImage:[CIImage emptyImage]] forState:UIControlStateNormal];
-        commentsButton.frame = mainTextLabel.commentsButtonFrameForPhotoPost;
-        NSString *commentsString = [[NSString alloc] initWithFormat:@"%@ Comments", count];
-        [commentsButton setTitle:commentsString forState:UIControlStateNormal];
-        
-        mainCommentButton.frame = mainTextLabel.mainCommentsButtonFrameForPhotoPost;
-        [mainCommentButton setTitle:@"Comment" forState:UIControlStateNormal];
+        buttonImage.imageView.image = nil;
+        buttonImage.frame = CGRectMake(buttonImage.frame.origin.x, buttonImage.frame.origin.y + heightChange, buttonImage.frame.size.width, buttonImage.frame.size.height);
+        commentButton.frame = CGRectMake(commentButton.frame.origin.x, commentButton.frame.origin.y + heightChange, commentButton.frame.size.width, commentButton.frame.size.height);
+        addCommentButton.frame = CGRectMake(addCommentButton.frame.origin.x, addCommentButton.frame.origin.y + heightChange, addCommentButton.frame.size.width, addCommentButton.frame.size.height);
     }
     else
     {
-        buttonImage.frame = CGRectZero;
-        commentsButton.frame = mainTextLabel.commentsButtonFrameForDefaultPost;
-        NSString *commentsString = [[NSString alloc] initWithFormat:@"%@ Comments", count];
-        [commentsButton setTitle:commentsString forState:UIControlStateNormal];
         
-        mainCommentButton.frame = mainTextLabel.mainCommentsButtonFrameForDefaultPost;
-        [mainCommentButton setTitle:@"Comment" forState:UIControlStateNormal];
-        [mainCommentButton setTitleColor:[UIColor blueColor] forState:UIControlStateHighlighted];
+        commentButton.frame = CGRectMake(commentButton.frame.origin.x, commentButton.frame.origin.y + heightChange, commentButton.frame.size.width, commentButton.frame.size.height);
+        addCommentButton.frame = CGRectMake(addCommentButton.frame.origin.x, addCommentButton.frame.origin.y + heightChange, addCommentButton.frame.size.width, addCommentButton.frame.size.height);
+        
     }
     return cell;
 }
@@ -404,11 +356,11 @@
             NSArray *tmpArray = [self.tableView indexPathsForVisibleRows];
             if ([tmpArray containsObject:indexPath])
             {
-                UIButton *buttonImage = (UIButton *)[cell.contentView viewWithTag:3];
+                UIButton *buttonImage = (UIButton *)[cell.contentView viewWithTag:6];
                 UIImage *image = [UIImage imageWithData:picture];
                 [buttonImage setBackgroundImage:image forState:UIControlStateNormal];
                 
-                UIImageView *profileImageView = (UIImageView *)[cell.contentView viewWithTag:4];
+                UIImageView *profileImageView = (UIImageView *)[cell.contentView viewWithTag:1];
                 [profileImageView setImage:[UIImage imageWithData:profilePictureData]];
             }
         });
@@ -445,17 +397,29 @@
         }
     }
     
-    CGSize stringSize = CGSizeZero;
+    UITableViewCell *cell = nil;
     
     if ([typeOfPost isEqualToString:@"photo"])
     {
-        stringSize.height = mainTextLabel.mainCommentsButtonFrameForPhotoPost.origin.y + mainTextLabel.commentsButtonFrameForPhotoPost.size.height;
+        cell = [tableView dequeueReusableCellWithIdentifier:@"photoFacebookCell"];
     }
     else
     {
-        stringSize.height = mainTextLabel.mainCommentsButtonFrameForDefaultPost.origin.y + mainTextLabel.mainCommentsButtonFrameForPhotoPost.size.height;
+        cell = [tableView dequeueReusableCellWithIdentifier:@"defaultFacebookCell"];
     }
-    return stringSize.height + FACEBOOK_TEXTVIEW_TOP_MARGIN;
+    
+    CGFloat height = 42;
+    if (cell)
+    {
+        //Set the cell text label's based upon the table contents array location
+        UITextView *textView = (UITextView *)[cell.contentView viewWithTag:3];
+        textView.text = mainTextLabel;
+        CGFloat oldSizeHeight = textView.frame.size.height;
+        [textView resizeHeightBasedOnString];
+        CGFloat heightChange = textView.frame.size.height - oldSizeHeight;
+        height = cell.frame.size.height + heightChange;
+    }
+    return height;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
