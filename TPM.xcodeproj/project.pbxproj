@@ -30,6 +30,11 @@
 		BE72312615C5FA8F002EE577 /* NSMutableDictionary+appConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BE72311E15C5FA8F002EE577 /* NSMutableDictionary+appConfiguration.m */; };
 		BE72312815C5FA8F002EE577 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE72312115C5FA8F002EE577 /* WebViewController.m */; };
 		BE72312915C5FA8F002EE577 /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = BE72312315C5FA8F002EE577 /* XMLReader.m */; };
+		BE8CB74D15CB765F0094F789 /* twitterTabBarIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE8CB74C15CB765F0094F789 /* twitterTabBarIcon@2x.png */; };
+		BE8CB74F15CB779E0094F789 /* twitterTabBarIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = BE8CB74E15CB779E0094F789 /* twitterTabBarIcon.png */; };
+		BE8CB75215CB7D030094F789 /* TwitterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8CB75115CB7D030094F789 /* TwitterTableViewController.m */; };
+		BE8CB75415CB7E4D0094F789 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8CB75315CB7E4D0094F789 /* Twitter.framework */; };
+		BE8CB75715CB9B4B0094F789 /* TPMTwitterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8CB75615CB9B4B0094F789 /* TPMTwitterTableViewController.m */; };
 		BE8EFA2F15C62CC400A383FD /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8EFA2E15C62CC400A383FD /* NSString+HTML.m */; };
 		BE8EFA3115C6349400A383FD /* TPM - iPhone - Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = BE8EFA3015C6349400A383FD /* TPM - iPhone - Retina.png */; };
 		BE8EFA3315C634C300A383FD /* TPM - iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = BE8EFA3215C634C300A383FD /* TPM - iPhone.png */; };
@@ -90,6 +95,13 @@
 		BE72312115C5FA8F002EE577 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		BE72312215C5FA8F002EE577 /* XMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLReader.h; sourceTree = "<group>"; };
 		BE72312315C5FA8F002EE577 /* XMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLReader.m; sourceTree = "<group>"; };
+		BE8CB74C15CB765F0094F789 /* twitterTabBarIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitterTabBarIcon@2x.png"; sourceTree = "<group>"; };
+		BE8CB74E15CB779E0094F789 /* twitterTabBarIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitterTabBarIcon.png; sourceTree = "<group>"; };
+		BE8CB75015CB7D030094F789 /* TwitterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterTableViewController.h; sourceTree = "<group>"; };
+		BE8CB75115CB7D030094F789 /* TwitterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterTableViewController.m; sourceTree = "<group>"; };
+		BE8CB75315CB7E4D0094F789 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		BE8CB75515CB9B4B0094F789 /* TPMTwitterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPMTwitterTableViewController.h; sourceTree = "<group>"; };
+		BE8CB75615CB9B4B0094F789 /* TPMTwitterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPMTwitterTableViewController.m; sourceTree = "<group>"; };
 		BE8EFA2D15C62CC400A383FD /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
 		BE8EFA2E15C62CC400A383FD /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
 		BE8EFA3015C6349400A383FD /* TPM - iPhone - Retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TPM - iPhone - Retina.png"; sourceTree = "<group>"; };
@@ -107,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE8CB75415CB7E4D0094F789 /* Twitter.framework in Frameworks */,
 				BE4C4AAE15C8C7F90091E3C1 /* CoreImage.framework in Frameworks */,
 				BE72310415C5FA72002EE577 /* UIKit.framework in Frameworks */,
 				BE72310615C5FA72002EE577 /* Foundation.framework in Frameworks */,
@@ -121,6 +134,8 @@
 		BE4C4A8915C8B8E20091E3C1 /* Base Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BE8CB75015CB7D030094F789 /* TwitterTableViewController.h */,
+				BE8CB75115CB7D030094F789 /* TwitterTableViewController.m */,
 				BE4C4ABB15C8FD1A0091E3C1 /* FacebookButton@2x.png */,
 				BE4C4A8C15C8BA770091E3C1 /* FaceBookTableViewController.h */,
 				BE4C4A8D15C8BA770091E3C1 /* FaceBookTableViewController.m */,
@@ -182,7 +197,6 @@
 		BE7230F415C5FA71002EE577 = {
 			isa = PBXGroup;
 			children = (
-				BE4C4AAD15C8C7F90091E3C1 /* CoreImage.framework */,
 				BE8EFA3215C634C300A383FD /* TPM - iPhone.png */,
 				BE8EFA3015C6349400A383FD /* TPM - iPhone - Retina.png */,
 				BE72310915C5FA72002EE577 /* TPM */,
@@ -202,6 +216,8 @@
 		BE72310215C5FA72002EE577 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BE8CB75315CB7E4D0094F789 /* Twitter.framework */,
+				BE4C4AAD15C8C7F90091E3C1 /* CoreImage.framework */,
 				BE72310315C5FA72002EE577 /* UIKit.framework */,
 				BE72310515C5FA72002EE577 /* Foundation.framework */,
 				BE72310715C5FA72002EE577 /* CoreGraphics.framework */,
@@ -215,10 +231,14 @@
 				BE72311215C5FA72002EE577 /* TPMAppDelegate.h */,
 				BE72311315C5FA72002EE577 /* TPMAppDelegate.m */,
 				BE72311C15C5FA8F002EE577 /* iPhone.storyboard */,
+				BE8CB75515CB9B4B0094F789 /* TPMTwitterTableViewController.h */,
+				BE8CB75615CB9B4B0094F789 /* TPMTwitterTableViewController.m */,
 				BE8EFA3815C63B6400A383FD /* TPMRSSViewController.h */,
 				BE8EFA3915C63B6400A383FD /* TPMRSSViewController.m */,
 				BE4C4AB615C8F8610091E3C1 /* TPMFacebookTableViewController.h */,
 				BE4C4AB715C8F8620091E3C1 /* TPMFacebookTableViewController.m */,
+				BE8CB74C15CB765F0094F789 /* twitterTabBarIcon@2x.png */,
+				BE8CB74E15CB779E0094F789 /* twitterTabBarIcon.png */,
 				BE72310A15C5FA72002EE577 /* Supporting Files */,
 			);
 			path = TPM;
@@ -301,6 +321,8 @@
 				BE4C4AB215C8E1F00091E3C1 /* 112-group.png in Resources */,
 				BE4C4ABC15C8FD1A0091E3C1 /* FacebookButton@2x.png in Resources */,
 				BE0C9C1615C9077000A457CD /* f_logo.png in Resources */,
+				BE8CB74D15CB765F0094F789 /* twitterTabBarIcon@2x.png in Resources */,
+				BE8CB74F15CB779E0094F789 /* twitterTabBarIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +348,8 @@
 				BE4C4AC615C9005E0091E3C1 /* SocialMediaDetailViewController.m in Sources */,
 				BEE911B215C9B90200A9A784 /* UITextView+Facebook.m in Sources */,
 				BE424C1B15CB316500146D29 /* MyApplication.m in Sources */,
+				BE8CB75215CB7D030094F789 /* TwitterTableViewController.m in Sources */,
+				BE8CB75715CB9B4B0094F789 /* TPMTwitterTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -286,7 +286,7 @@
         //[self performSelector:@selector(stopLoading) withObject:nil afterDelay:0];
         //Since the RSS file has been loaded, stop animating the activity indicator
         [self.activityIndicator stopAnimating];
-        NSLog(@"%@", self.oldBarButtonItem);
+
         //If there is a right bar button item, put it back
         self.navigationItem.rightBarButtonItem = self.oldBarButtonItem;
     }
@@ -362,7 +362,6 @@
     //postData is a String
     id postData = [self.fullCommentsDictionaryModel objectForKey:@"message"];
     if ([postData isKindOfClass:[NSString class]]) self.textView.text = postData;
-    NSLog(@"%@", postData);
     
     //Pull all of the comments from the fullCommentsDictionaryModel and use introspection
     //to verify the commentsArray is actually an array or if the commentsArray is nil

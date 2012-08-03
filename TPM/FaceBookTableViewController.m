@@ -218,7 +218,7 @@
     
     NSString *graphAPIString = [NSString stringWithFormat:@"%@/likes", [dictionaryData valueForKeyPath:@"id"]];
     UIButton *likeButton = sender;
-    NSLog(@"%@", likeButton.currentTitle);
+
     if ([likeButton.titleLabel.text isEqualToString:@"Like"])
     {
         [self.facebook requestWithGraphPath:graphAPIString andParams:[[NSMutableDictionary alloc]init] andHttpMethod:@"POST" andDelegate:self];
@@ -244,7 +244,7 @@
 {
     //Retrieve the corresponding dictionary to the index row requested
     NSDictionary *dictionaryForCell = [self.facebookArrayTableData objectAtIndex:[indexPath row]];
-    NSLog(@"%@", dictionaryForCell);
+
     
     NSString *typeOfPost = [dictionaryForCell valueForKeyPath:@"type"];
     UITableViewCell *cell = nil;
@@ -730,7 +730,6 @@
     
     if ([[notification name] isEqualToString:@"urlSelected"])
     {
-        NSLog(@"%@", [notification object]);
         [self performSegueWithIdentifier:@"Web" sender:[notification object]];
     }
 }

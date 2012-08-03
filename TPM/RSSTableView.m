@@ -90,7 +90,7 @@
             else
             {
                 xmlDictionary = [XMLReader dictionaryForXMLData:xmlData error:nil];
-                NSLog(@"%@", xmlDictionary);
+
                 if (!xmlDictionary)
                 {
                     dispatch_async(dispatch_get_main_queue(), ^{
@@ -110,7 +110,7 @@
                             //[self performSelector:@selector(stopLoading) withObject:nil afterDelay:0];
                         });
                     }
-                    NSLog(@"%@", self.RSSDataArray);
+
                     if (self.finishblock) self.finishblock();
                 }
             }

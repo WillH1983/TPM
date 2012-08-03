@@ -24,7 +24,6 @@
         <!--Web View Controller-->
         <scene sceneID="ZEZ-Hi-cQS">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ycF-oF-wB8" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="3rO-41-YSS" customClass="WebViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c7U-T1-Lgo">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
@@ -46,6 +45,7 @@
                         <outlet property="webView" destination="7hG-ns-K0i" id="BBq-uf-cmu"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ycF-oF-wB8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1464" y="1138"/>
         </scene>
@@ -346,6 +346,89 @@
             </objects>
             <point key="canvasLocation" x="441" y="541"/>
         </scene>
+        <!--Navigation Controller - Twitter-->
+        <scene sceneID="27L-xQ-LcK">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rwU-Bn-Y8I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" id="fLJ-j2-uNb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Twitter" image="twitterTabBarIcon.png" id="hd5-fl-gUq"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="J3A-5e-2YU">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="L9U-u1-5xe" kind="relationship" relationship="rootViewController" id="Odr-LO-VkO"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="441" y="1161"/>
+        </scene>
+        <!--Twitter Table View Controller - Twitter-->
+        <scene sceneID="Js1-1j-mO9">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BjI-r5-TeB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="L9U-u1-5xe" customClass="TPMTwitterTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="a9D-Ho-qux">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="twitterCell" rowHeight="105" id="EB8-Dc-fMu">
+                                <rect key="frame" x="0.0" y="46" width="320" height="107"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="10" y="1" width="300" height="104"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" id="R1R-rL-NGD">
+                                            <rect key="frame" x="8" y="6" width="60" height="60"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="gVX-RC-aYa">
+                                            <rect key="frame" x="76" y="6" width="137" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="4" contentMode="left" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="etv-dC-9Y7">
+                                            <rect key="frame" x="76" y="25" width="137" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Tweet" id="5c0-9n-Rpj">
+                                            <rect key="frame" x="8" y="69" width="287" height="28"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                        </textView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="5" contentMode="left" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Dgh-iB-Uwo">
+                                            <rect key="frame" x="76" y="45" width="137" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="1" alpha="0.75" colorSpace="calibratedWhite"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="L9U-u1-5xe" id="Qo8-tx-Lpx"/>
+                            <outlet property="delegate" destination="L9U-u1-5xe" id="HSL-Pk-NLz"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Twitter" image="twitterTabBarIcon.png" id="Ues-EG-sCm"/>
+                    <navigationItem key="navigationItem" title="Twitter" id="zH6-qk-bGZ"/>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="913" y="1161"/>
+        </scene>
         <!--View Controller - Tech Powered Math-->
         <scene sceneID="JZP-5J-WEc">
             <objects>
@@ -450,6 +533,7 @@
                     <connections>
                         <segue destination="9sB-ey-aQe" kind="relationship" relationship="viewControllers" id="6Wj-U9-dOT"/>
                         <segue destination="rf2-3e-z64" kind="relationship" relationship="viewControllers" id="39t-rc-nKE"/>
+                        <segue destination="fLJ-j2-uNb" kind="relationship" relationship="viewControllers" id="M8x-eB-FCB"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VPc-Yg-HOy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -553,6 +637,7 @@
     <resources>
         <image name="112-group.png" width="32" height="21"/>
         <image name="FacebookButton@2x.png" width="94" height="37"/>
+        <image name="twitterTabBarIcon.png" width="38" height="38"/>
     </resources>
     <classes>
         <class className="FaceBookTableViewController" superclassName="UITableViewController">
@@ -597,6 +682,12 @@
                 <relationship kind="outlet" name="pageControl" candidateClass="UIPageControl"/>
                 <relationship kind="outlet" name="pagingScrollView" candidateClass="UIScrollView"/>
             </relationships>
+        </class>
+        <class className="TPMTwitterTableViewController" superclassName="TwitterTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TPMTwitterTableViewController.h"/>
+        </class>
+        <class className="TwitterTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TwitterTableViewController.h"/>
         </class>
         <class className="WebViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WebViewController.h"/>

@@ -15,7 +15,7 @@
 {
     
     BOOL couldWeOpenUrl = NO;
-    NSLog(@"%@", url.pathComponents);
+
     NSArray *urlComponenets = url.pathComponents;
     int oauthIndex = [urlComponenets indexOfObject:@"oauth"];
     NSString* scheme = [url.scheme lowercaseString];
