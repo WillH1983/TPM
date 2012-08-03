@@ -40,7 +40,7 @@
     [super viewWillAppear:animated];
     
     [[[self navigationController] navigationBar] setTintColor:[UIColor colorWithHue:0 saturation:0 brightness:0.30 alpha:1.0]];
-    //self.tableView.backgroundColor = [UIColor blackColor];
+    self.tableView.indicatorStyle = UIScrollViewIndicatorStyleWhite;
     
 }
 
