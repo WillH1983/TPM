@@ -46,7 +46,7 @@
     
     //initialize the activity indicator, set it to the center top of the view, and
     //start it animating
-    self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
 	self.activityIndicator.hidesWhenStopped = YES;
     
     //Save the previous rightBarButtonItem so it can be put back on once the View is done loading
