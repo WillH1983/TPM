@@ -57,7 +57,7 @@
 {
     [super viewWillAppear:animated];
     
-    self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
     UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(donePressed:)];
     self.navigationBar.topItem.leftBarButtonItem = button;
     NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:self.urlToLoad];

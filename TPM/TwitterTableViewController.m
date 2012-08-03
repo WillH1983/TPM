@@ -9,6 +9,7 @@
 #import "TwitterTableViewController.h"
 #import "UITextView+Facebook.h"
 #import <Twitter/Twitter.h>
+#import "WebViewController.h"
 
 @interface TwitterTableViewController ()
 
@@ -39,6 +40,23 @@
         // Custom initialization
     }
     return self;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(presentWebView:) 
+                                                 name:@"urlSelected"
+                                               object:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"urlSelected" object:nil];
 }
 
 - (void)viewDidLoad
@@ -189,6 +207,23 @@
             }
         });
     });
+}
+
+- (void) presentWebView:(NSNotification *) notification
+{
+    
+    if ([[notification name] isEqualToString:@"urlSelected"])
+    {
+        [self performSegueWithIdentifier:@"Web" sender:[notification object]];
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"Web"] & [sender isKindOfClass:[NSURL class]])
+    {
+        [segue.destinationViewController setUrlToLoad:sender];
+    }
 }
 
 @end

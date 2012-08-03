@@ -47,7 +47,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ycF-oF-wB8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1464" y="1138"/>
+            <point key="canvasLocation" x="1464" y="1161"/>
         </scene>
         <!--Social Media Detail View Controller-->
         <scene sceneID="P7K-8k-roX">
@@ -425,6 +425,9 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Twitter" image="twitterTabBarIcon.png" id="Ues-EG-sCm"/>
                     <navigationItem key="navigationItem" title="Twitter" id="zH6-qk-bGZ"/>
+                    <connections>
+                        <segue destination="3rO-41-YSS" kind="push" identifier="Web" id="Ulf-fg-jEC"/>
+                    </connections>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="913" y="1161"/>
@@ -702,7 +705,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="R6K-eO-Qz7"/>
+        <segue reference="Ulf-fg-jEC"/>
         <segue reference="vSi-FH-l32"/>
     </inferredMetricsTieBreakers>
 </document>
