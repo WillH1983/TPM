@@ -10,7 +10,7 @@
 #import "NSMutableDictionary+appConfiguration.h"
 #import "FBConnect.h"
 
-#define FACEBOOK_APP_ID @"266340113480596"
+#define FACEBOOK_APP_ID @"268933006548697"
 
 @interface TPMAppDelegate : UIResponder <UIApplicationDelegate>
 {
