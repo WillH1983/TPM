@@ -178,12 +178,10 @@
     UITextView *tweetText = (UITextView *)[cell.contentView viewWithTag:3];
     
     NSDictionary *tweetDictionary = [self.twitterTableData objectAtIndex:indexPath.row];
-    
-    CGFloat oldSizeHeight = tweetText.frame.size.height;
     tweetText.text = [tweetDictionary valueForKeyPath:TWITTER_TWEET];
     [tweetText resizeHeightBasedOnString];
-    CGFloat heightChange = tweetText.frame.size.height - oldSizeHeight;
-    CGFloat height = cell.frame.size.height + heightChange;
+
+    CGFloat height = tweetText.frame.origin.y + tweetText.frame.size.height;
     
     return height;
 }

@@ -12,10 +12,21 @@
 
 - (void)resizeHeightBasedOnString
 {
-    CGSize maxSize = CGSizeMake(self.frame.size.width - self.font.pointSize, CGFLOAT_MAX);
-    CGSize size = [self.text sizeWithFont:self.font  constrainedToSize:maxSize lineBreakMode:UILineBreakModeWordWrap];
-    size.height += 12;
-    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, size.height);
+    UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
+    
+    CGFloat flexableWidth = CGFLOAT_MIN;
+    if (orientation == UIInterfaceOrientationLandscapeRight || orientation == UIInterfaceOrientationLandscapeLeft)
+    {
+        flexableWidth = 420;
+    }
+    else 
+    {
+        flexableWidth = 287;
+    }
+    
+    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, flexableWidth, self.frame.size.height);
+    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, self.contentSize.height);
+    
     
 }
 
