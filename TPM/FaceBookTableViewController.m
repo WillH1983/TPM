@@ -338,7 +338,8 @@
     //Set the cell text label's based upon the table contents array location
     textView.text = mainTextLabel;
     CGFloat oldSizeHeight = textView.frame.size.height;
-    [textView resizeTextViewForWidth:287];
+    
+    [textView resizeTextViewForWidth:self.tableView.frame.size.width - 30];
     CGFloat heightChange = textView.frame.size.height - oldSizeHeight;
     
     NSNumber *count = [dictionaryForCell valueForKeyPath:@"comments.count"];
@@ -470,7 +471,9 @@
         UITextView *textView = (UITextView *)[cell.contentView viewWithTag:3];
         textView.text = mainTextLabel;
         CGFloat oldSizeHeight = textView.frame.size.height;
-        [textView resizeTextViewForWidth:287];
+        [textView resizeTextViewForWidth:self.tableView.frame.size.width - 30];
+        [textView resizeTextViewForWidth:self.tableView.frame.size.width - 30];
+        
         CGFloat heightChange = textView.frame.size.height - oldSizeHeight;
         height = cell.frame.size.height + heightChange;
     }

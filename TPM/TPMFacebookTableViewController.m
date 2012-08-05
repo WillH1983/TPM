@@ -40,6 +40,11 @@
     return YES;
 }
 
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    [self.tableView reloadData];
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];

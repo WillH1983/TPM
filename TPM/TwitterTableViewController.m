@@ -187,14 +187,7 @@
     
     NSDictionary *tweetDictionary = [self.twitterTableData objectAtIndex:indexPath.row];
     tweetText.text = [tweetDictionary valueForKeyPath:TWITTER_TWEET];
-    if(self.interfaceOrientation == UIInterfaceOrientationLandscapeLeft || self.interfaceOrientation == UIInterfaceOrientationLandscapeRight)
-    {
-        [tweetText resizeTextViewForWidth:self.tableView.frame.size.width - 30];
-    }
-    else
-    {
-        [tweetText resizeTextViewForWidth:self.tableView.frame.size.width - 30];
-    }
+    [tweetText resizeTextViewForWidth:self.tableView.frame.size.width - 30];
 
     CGFloat height = tweetText.frame.origin.y + tweetText.frame.size.height;
     
