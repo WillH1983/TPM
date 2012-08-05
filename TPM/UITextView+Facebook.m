@@ -10,21 +10,9 @@
 
 @implementation UITextView (Facebook)
 
-- (void)resizeHeightBasedOnString
+- (void)resizeTextViewForWidth:(CGFloat)width
 {
-    UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
-    
-    CGFloat flexableWidth = CGFLOAT_MIN;
-    if (orientation == UIInterfaceOrientationLandscapeRight || orientation == UIInterfaceOrientationLandscapeLeft)
-    {
-        flexableWidth = 420;
-    }
-    else 
-    {
-        flexableWidth = 287;
-    }
-    
-    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, flexableWidth, self.frame.size.height);
+    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, width, self.frame.size.height);
     self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, self.contentSize.height);
     
     

@@ -150,7 +150,7 @@
     NSString *mainTextLabel = [dictionaryForCell valueForKeyPath:@"message"];
     NSString *detailTextLabel = [dictionaryForCell valueForKeyPath:@"from.name"];
     comment.text = mainTextLabel;
-    [comment resizeHeightBasedOnString];
+    [comment resizeTextViewForWidth:287];
     name.text = detailTextLabel;
     
     return cell;
@@ -203,7 +203,7 @@
         UITextView *textView = (UITextView *)[cell.contentView viewWithTag:2];
         textView.text = dictionaryText;
         CGFloat oldSizeHeight = textView.frame.size.height;
-        [textView resizeHeightBasedOnString];
+        [textView resizeTextViewForWidth:287];
         CGFloat heightChange = textView.frame.size.height - oldSizeHeight;
         CGFloat height = cell.frame.size.height + heightChange;
         return height;
@@ -227,7 +227,7 @@
         
         name.text = [self.fullCommentsDictionaryModel valueForKeyPath:@"from.name"];
         comment.text = [self.fullCommentsDictionaryModel valueForKeyPath:@"message"];
-        [comment resizeHeightBasedOnString];
+        [comment resizeTextViewForWidth:287];
         dispatch_queue_t downloadQueue = dispatch_queue_create("Profile Image Downloader", NULL);
         dispatch_async(downloadQueue, ^{
     
@@ -265,7 +265,7 @@
         UITextView *comment = (UITextView *)[cell.contentView viewWithTag:2];
         
         comment.text = [self.fullCommentsDictionaryModel valueForKeyPath:@"message"];
-        [comment resizeHeightBasedOnString];
+        [comment resizeTextViewForWidth:287];
         CGSize size = CGSizeMake(comment.frame.size.height, comment.frame.origin.y + comment.frame.size.height);
         return size.height;
     }

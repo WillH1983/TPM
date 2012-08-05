@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface UITextView (Facebook)
-- (void)resizeHeightBasedOnString;
+- (void)resizeTextViewForWidth:(CGFloat)width;
 @end

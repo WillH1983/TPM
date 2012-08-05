@@ -158,7 +158,15 @@
     twitterScreenName.text = [NSString stringWithFormat:@"@%@", screeName];
     
     tweetText.text = [tweetDictionary valueForKeyPath:TWITTER_TWEET];
-    [tweetText resizeHeightBasedOnString];
+    
+    if(self.interfaceOrientation == UIInterfaceOrientationLandscapeLeft || self.interfaceOrientation == UIInterfaceOrientationLandscapeRight)
+    {
+        [tweetText resizeTextViewForWidth:self.tableView.frame.size.width - 30];
+    }
+    else
+    {
+        [tweetText resizeTextViewForWidth:self.tableView.frame.size.width - 30];
+    }
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"EEE MMM d HH:mm:ss zzzz yyyy"];
@@ -179,7 +187,14 @@
     
     NSDictionary *tweetDictionary = [self.twitterTableData objectAtIndex:indexPath.row];
     tweetText.text = [tweetDictionary valueForKeyPath:TWITTER_TWEET];
-    [tweetText resizeHeightBasedOnString];
+    if(self.interfaceOrientation == UIInterfaceOrientationLandscapeLeft || self.interfaceOrientation == UIInterfaceOrientationLandscapeRight)
+    {
+        [tweetText resizeTextViewForWidth:self.tableView.frame.size.width - 30];
+    }
+    else
+    {
+        [tweetText resizeTextViewForWidth:self.tableView.frame.size.width - 30];
+    }
 
     CGFloat height = tweetText.frame.origin.y + tweetText.frame.size.height;
     
