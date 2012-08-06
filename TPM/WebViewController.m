@@ -64,6 +64,8 @@
     self.webView.scalesPageToFit = YES;
     [self.webView loadRequest:urlRequest];
     [self.programmedWebView loadRequest:urlRequest];
+    self.title = @"Loading...";
+    self.navigationBar.topItem.title = @"Loading...";
 }
 
 - (void)viewDidUnload
@@ -93,8 +95,7 @@
 
 - (void)webViewDidStartLoad:(UIWebView *)webView
 {
-    self.title = @"Loading...";
-    self.navigationBar.topItem.title = @"Loading...";
+    
     [self.activityIndicator startAnimating];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.activityIndicator];
     self.navigationBar.topItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.activityIndicator];
