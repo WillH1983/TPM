@@ -11,7 +11,7 @@
 #import "WebViewController.h"
 
 @interface TPMRSSViewController ()
-
+@property (nonatomic) CGRect tableViewFrameAtStartup;
 @end
 
 @implementation TPMRSSViewController
@@ -22,6 +22,7 @@
 @synthesize FeaturedStories = _FeaturedStories;
 @synthesize featuredStoriesLabel = _featuredStoriesLabel;
 @synthesize featureStoriesActivityIndicator = _featureStoriesActivityIndicator;
+@synthesize tableViewFrameAtStartup;
 
 - (NSMutableArray *)FeaturedStories
 {
@@ -91,6 +92,8 @@
             [self.featureStoriesActivityIndicator stopAnimating];
         });
     }];
+    
+    self.tableViewFrameAtStartup = self.tableView.frame;
     
     self.pagingScrollView.delegate = self;
     self.featuredStoriesLabel.userInteractionEnabled = NO;
@@ -253,6 +256,19 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return YES;
+}
+
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    if (toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft || toInterfaceOrientation == UIInterfaceOrientationLandscapeRight)
+    {
+        self.tableView.frame = self.view.frame;
+        [self.view bringSubviewToFront:self.tableView];
+    }
+    else {
+        self.tableView.frame = self.tableViewFrameAtStartup;
+        [self.view sendSubviewToBack:self.tableView];
+    }
 }
 
 @end
