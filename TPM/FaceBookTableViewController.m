@@ -458,6 +458,9 @@
     if ([typeOfPost isEqualToString:@"photo"])
     {
         cell = [tableView dequeueReusableCellWithIdentifier:@"photoFacebookCell"];
+        cell.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y, cell.frame.size.width, 303);
+        UITextView *textView2 = (UITextView *)[cell.contentView viewWithTag:3];
+        textView2.frame = CGRectMake(textView2.frame.origin.x, textView2.frame.origin.y, textView2.frame.size.width, 25);
     }
     else
     {
@@ -471,7 +474,6 @@
         UITextView *textView = (UITextView *)[cell.contentView viewWithTag:3];
         textView.text = mainTextLabel;
         CGFloat oldSizeHeight = textView.frame.size.height;
-        [textView resizeTextViewForWidth:self.tableView.frame.size.width - 30];
         [textView resizeTextViewForWidth:self.tableView.frame.size.width - 30];
         
         CGFloat heightChange = textView.frame.size.height - oldSizeHeight;
