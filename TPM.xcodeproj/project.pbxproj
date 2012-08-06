@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE03E0B015CF6D6E007759B1 /* TPMSocialMediaDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE03E0AF15CF6D6E007759B1 /* TPMSocialMediaDetailViewController.m */; };
 		BE0C9C1615C9077000A457CD /* f_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BE0C9C1515C9077000A457CD /* f_logo.png */; };
 		BE424C1B15CB316500146D29 /* MyApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = BE424C1915CB316500146D29 /* MyApplication.m */; };
 		BE4C4A8E15C8BA770091E3C1 /* FaceBookTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4C4A8D15C8BA770091E3C1 /* FaceBookTableViewController.m */; };
@@ -45,6 +46,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE03E0AE15CF6D6E007759B1 /* TPMSocialMediaDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPMSocialMediaDetailViewController.h; sourceTree = "<group>"; };
+		BE03E0AF15CF6D6E007759B1 /* TPMSocialMediaDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPMSocialMediaDetailViewController.m; sourceTree = "<group>"; };
 		BE0C9C1515C9077000A457CD /* f_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = f_logo.png; sourceTree = "<group>"; };
 		BE424C1915CB316500146D29 /* MyApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyApplication.m; sourceTree = "<group>"; };
 		BE424C1A15CB316500146D29 /* MyApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyApplication.h; sourceTree = "<group>"; };
@@ -231,6 +234,8 @@
 				BE72311215C5FA72002EE577 /* TPMAppDelegate.h */,
 				BE72311315C5FA72002EE577 /* TPMAppDelegate.m */,
 				BE72311C15C5FA8F002EE577 /* iPhone.storyboard */,
+				BE03E0AE15CF6D6E007759B1 /* TPMSocialMediaDetailViewController.h */,
+				BE03E0AF15CF6D6E007759B1 /* TPMSocialMediaDetailViewController.m */,
 				BE8CB75515CB9B4B0094F789 /* TPMTwitterTableViewController.h */,
 				BE8CB75615CB9B4B0094F789 /* TPMTwitterTableViewController.m */,
 				BE8EFA3815C63B6400A383FD /* TPMRSSViewController.h */,
@@ -350,6 +355,7 @@
 				BE424C1B15CB316500146D29 /* MyApplication.m in Sources */,
 				BE8CB75215CB7D030094F789 /* TwitterTableViewController.m in Sources */,
 				BE8CB75715CB9B4B0094F789 /* TPMTwitterTableViewController.m in Sources */,
+				BE03E0B015CF6D6E007759B1 /* TPMSocialMediaDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -52,7 +52,7 @@
         <!--Social Media Detail View Controller-->
         <scene sceneID="P7K-8k-roX">
             <objects>
-                <tableViewController id="AYI-80-p8y" customClass="SocialMediaDetailViewController" sceneMemberID="viewController">
+                <tableViewController id="AYI-80-p8y" customClass="TPMSocialMediaDetailViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="80" sectionHeaderHeight="10" sectionFooterHeight="10" id="VFy-Q7-MY1">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -111,7 +111,7 @@
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Text View" id="ibO-cy-2yz">
                                             <rect key="frame" x="67" y="34" width="224" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             <dataDetectorType key="dataDetectorTypes" link="YES"/>
@@ -687,6 +687,9 @@
                 <relationship kind="outlet" name="pagingScrollView" candidateClass="UIScrollView"/>
             </relationships>
         </class>
+        <class className="TPMSocialMediaDetailViewController" superclassName="SocialMediaDetailViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TPMSocialMediaDetailViewController.h"/>
+        </class>
         <class className="TPMTwitterTableViewController" superclassName="TwitterTableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TPMTwitterTableViewController.h"/>
         </class>
@@ -706,7 +709,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="0Th-a7-vgz"/>
-        <segue reference="q4o-QJ-iX2"/>
+        <segue reference="vSi-FH-l32"/>
+        <segue reference="R6K-eO-Qz7"/>
     </inferredMetricsTieBreakers>
 </document>
