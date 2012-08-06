@@ -248,6 +248,16 @@
     [super viewWillAppear:animated];
     
     [[[self navigationController] navigationBar] setTintColor:[UIColor colorWithHue:0 saturation:0 brightness:0.30 alpha:1.0]];
+    
+    if (self.interfaceOrientation == UIInterfaceOrientationLandscapeLeft || self.interfaceOrientation == UIInterfaceOrientationLandscapeRight)
+    {
+        self.tableView.frame = self.view.frame;
+        [self.view bringSubviewToFront:self.tableView];
+    }
+    else {
+        self.tableView.frame = self.tableViewFrameAtStartup;
+        [self.view sendSubviewToBack:self.tableView];
+    }
 
 }
 
@@ -265,7 +275,8 @@
         self.tableView.frame = self.view.frame;
         [self.view bringSubviewToFront:self.tableView];
     }
-    else {
+    else 
+    {
         self.tableView.frame = self.tableViewFrameAtStartup;
         [self.view sendSubviewToBack:self.tableView];
     }
