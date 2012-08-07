@@ -174,7 +174,7 @@
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Text View" id="l7P-xR-C13">
                                             <rect key="frame" x="9" y="67" width="300" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="1" green="0.13505036029150885" blue="0.11334503622131087" alpha="0.0" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             <dataDetectorType key="dataDetectorTypes" link="YES"/>
@@ -709,7 +709,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="vSi-FH-l32"/>
-        <segue reference="R6K-eO-Qz7"/>
+        <segue reference="0Th-a7-vgz"/>
+        <segue reference="q4o-QJ-iX2"/>
     </inferredMetricsTieBreakers>
 </document>
