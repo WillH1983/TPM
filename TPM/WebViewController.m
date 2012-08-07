@@ -97,21 +97,25 @@
 {
     
     [self.activityIndicator startAnimating];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.activityIndicator];
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     self.navigationBar.topItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.activityIndicator];
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    self.navigationItem.rightBarButtonItem = nil;
-    self.navigationBar.topItem.rightBarButtonItem = nil;
-    NSString *title = [self.webView stringByEvaluatingJavaScriptFromString:@"document.title"];
-    self.navigationBar.topItem.title = title;
-    self.title = title;
-    if (!self.title)
+    if (!webView.isLoading)
     {
-        self.title = [self.programmedWebView stringByEvaluatingJavaScriptFromString:@"document.title"];
-        self.navigationBar.topItem.title = [self.programmedWebView stringByEvaluatingJavaScriptFromString:@"document.title"];
+        self.navigationItem.rightBarButtonItem = nil;
+        self.navigationBar.topItem.rightBarButtonItem = nil;
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        NSString *title = [self.webView stringByEvaluatingJavaScriptFromString:@"document.title"];
+        self.navigationBar.topItem.title = title;
+        self.title = title;
+        if (!self.title)
+        {
+            self.title = [self.programmedWebView stringByEvaluatingJavaScriptFromString:@"document.title"];
+            self.navigationBar.topItem.title = [self.programmedWebView stringByEvaluatingJavaScriptFromString:@"document.title"];
+        }
     }
 }
 - (IBAction)donePressed:(id)sender 
