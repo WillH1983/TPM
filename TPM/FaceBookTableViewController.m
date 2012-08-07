@@ -465,6 +465,9 @@
     else
     {
         cell = [tableView dequeueReusableCellWithIdentifier:@"defaultFacebookCell"];
+        cell.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y, cell.frame.size.width, 128);
+        UITextView *textView2 = (UITextView *)[cell.contentView viewWithTag:3];
+        textView2.frame = CGRectMake(textView2.frame.origin.x, textView2.frame.origin.y, textView2.frame.size.width, 25);
     }
     
     CGFloat height = 42;

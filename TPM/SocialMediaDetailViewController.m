@@ -202,10 +202,8 @@
         //Set the cell text label's based upon the table contents array location
         UITextView *textView = (UITextView *)[cell.contentView viewWithTag:2];
         textView.text = dictionaryText;
-        CGFloat oldSizeHeight = textView.frame.size.height;
         [textView resizeTextViewForWidth:self.tableView.frame.size.width - textView.frame.origin.x - 30];
-        CGFloat heightChange = textView.frame.size.height - oldSizeHeight;
-        CGFloat height = cell.frame.size.height + heightChange;
+        CGFloat height = textView.frame.origin.y + textView.frame.size.height;
         return height;
     }
     else return 44;
@@ -266,8 +264,8 @@
         
         comment.text = [self.fullCommentsDictionaryModel valueForKeyPath:@"message"];
         [comment resizeTextViewForWidth:self.tableView.frame.size.width - comment.frame.origin.x - 30];
-        CGSize size = CGSizeMake(comment.frame.size.height, comment.frame.origin.y + comment.frame.size.height);
-        return size.height;
+        CGFloat height = comment.frame.origin.y + comment.frame.size.height;
+        return height;
     }
     else return 44;
 }
