@@ -45,6 +45,7 @@
     else
     {
         self.programmedWebView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+        self.programmedWebView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleBottomMargin;
     }
     
     self.programmedWebView.delegate = self;
@@ -121,6 +122,12 @@
 - (IBAction)donePressed:(id)sender 
 {
     [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    [self.webView.scrollView sizeToFit];
+    [self.programmedWebView.scrollView sizeToFit];
 }
 
 @end
