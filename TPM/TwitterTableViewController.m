@@ -101,10 +101,18 @@
                  if ([timeline isKindOfClass:[NSArray class]])
                  {
                      self.twitterTableData = timeline;
-                     dispatch_async(dispatch_get_main_queue(), ^{
-                         [self.activityIndicator stopAnimating];
-                     });
                  }
+                 dispatch_async(dispatch_get_main_queue(), ^{
+                     if ([timeline isKindOfClass:[NSDictionary class]])
+                     {
+                         if ([timeline valueForKey:@"error"])
+                         {
+                             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"TPM - Twitter" message:[timeline valueForKey:@"error"] delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles: nil];
+                             [alertView show];
+                         }
+                     }
+                     [self.activityIndicator stopAnimating];
+                 });
              } 
              else { 
                  // Inspect the contents of jsonError
