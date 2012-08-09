@@ -223,8 +223,25 @@
         UILabel *name = (UILabel *)[cell.contentView viewWithTag:1];
         UITextView *comment = (UITextView *)[cell.contentView viewWithTag:2];
         
+        NSString *typeOfPost = [self.fullCommentsDictionaryModel valueForKeyPath:@"type"];
+        NSString *commentString = [self.fullCommentsDictionaryModel valueForKeyPath:@"message"];
+        
+        if ([typeOfPost isEqualToString:@"link"])
+        {
+            NSRange range = [commentString rangeOfString:@"http"];
+            if (range.location == NSNotFound)
+            {
+                NSString *linkURL = [self.fullCommentsDictionaryModel valueForKeyPath:@"link"];
+                if ([linkURL isKindOfClass:[NSString class]])
+                {
+                    commentString = [commentString stringByAppendingString:@" "];
+                    commentString = [commentString stringByAppendingString:linkURL];
+                }
+            }
+        }
+        
         name.text = [self.fullCommentsDictionaryModel valueForKeyPath:@"from.name"];
-        comment.text = [self.fullCommentsDictionaryModel valueForKeyPath:@"message"];
+        comment.text = commentString;
         [comment resizeTextViewForWidth:self.tableView.frame.size.width - comment.frame.origin.x - 10];
         dispatch_queue_t downloadQueue = dispatch_queue_create("Profile Image Downloader", NULL);
         dispatch_async(downloadQueue, ^{
@@ -260,9 +277,25 @@
     
     if (cell)
     {
-        UITextView *comment = (UITextView *)[cell.contentView viewWithTag:2];
+        NSString *typeOfPost = [self.fullCommentsDictionaryModel valueForKeyPath:@"type"];
+        NSString *commentString = [self.fullCommentsDictionaryModel valueForKeyPath:@"message"];
         
-        comment.text = [self.fullCommentsDictionaryModel valueForKeyPath:@"message"];
+        if ([typeOfPost isEqualToString:@"link"])
+        {
+            NSRange range = [commentString rangeOfString:@"http"];
+            if (range.location == NSNotFound)
+            {
+                NSString *linkURL = [self.fullCommentsDictionaryModel valueForKeyPath:@"link"];
+                if ([linkURL isKindOfClass:[NSString class]])
+                {
+                    commentString = [commentString stringByAppendingString:@" "];
+                    commentString = [commentString stringByAppendingString:linkURL];
+                }
+            }
+        }
+        
+        UITextView *comment = (UITextView *)[cell.contentView viewWithTag:2];
+        comment.text = commentString;
         [comment resizeTextViewForWidth:self.tableView.frame.size.width - comment.frame.origin.x - 10];
         CGFloat height = comment.frame.origin.y + comment.frame.size.height;
         return height;
