@@ -72,7 +72,6 @@
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
     [params setObject:@"techpoweredmath" forKey:@"screen_name"];
     [params setObject:@"20" forKey:@"count"];
-    [params setObject:@"1" forKey:@"include_entities"];
     [params setObject:@"1" forKey:@"include_rts"];
     
     //  Next, we create an URL that points to the target endpoint
