@@ -51,13 +51,13 @@
     //Do not allow the cells in the tableview to be selected
     [self.tableView setAllowsSelection:NO];
     
-    //Pull the full comments dictionary from the delegate to use as our Model
-    [self.socialMediaDelegate SocialMediaDetailViewController:self dictionaryForFacebookGraphAPIString:[self.shortCommentsDictionaryModel objectForKey:@"id"]];
-    
     //initialize the activity indicator, set it to the center top of the view, and
     //start it animating
-    self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
 	self.activityIndicator.hidesWhenStopped = YES;
+    
+    //Pull the full comments dictionary from the delegate to use as our Model
+    [self.socialMediaDelegate SocialMediaDetailViewController:self dictionaryForFacebookGraphAPIString:[self.shortCommentsDictionaryModel objectForKey:@"id"]];
     
 }
 
