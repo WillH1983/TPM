@@ -133,14 +133,9 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.activityIndicator];
 }
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidAppear:animated];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(presentWebView:) 
-                                                 name:@"urlSelected"
-                                               object:nil];
+    [super viewWillAppear:animated];
     
     //Init the facebook session
     [self facebookInit];
@@ -156,7 +151,20 @@
     
     //Begin the facebook request, the data that comes back form this method will be used
     //to populate the UITableView
-    [self.facebook requestWithGraphPath:FACEBOOK_FEED_TO_REQUEST andDelegate:self];
+    if ([self.facebookArrayTableData count] == 0) [self.facebook requestWithGraphPath:FACEBOOK_FEED_TO_REQUEST andDelegate:self];
+    else [self.tableView reloadData];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(presentWebView:) 
+                                                 name:@"urlSelected"
+                                               object:nil];
+    
+    
 }
 
 #pragma mark - Table view data source
