@@ -19,7 +19,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pa0-iF-ZS3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="441" y="-67"/>
+            <point key="canvasLocation" x="460" y="-67"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="ZEZ-Hi-cQS">
@@ -657,10 +657,6 @@
         </class>
         <class className="ImagoDeiTextEntryViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ImagoDeiTextEntryViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="postButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
-            </relationships>
         </class>
         <class className="RSSTableView" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RSSTableView.h"/>
