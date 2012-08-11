@@ -12,4 +12,6 @@
 @property (nonatomic, strong) NSURL *RSSlink;
 @property (nonatomic, strong) NSString *defaultLocalPathImageForTableViewCell;
 @property (nonatomic, strong) NSString *appName;
+@property (nonatomic, strong) NSString *facebookID;
+@property (nonatomic, strong) NSString *facebookFeedToRequest;
 @end

@@ -10,39 +10,28 @@
 		BE03E0B015CF6D6E007759B1 /* TPMSocialMediaDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE03E0AF15CF6D6E007759B1 /* TPMSocialMediaDetailViewController.m */; };
 		BE0C9C1615C9077000A457CD /* f_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BE0C9C1515C9077000A457CD /* f_logo.png */; };
 		BE424C1B15CB316500146D29 /* MyApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = BE424C1915CB316500146D29 /* MyApplication.m */; };
-		BE4C4A8E15C8BA770091E3C1 /* FaceBookTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4C4A8D15C8BA770091E3C1 /* FaceBookTableViewController.m */; };
 		BE4C4A9F15C8BE1E0091E3C1 /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BE4C4A9215C8BE1E0091E3C1 /* FBDialog.bundle */; };
-		BE4C4AA015C8BE1E0091E3C1 /* libfacebook_ios_sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4C4A9815C8BE1E0091E3C1 /* libfacebook_ios_sdk.a */; };
-		BE4C4AA315C8C4840091E3C1 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4C4AA215C8C4840091E3C1 /* ImageViewController.m */; };
-		BE4C4AAC15C8C5B90091E3C1 /* ImagoDeiTextEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4C4AAB15C8C5B90091E3C1 /* ImagoDeiTextEntryViewController.m */; };
 		BE4C4AAE15C8C7F90091E3C1 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4C4AAD15C8C7F90091E3C1 /* CoreImage.framework */; };
 		BE4C4AB215C8E1F00091E3C1 /* 112-group.png in Resources */ = {isa = PBXBuildFile; fileRef = BE4C4AB115C8E1F00091E3C1 /* 112-group.png */; };
 		BE4C4AB815C8F8620091E3C1 /* TPMFacebookTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4C4AB715C8F8620091E3C1 /* TPMFacebookTableViewController.m */; };
 		BE4C4ABC15C8FD1A0091E3C1 /* FacebookButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE4C4ABB15C8FD1A0091E3C1 /* FacebookButton@2x.png */; };
-		BE4C4AC615C9005E0091E3C1 /* SocialMediaDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4C4AC515C9005E0091E3C1 /* SocialMediaDetailViewController.m */; };
 		BE72310415C5FA72002EE577 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE72310315C5FA72002EE577 /* UIKit.framework */; };
 		BE72310615C5FA72002EE577 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE72310515C5FA72002EE577 /* Foundation.framework */; };
 		BE72310815C5FA72002EE577 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE72310715C5FA72002EE577 /* CoreGraphics.framework */; };
 		BE72310E15C5FA72002EE577 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE72310C15C5FA72002EE577 /* InfoPlist.strings */; };
 		BE72311015C5FA72002EE577 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE72310F15C5FA72002EE577 /* main.m */; };
 		BE72311415C5FA72002EE577 /* TPMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE72311315C5FA72002EE577 /* TPMAppDelegate.m */; };
-		BE72312415C5FA8F002EE577 /* RSSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE72311B15C5FA8F002EE577 /* RSSTableView.m */; };
 		BE72312515C5FA8F002EE577 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE72311C15C5FA8F002EE577 /* iPhone.storyboard */; };
-		BE72312615C5FA8F002EE577 /* NSMutableDictionary+appConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BE72311E15C5FA8F002EE577 /* NSMutableDictionary+appConfiguration.m */; };
-		BE72312815C5FA8F002EE577 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE72312115C5FA8F002EE577 /* WebViewController.m */; };
-		BE72312915C5FA8F002EE577 /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = BE72312315C5FA8F002EE577 /* XMLReader.m */; };
 		BE8CB74D15CB765F0094F789 /* twitterTabBarIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE8CB74C15CB765F0094F789 /* twitterTabBarIcon@2x.png */; };
 		BE8CB74F15CB779E0094F789 /* twitterTabBarIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = BE8CB74E15CB779E0094F789 /* twitterTabBarIcon.png */; };
-		BE8CB75215CB7D030094F789 /* TwitterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8CB75115CB7D030094F789 /* TwitterTableViewController.m */; };
 		BE8CB75415CB7E4D0094F789 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8CB75315CB7E4D0094F789 /* Twitter.framework */; };
 		BE8CB75715CB9B4B0094F789 /* TPMTwitterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8CB75615CB9B4B0094F789 /* TPMTwitterTableViewController.m */; };
-		BE8EFA2F15C62CC400A383FD /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8EFA2E15C62CC400A383FD /* NSString+HTML.m */; };
 		BE8EFA3115C6349400A383FD /* TPM - iPhone - Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = BE8EFA3015C6349400A383FD /* TPM - iPhone - Retina.png */; };
 		BE8EFA3315C634C300A383FD /* TPM - iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = BE8EFA3215C634C300A383FD /* TPM - iPhone.png */; };
 		BE8EFA3515C635BF00A383FD /* TPM_Default_Cell_Image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE8EFA3415C635BF00A383FD /* TPM_Default_Cell_Image@2x.png */; };
 		BE8EFA3715C635CD00A383FD /* TPM_Default_Cell_Image.png in Resources */ = {isa = PBXBuildFile; fileRef = BE8EFA3615C635CD00A383FD /* TPM_Default_Cell_Image.png */; };
 		BE8EFA3A15C63B6400A383FD /* TPMRSSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8EFA3915C63B6400A383FD /* TPMRSSViewController.m */; };
-		BEE911B215C9B90200A9A784 /* UITextView+Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE911B115C9B90200A9A784 /* UITextView+Facebook.m */; };
+		BEF4254515D6EC2B00C647BC /* libtheBlimpBaseClasses.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF4254415D6EC2B00C647BC /* libtheBlimpBaseClasses.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,7 +41,6 @@
 		BE424C1915CB316500146D29 /* MyApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyApplication.m; sourceTree = "<group>"; };
 		BE424C1A15CB316500146D29 /* MyApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyApplication.h; sourceTree = "<group>"; };
 		BE4C4A8C15C8BA770091E3C1 /* FaceBookTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceBookTableViewController.h; sourceTree = "<group>"; };
-		BE4C4A8D15C8BA770091E3C1 /* FaceBookTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceBookTableViewController.m; sourceTree = "<group>"; };
 		BE4C4A9015C8BD380091E3C1 /* FBConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBConnect.h; sourceTree = "<group>"; };
 		BE4C4A9115C8BE080091E3C1 /* Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Facebook.h; sourceTree = "<group>"; };
 		BE4C4A9215C8BE1E0091E3C1 /* FBDialog.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FBDialog.bundle; sourceTree = "<group>"; };
@@ -61,7 +49,6 @@
 		BE4C4A9515C8BE1E0091E3C1 /* FBLoginDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBLoginDialog.h; sourceTree = "<group>"; };
 		BE4C4A9615C8BE1E0091E3C1 /* FBRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBRequest.h; sourceTree = "<group>"; };
 		BE4C4A9715C8BE1E0091E3C1 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
-		BE4C4A9815C8BE1E0091E3C1 /* libfacebook_ios_sdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libfacebook_ios_sdk.a; sourceTree = "<group>"; };
 		BE4C4A9915C8BE1E0091E3C1 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
 		BE4C4A9A15C8BE1E0091E3C1 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
 		BE4C4A9B15C8BE1E0091E3C1 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
@@ -69,16 +56,13 @@
 		BE4C4A9D15C8BE1E0091E3C1 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
 		BE4C4A9E15C8BE1E0091E3C1 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		BE4C4AA115C8C4840091E3C1 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
-		BE4C4AA215C8C4840091E3C1 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
 		BE4C4AAA15C8C5B90091E3C1 /* ImagoDeiTextEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagoDeiTextEntryViewController.h; sourceTree = "<group>"; };
-		BE4C4AAB15C8C5B90091E3C1 /* ImagoDeiTextEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagoDeiTextEntryViewController.m; sourceTree = "<group>"; };
 		BE4C4AAD15C8C7F90091E3C1 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		BE4C4AB115C8E1F00091E3C1 /* 112-group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "112-group.png"; sourceTree = "<group>"; };
 		BE4C4AB615C8F8610091E3C1 /* TPMFacebookTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPMFacebookTableViewController.h; sourceTree = "<group>"; };
 		BE4C4AB715C8F8620091E3C1 /* TPMFacebookTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPMFacebookTableViewController.m; sourceTree = "<group>"; };
 		BE4C4ABB15C8FD1A0091E3C1 /* FacebookButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FacebookButton@2x.png"; sourceTree = "<group>"; };
 		BE4C4AC415C9005D0091E3C1 /* SocialMediaDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialMediaDetailViewController.h; sourceTree = "<group>"; };
-		BE4C4AC515C9005E0091E3C1 /* SocialMediaDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialMediaDetailViewController.m; sourceTree = "<group>"; };
 		BE7230FF15C5FA72002EE577 /* TPM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TPM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE72310315C5FA72002EE577 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BE72310515C5FA72002EE577 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -90,31 +74,25 @@
 		BE72311215C5FA72002EE577 /* TPMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPMAppDelegate.h; sourceTree = "<group>"; };
 		BE72311315C5FA72002EE577 /* TPMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPMAppDelegate.m; sourceTree = "<group>"; };
 		BE72311A15C5FA8F002EE577 /* RSSTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSTableView.h; sourceTree = "<group>"; };
-		BE72311B15C5FA8F002EE577 /* RSSTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSTableView.m; sourceTree = "<group>"; };
 		BE72311C15C5FA8F002EE577 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
-		BE72311D15C5FA8F002EE577 /* NSMutableDictionary+appConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+appConfiguration.h"; sourceTree = "<group>"; };
-		BE72311E15C5FA8F002EE577 /* NSMutableDictionary+appConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+appConfiguration.m"; sourceTree = "<group>"; };
 		BE72312015C5FA8F002EE577 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
-		BE72312115C5FA8F002EE577 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		BE72312215C5FA8F002EE577 /* XMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLReader.h; sourceTree = "<group>"; };
-		BE72312315C5FA8F002EE577 /* XMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLReader.m; sourceTree = "<group>"; };
 		BE8CB74C15CB765F0094F789 /* twitterTabBarIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitterTabBarIcon@2x.png"; sourceTree = "<group>"; };
 		BE8CB74E15CB779E0094F789 /* twitterTabBarIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitterTabBarIcon.png; sourceTree = "<group>"; };
 		BE8CB75015CB7D030094F789 /* TwitterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterTableViewController.h; sourceTree = "<group>"; };
-		BE8CB75115CB7D030094F789 /* TwitterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterTableViewController.m; sourceTree = "<group>"; };
 		BE8CB75315CB7E4D0094F789 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		BE8CB75515CB9B4B0094F789 /* TPMTwitterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPMTwitterTableViewController.h; sourceTree = "<group>"; };
 		BE8CB75615CB9B4B0094F789 /* TPMTwitterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPMTwitterTableViewController.m; sourceTree = "<group>"; };
-		BE8EFA2D15C62CC400A383FD /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
-		BE8EFA2E15C62CC400A383FD /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
 		BE8EFA3015C6349400A383FD /* TPM - iPhone - Retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TPM - iPhone - Retina.png"; sourceTree = "<group>"; };
 		BE8EFA3215C634C300A383FD /* TPM - iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TPM - iPhone.png"; sourceTree = "<group>"; };
 		BE8EFA3415C635BF00A383FD /* TPM_Default_Cell_Image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TPM_Default_Cell_Image@2x.png"; sourceTree = "<group>"; };
 		BE8EFA3615C635CD00A383FD /* TPM_Default_Cell_Image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TPM_Default_Cell_Image.png; sourceTree = "<group>"; };
 		BE8EFA3815C63B6400A383FD /* TPMRSSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPMRSSViewController.h; sourceTree = "<group>"; };
 		BE8EFA3915C63B6400A383FD /* TPMRSSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPMRSSViewController.m; sourceTree = "<group>"; };
-		BEE911B015C9B90200A9A784 /* UITextView+Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Facebook.h"; sourceTree = "<group>"; };
-		BEE911B115C9B90200A9A784 /* UITextView+Facebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Facebook.m"; sourceTree = "<group>"; };
+		BEB2247E15D63C1500207C2D /* NSMutableDictionary+appConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+appConfiguration.h"; sourceTree = "<group>"; };
+		BEB2247F15D63C1500207C2D /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
+		BEB2248015D63C1500207C2D /* UITextView+Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Facebook.h"; sourceTree = "<group>"; };
+		BEF4254415D6EC2B00C647BC /* libtheBlimpBaseClasses.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtheBlimpBaseClasses.a; path = "../../Library/Developer/Xcode/DerivedData/TPMWorkSpace-euyfzrcsyncolcgpumamgccdyloa/Build/Products/Debug-iphoneos/libtheBlimpBaseClasses.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,12 +100,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEF4254515D6EC2B00C647BC /* libtheBlimpBaseClasses.a in Frameworks */,
 				BE8CB75415CB7E4D0094F789 /* Twitter.framework in Frameworks */,
 				BE4C4AAE15C8C7F90091E3C1 /* CoreImage.framework in Frameworks */,
 				BE72310415C5FA72002EE577 /* UIKit.framework in Frameworks */,
 				BE72310615C5FA72002EE577 /* Foundation.framework in Frameworks */,
 				BE72310815C5FA72002EE577 /* CoreGraphics.framework in Frameworks */,
-				BE4C4AA015C8BE1E0091E3C1 /* libfacebook_ios_sdk.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +116,15 @@
 			isa = PBXGroup;
 			children = (
 				BE8CB75015CB7D030094F789 /* TwitterTableViewController.h */,
-				BE8CB75115CB7D030094F789 /* TwitterTableViewController.m */,
 				BE4C4ABB15C8FD1A0091E3C1 /* FacebookButton@2x.png */,
 				BE4C4A8C15C8BA770091E3C1 /* FaceBookTableViewController.h */,
-				BE4C4A8D15C8BA770091E3C1 /* FaceBookTableViewController.m */,
 				BE72312015C5FA8F002EE577 /* WebViewController.h */,
-				BE72312115C5FA8F002EE577 /* WebViewController.m */,
 				BE72312215C5FA8F002EE577 /* XMLReader.h */,
-				BE72312315C5FA8F002EE577 /* XMLReader.m */,
 				BE72311A15C5FA8F002EE577 /* RSSTableView.h */,
-				BE72311B15C5FA8F002EE577 /* RSSTableView.m */,
 				BE4C4AA115C8C4840091E3C1 /* ImageViewController.h */,
-				BE4C4AA215C8C4840091E3C1 /* ImageViewController.m */,
 				BE4C4AAA15C8C5B90091E3C1 /* ImagoDeiTextEntryViewController.h */,
-				BE4C4AAB15C8C5B90091E3C1 /* ImagoDeiTextEntryViewController.m */,
 				BE4C4AB115C8E1F00091E3C1 /* 112-group.png */,
 				BE4C4AC415C9005D0091E3C1 /* SocialMediaDetailViewController.h */,
-				BE4C4AC515C9005E0091E3C1 /* SocialMediaDetailViewController.m */,
 				BE0C9C1515C9077000A457CD /* f_logo.png */,
 				BE424C1915CB316500146D29 /* MyApplication.m */,
 				BE424C1A15CB316500146D29 /* MyApplication.h */,
@@ -165,12 +135,9 @@
 		BE4C4A8B15C8B91E0091E3C1 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				BEE911B015C9B90200A9A784 /* UITextView+Facebook.h */,
-				BEE911B115C9B90200A9A784 /* UITextView+Facebook.m */,
-				BE72311D15C5FA8F002EE577 /* NSMutableDictionary+appConfiguration.h */,
-				BE72311E15C5FA8F002EE577 /* NSMutableDictionary+appConfiguration.m */,
-				BE8EFA2D15C62CC400A383FD /* NSString+HTML.h */,
-				BE8EFA2E15C62CC400A383FD /* NSString+HTML.m */,
+				BEB2247E15D63C1500207C2D /* NSMutableDictionary+appConfiguration.h */,
+				BEB2247F15D63C1500207C2D /* NSString+HTML.h */,
+				BEB2248015D63C1500207C2D /* UITextView+Facebook.h */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -186,7 +153,6 @@
 				BE4C4A9515C8BE1E0091E3C1 /* FBLoginDialog.h */,
 				BE4C4A9615C8BE1E0091E3C1 /* FBRequest.h */,
 				BE4C4A9715C8BE1E0091E3C1 /* JSON.h */,
-				BE4C4A9815C8BE1E0091E3C1 /* libfacebook_ios_sdk.a */,
 				BE4C4A9915C8BE1E0091E3C1 /* NSObject+SBJSON.h */,
 				BE4C4A9A15C8BE1E0091E3C1 /* NSString+SBJSON.h */,
 				BE4C4A9B15C8BE1E0091E3C1 /* SBJSON.h */,
@@ -200,6 +166,7 @@
 		BE7230F415C5FA71002EE577 = {
 			isa = PBXGroup;
 			children = (
+				BEF4254415D6EC2B00C647BC /* libtheBlimpBaseClasses.a */,
 				BE8EFA3215C634C300A383FD /* TPM - iPhone.png */,
 				BE8EFA3015C6349400A383FD /* TPM - iPhone - Retina.png */,
 				BE72310915C5FA72002EE577 /* TPM */,
@@ -340,20 +307,9 @@
 			files = (
 				BE72311015C5FA72002EE577 /* main.m in Sources */,
 				BE72311415C5FA72002EE577 /* TPMAppDelegate.m in Sources */,
-				BE72312415C5FA8F002EE577 /* RSSTableView.m in Sources */,
-				BE72312615C5FA8F002EE577 /* NSMutableDictionary+appConfiguration.m in Sources */,
-				BE72312815C5FA8F002EE577 /* WebViewController.m in Sources */,
-				BE72312915C5FA8F002EE577 /* XMLReader.m in Sources */,
-				BE8EFA2F15C62CC400A383FD /* NSString+HTML.m in Sources */,
 				BE8EFA3A15C63B6400A383FD /* TPMRSSViewController.m in Sources */,
-				BE4C4A8E15C8BA770091E3C1 /* FaceBookTableViewController.m in Sources */,
-				BE4C4AA315C8C4840091E3C1 /* ImageViewController.m in Sources */,
-				BE4C4AAC15C8C5B90091E3C1 /* ImagoDeiTextEntryViewController.m in Sources */,
 				BE4C4AB815C8F8620091E3C1 /* TPMFacebookTableViewController.m in Sources */,
-				BE4C4AC615C9005E0091E3C1 /* SocialMediaDetailViewController.m in Sources */,
-				BEE911B215C9B90200A9A784 /* UITextView+Facebook.m in Sources */,
 				BE424C1B15CB316500146D29 /* MyApplication.m in Sources */,
-				BE8CB75215CB7D030094F789 /* TwitterTableViewController.m in Sources */,
 				BE8CB75715CB9B4B0094F789 /* TPMTwitterTableViewController.m in Sources */,
 				BE03E0B015CF6D6E007759B1 /* TPMSocialMediaDetailViewController.m in Sources */,
 			);
@@ -394,7 +350,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
+				VALID_ARCHS = "armv6 armv7";
 			};
 			name = Debug;
 		};
@@ -413,8 +371,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv6 armv7";
 			};
 			name = Release;
 		};
@@ -427,7 +387,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/TPM\"",
+					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/TPM-fdbwnvbkcijihagbfwqtfthtfhqm/Build/Products/Debug-iphoneos\"",
+					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/TPMWorkSpace-euyfzrcsyncolcgpumamgccdyloa/Build/Products/Debug-iphoneos\"",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -443,7 +406,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/TPM\"",
+					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/TPM-fdbwnvbkcijihagbfwqtfthtfhqm/Build/Products/Debug-iphoneos\"",
+					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/TPMWorkSpace-euyfzrcsyncolcgpumamgccdyloa/Build/Products/Debug-iphoneos\"",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
