@@ -34,12 +34,37 @@
 		BEF4254515D6EC2B00C647BC /* libtheBlimpBaseClasses.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF4254415D6EC2B00C647BC /* libtheBlimpBaseClasses.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		BE443F2115D8A97F00A58FBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE443F1C15D8A97F00A58FBA /* theBlimpBaseClasses.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BEF4248015D6E2DF00C647BC;
+			remoteInfo = theBlimpBaseClasses;
+		};
+		BE443F2315D8A97F00A58FBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE443F1C15D8A97F00A58FBA /* theBlimpBaseClasses.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BEF4249015D6E2DF00C647BC;
+			remoteInfo = theBlimpBaseClassesTests;
+		};
+		BE443F3115D8A9B300A58FBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE443F1C15D8A97F00A58FBA /* theBlimpBaseClasses.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BEF4247F15D6E2DF00C647BC;
+			remoteInfo = theBlimpBaseClasses;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		BE03E0AE15CF6D6E007759B1 /* TPMSocialMediaDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPMSocialMediaDetailViewController.h; sourceTree = "<group>"; };
 		BE03E0AF15CF6D6E007759B1 /* TPMSocialMediaDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPMSocialMediaDetailViewController.m; sourceTree = "<group>"; };
 		BE0C9C1515C9077000A457CD /* f_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = f_logo.png; sourceTree = "<group>"; };
 		BE424C1915CB316500146D29 /* MyApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyApplication.m; sourceTree = "<group>"; };
 		BE424C1A15CB316500146D29 /* MyApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyApplication.h; sourceTree = "<group>"; };
+		BE443F1C15D8A97F00A58FBA /* theBlimpBaseClasses.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = theBlimpBaseClasses.xcodeproj; path = ../theBlimpBaseClasses/theBlimpBaseClasses.xcodeproj; sourceTree = "<group>"; };
 		BE4C4A8C15C8BA770091E3C1 /* FaceBookTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceBookTableViewController.h; sourceTree = "<group>"; };
 		BE4C4A9015C8BD380091E3C1 /* FBConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBConnect.h; sourceTree = "<group>"; };
 		BE4C4A9115C8BE080091E3C1 /* Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Facebook.h; sourceTree = "<group>"; };
@@ -112,6 +137,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE443F1D15D8A97F00A58FBA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE443F2215D8A97F00A58FBA /* libtheBlimpBaseClasses.a */,
+				BE443F2415D8A97F00A58FBA /* theBlimpBaseClassesTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		BE4C4A8915C8B8E20091E3C1 /* Base Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +206,7 @@
 				BE72310915C5FA72002EE577 /* TPM */,
 				BE72310215C5FA72002EE577 /* Frameworks */,
 				BE72310015C5FA72002EE577 /* Products */,
+				BE443F1C15D8A97F00A58FBA /* theBlimpBaseClasses.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -246,6 +281,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				BE443F3215D8A9B300A58FBA /* PBXTargetDependency */,
 			);
 			name = TPM;
 			productName = TPM;
@@ -271,12 +307,35 @@
 			mainGroup = BE7230F415C5FA71002EE577;
 			productRefGroup = BE72310015C5FA72002EE577 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BE443F1D15D8A97F00A58FBA /* Products */;
+					ProjectRef = BE443F1C15D8A97F00A58FBA /* theBlimpBaseClasses.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BE7230FE15C5FA72002EE577 /* TPM */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BE443F2215D8A97F00A58FBA /* libtheBlimpBaseClasses.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libtheBlimpBaseClasses.a;
+			remoteRef = BE443F2115D8A97F00A58FBA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BE443F2415D8A97F00A58FBA /* theBlimpBaseClassesTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = theBlimpBaseClassesTests.octest;
+			remoteRef = BE443F2315D8A97F00A58FBA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		BE7230FD15C5FA72002EE577 /* Resources */ = {
@@ -316,6 +375,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BE443F3215D8A9B300A58FBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = theBlimpBaseClasses;
+			targetProxy = BE443F3115D8A9B300A58FBA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BE72310C15C5FA72002EE577 /* InfoPlist.strings */ = {
