@@ -137,7 +137,6 @@
 		BE7230F415C5FA71002EE577 = {
 			isa = PBXGroup;
 			children = (
-				BEEB0AB815D9E9830026DD5E /* Accounts.framework */,
 				BE443F5A15D8BB9D00A58FBA /* libtheBlimpBaseClasses.a */,
 				BE8EFA3215C634C300A383FD /* TPM - iPhone.png */,
 				BE8EFA3015C6349400A383FD /* TPM - iPhone - Retina.png */,
@@ -159,6 +158,7 @@
 		BE72310215C5FA72002EE577 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BEEB0AB815D9E9830026DD5E /* Accounts.framework */,
 				BE8CB75315CB7E4D0094F789 /* Twitter.framework */,
 				BE4C4AAD15C8C7F90091E3C1 /* CoreImage.framework */,
 				BE72310315C5FA72002EE577 /* UIKit.framework */,
