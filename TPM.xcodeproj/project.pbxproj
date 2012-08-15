@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		BE03E0B015CF6D6E007759B1 /* TPMSocialMediaDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE03E0AF15CF6D6E007759B1 /* TPMSocialMediaDetailViewController.m */; };
 		BE424C1B15CB316500146D29 /* MyApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = BE424C1915CB316500146D29 /* MyApplication.m */; };
-		BE443F5B15D8BB9D00A58FBA /* libtheBlimpBaseClasses.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE443F5A15D8BB9D00A58FBA /* libtheBlimpBaseClasses.a */; };
 		BE4C4AAE15C8C7F90091E3C1 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4C4AAD15C8C7F90091E3C1 /* CoreImage.framework */; };
 		BE4C4AB815C8F8620091E3C1 /* TPMFacebookTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4C4AB715C8F8620091E3C1 /* TPMFacebookTableViewController.m */; };
 		BE4C4ABC15C8FD1A0091E3C1 /* FacebookButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE4C4ABB15C8FD1A0091E3C1 /* FacebookButton@2x.png */; };
@@ -30,26 +29,28 @@
 		BE8EFA3715C635CD00A383FD /* TPM_Default_Cell_Image.png in Resources */ = {isa = PBXBuildFile; fileRef = BE8EFA3615C635CD00A383FD /* TPM_Default_Cell_Image.png */; };
 		BE8EFA3A15C63B6400A383FD /* TPMRSSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8EFA3915C63B6400A383FD /* TPMRSSViewController.m */; };
 		BEEB0AB915D9E9830026DD5E /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEB0AB815D9E9830026DD5E /* Accounts.framework */; };
+		BEEDC98915DB846900D1CAA1 /* libtheBlimpBaseClasses.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEDC98415DB844E00D1CAA1 /* libtheBlimpBaseClasses.a */; };
+		BEEDC99F15DB85D800D1CAA1 /* 112-group.png in Resources */ = {isa = PBXBuildFile; fileRef = BEEDC99E15DB85D800D1CAA1 /* 112-group.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BEEB0AA815D9C9560026DD5E /* PBXContainerItemProxy */ = {
+		BEEDC98315DB844E00D1CAA1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = BEEB0AA315D9C9560026DD5E /* theBlimpBaseClasses.xcodeproj */;
+			containerPortal = BEEDC97B15DB844E00D1CAA1 /* theBlimpBaseClasses.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = BEF4248015D6E2DF00C647BC;
 			remoteInfo = theBlimpBaseClasses;
 		};
-		BEEB0AAA15D9C9560026DD5E /* PBXContainerItemProxy */ = {
+		BEEDC98515DB844E00D1CAA1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = BEEB0AA315D9C9560026DD5E /* theBlimpBaseClasses.xcodeproj */;
+			containerPortal = BEEDC97B15DB844E00D1CAA1 /* theBlimpBaseClasses.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = BEF4249015D6E2DF00C647BC;
 			remoteInfo = theBlimpBaseClassesTests;
 		};
-		BEEB0AAD15D9CA030026DD5E /* PBXContainerItemProxy */ = {
+		BEEDC98715DB846100D1CAA1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = BEEB0AA315D9C9560026DD5E /* theBlimpBaseClasses.xcodeproj */;
+			containerPortal = BEEDC97B15DB844E00D1CAA1 /* theBlimpBaseClasses.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = BEF4247F15D6E2DF00C647BC;
 			remoteInfo = theBlimpBaseClasses;
@@ -61,7 +62,6 @@
 		BE03E0AF15CF6D6E007759B1 /* TPMSocialMediaDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPMSocialMediaDetailViewController.m; sourceTree = "<group>"; };
 		BE424C1915CB316500146D29 /* MyApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyApplication.m; sourceTree = "<group>"; };
 		BE424C1A15CB316500146D29 /* MyApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyApplication.h; sourceTree = "<group>"; };
-		BE443F5A15D8BB9D00A58FBA /* libtheBlimpBaseClasses.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtheBlimpBaseClasses.a; path = "../../Library/Developer/Xcode/DerivedData/TPMWorkSpace-euyfzrcsyncolcgpumamgccdyloa/Build/Products/Debug-iphoneos/libtheBlimpBaseClasses.a"; sourceTree = "<group>"; };
 		BE4C4AAD15C8C7F90091E3C1 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		BE4C4AB615C8F8610091E3C1 /* TPMFacebookTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPMFacebookTableViewController.h; sourceTree = "<group>"; };
 		BE4C4AB715C8F8620091E3C1 /* TPMFacebookTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPMFacebookTableViewController.m; sourceTree = "<group>"; };
@@ -88,8 +88,9 @@
 		BE8EFA3615C635CD00A383FD /* TPM_Default_Cell_Image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TPM_Default_Cell_Image.png; sourceTree = "<group>"; };
 		BE8EFA3815C63B6400A383FD /* TPMRSSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPMRSSViewController.h; sourceTree = "<group>"; };
 		BE8EFA3915C63B6400A383FD /* TPMRSSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPMRSSViewController.m; sourceTree = "<group>"; };
-		BEEB0AA315D9C9560026DD5E /* theBlimpBaseClasses.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = theBlimpBaseClasses.xcodeproj; path = ../theBlimpBaseClasses/theBlimpBaseClasses.xcodeproj; sourceTree = "<group>"; };
 		BEEB0AB815D9E9830026DD5E /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		BEEDC97B15DB844E00D1CAA1 /* theBlimpBaseClasses.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = theBlimpBaseClasses.xcodeproj; path = ../theBlimpBaseClasses/theBlimpBaseClasses.xcodeproj; sourceTree = "<group>"; };
+		BEEDC99E15DB85D800D1CAA1 /* 112-group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "112-group.png"; path = "../../theBlimpBaseClasses/theBlimpBaseClasses/112-group.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +98,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEEDC98915DB846900D1CAA1 /* libtheBlimpBaseClasses.a in Frameworks */,
 				BEEB0AB915D9E9830026DD5E /* Accounts.framework in Frameworks */,
-				BE443F5B15D8BB9D00A58FBA /* libtheBlimpBaseClasses.a in Frameworks */,
 				BE8CB75415CB7E4D0094F789 /* Twitter.framework in Frameworks */,
 				BE4C4AAE15C8C7F90091E3C1 /* CoreImage.framework in Frameworks */,
 				BE72310415C5FA72002EE577 /* UIKit.framework in Frameworks */,
@@ -137,13 +138,12 @@
 		BE7230F415C5FA71002EE577 = {
 			isa = PBXGroup;
 			children = (
-				BE443F5A15D8BB9D00A58FBA /* libtheBlimpBaseClasses.a */,
 				BE8EFA3215C634C300A383FD /* TPM - iPhone.png */,
 				BE8EFA3015C6349400A383FD /* TPM - iPhone - Retina.png */,
 				BE72310915C5FA72002EE577 /* TPM */,
 				BE72310215C5FA72002EE577 /* Frameworks */,
 				BE72310015C5FA72002EE577 /* Products */,
-				BEEB0AA315D9C9560026DD5E /* theBlimpBaseClasses.xcodeproj */,
+				BEEDC97B15DB844E00D1CAA1 /* theBlimpBaseClasses.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -192,6 +192,7 @@
 		BE72310A15C5FA72002EE577 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BEEDC99E15DB85D800D1CAA1 /* 112-group.png */,
 				BE4C4A8F15C8BD1C0091E3C1 /* Facebook */,
 				BE4C4A8B15C8B91E0091E3C1 /* Categories */,
 				BE4C4A8915C8B8E20091E3C1 /* Base Classes */,
@@ -205,11 +206,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		BEEB0AA415D9C9560026DD5E /* Products */ = {
+		BEEDC97C15DB844E00D1CAA1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BEEB0AA915D9C9560026DD5E /* libtheBlimpBaseClasses.a */,
-				BEEB0AAB15D9C9560026DD5E /* theBlimpBaseClassesTests.octest */,
+				BEEDC98415DB844E00D1CAA1 /* libtheBlimpBaseClasses.a */,
+				BEEDC98615DB844E00D1CAA1 /* theBlimpBaseClassesTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -228,7 +229,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				BEEB0AAE15D9CA030026DD5E /* PBXTargetDependency */,
+				BEEDC98815DB846100D1CAA1 /* PBXTargetDependency */,
 			);
 			name = TPM;
 			productName = TPM;
@@ -256,8 +257,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = BEEB0AA415D9C9560026DD5E /* Products */;
-					ProjectRef = BEEB0AA315D9C9560026DD5E /* theBlimpBaseClasses.xcodeproj */;
+					ProductGroup = BEEDC97C15DB844E00D1CAA1 /* Products */;
+					ProjectRef = BEEDC97B15DB844E00D1CAA1 /* theBlimpBaseClasses.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -268,18 +269,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		BEEB0AA915D9C9560026DD5E /* libtheBlimpBaseClasses.a */ = {
+		BEEDC98415DB844E00D1CAA1 /* libtheBlimpBaseClasses.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libtheBlimpBaseClasses.a;
-			remoteRef = BEEB0AA815D9C9560026DD5E /* PBXContainerItemProxy */;
+			remoteRef = BEEDC98315DB844E00D1CAA1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		BEEB0AAB15D9C9560026DD5E /* theBlimpBaseClassesTests.octest */ = {
+		BEEDC98615DB844E00D1CAA1 /* theBlimpBaseClassesTests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = theBlimpBaseClassesTests.octest;
-			remoteRef = BEEB0AAA15D9C9560026DD5E /* PBXContainerItemProxy */;
+			remoteRef = BEEDC98515DB844E00D1CAA1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -298,6 +299,7 @@
 				BE4C4ABC15C8FD1A0091E3C1 /* FacebookButton@2x.png in Resources */,
 				BE8CB74D15CB765F0094F789 /* twitterTabBarIcon@2x.png in Resources */,
 				BE8CB74F15CB779E0094F789 /* twitterTabBarIcon.png in Resources */,
+				BEEDC99F15DB85D800D1CAA1 /* 112-group.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,10 +323,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BEEB0AAE15D9CA030026DD5E /* PBXTargetDependency */ = {
+		BEEDC98815DB846100D1CAA1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = theBlimpBaseClasses;
-			targetProxy = BEEB0AAD15D9CA030026DD5E /* PBXContainerItemProxy */;
+			targetProxy = BEEDC98715DB846100D1CAA1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -400,8 +402,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/TPM\"",
-					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/TPM-fdbwnvbkcijihagbfwqtfthtfhqm/Build/Products/Debug-iphoneos\"",
-					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/TPMWorkSpace-euyfzrcsyncolcgpumamgccdyloa/Build/Products/Debug-iphoneos\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -420,8 +420,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/TPM\"",
-					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/TPM-fdbwnvbkcijihagbfwqtfthtfhqm/Build/Products/Debug-iphoneos\"",
-					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/TPMWorkSpace-euyfzrcsyncolcgpumamgccdyloa/Build/Products/Debug-iphoneos\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
