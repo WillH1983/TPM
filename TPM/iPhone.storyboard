@@ -386,7 +386,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="quj-6D-358" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="441" y="541"/>
+            <point key="canvasLocation" x="460" y="541"/>
         </scene>
         <!--Navigation Controller - Twitter-->
         <scene sceneID="27L-xQ-LcK">
@@ -816,6 +816,70 @@
         <image name="FacebookButton@2x.png" width="94" height="37"/>
         <image name="twitterTabBarIcon.png" width="38" height="38"/>
     </resources>
+    <classes>
+        <class className="FaceBookTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FaceBookTableViewController.h"/>
+        </class>
+        <class className="ImageViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ImageViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="navigationBar" candidateClass="UINavigationBar"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="RSSTableView" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RSSTableView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="SocialMediaDetailViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SocialMediaDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="profilePictureImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="TPMFacebookTableViewController" superclassName="FaceBookTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TPMFacebookTableViewController.h"/>
+        </class>
+        <class className="TPMRSSViewController" superclassName="RSSTableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TPMRSSViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="featureStoriesActivityIndicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="featuredStoriesLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="pageControl" candidateClass="UIPageControl"/>
+                <relationship kind="outlet" name="pagingScrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="TPMSocialMediaDetailViewController" superclassName="SocialMediaDetailViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TPMSocialMediaDetailViewController.h"/>
+        </class>
+        <class className="TPMTwitterTableViewController" superclassName="TwitterTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TPMTwitterTableViewController.h"/>
+        </class>
+        <class className="TextEntryViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TextEntryViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="navigationBar" candidateClass="UINavigationBar"/>
+                <relationship kind="outlet" name="submitButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="TwitterConversationTableViewController" superclassName="TwitterTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TwitterConversationTableViewController.h"/>
+        </class>
+        <class className="TwitterTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TwitterTableViewController.h"/>
+        </class>
+        <class className="WebViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WebViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
