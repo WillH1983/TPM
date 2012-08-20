@@ -24,7 +24,7 @@
     facebook = [[Facebook alloc] initWithAppId:FACEBOOK_APP_ID andDelegate:nil];
     self.appConfiguration.facebookID = FACEBOOK_APP_ID;
     self.appConfiguration.facebookFeedToRequest = @"techpoweredmath";
-    self.appConfiguration.twitterUserNameToRequest = @"theblimpinc";
+    self.appConfiguration.twitterUserNameToRequest = @"techpoweredmath";
 
     application.statusBarStyle = UIStatusBarStyleBlackOpaque;
     return YES;
