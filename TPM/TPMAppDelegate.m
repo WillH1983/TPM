@@ -13,7 +13,7 @@
 
 @synthesize window = _window;
 @synthesize appConfiguration = _appConfiguration;
-@synthesize facebook;
+@synthesize facebookSession = _facebookSession;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -21,7 +21,8 @@
     self.appConfiguration.RSSlink = [[NSURL alloc] initWithString:@"http://www.techpoweredmath.com/feed"];
     self.appConfiguration.defaultLocalPathImageForTableViewCell = @"TPM_Default_Cell_Image";
     self.appConfiguration.appName = @"Tech Powered Math";
-    facebook = [[Facebook alloc] initWithAppId:FACEBOOK_APP_ID andDelegate:nil];
+    facebookSession = [[FBSession alloc] init];
+    [FBSession setDefaultAppID:FACEBOOK_APP_ID];
     self.appConfiguration.facebookID = FACEBOOK_APP_ID;
     self.appConfiguration.facebookFeedToRequest = @"techpoweredmath";
     self.appConfiguration.twitterUserNameToRequest = @"techpoweredmath";
@@ -57,16 +58,12 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-// Pre iOS 4.2 support
-- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
-    return [facebook handleOpenURL:url]; 
-}
-
 // For iOS 4.2+ support
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    return [facebook handleOpenURL:url]; 
+    return [FBSession.activeSession handleOpenURL:url]; 
 }
+
 
 -(BOOL)openURL:(NSURL *)url
 {

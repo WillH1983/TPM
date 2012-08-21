@@ -7,19 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FacebookSDK/FacebookSDK.h>
 #import "NSMutableDictionary+appConfiguration.h"
-#import "FBConnect.h"
 
 #define FACEBOOK_APP_ID @"268933006548697"
 
 @interface TPMAppDelegate : UIResponder <UIApplicationDelegate>
 {
-    Facebook *facebook;
+    FBSession *facebookSession;
 }
     
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) NSMutableDictionary *appConfiguration;
-@property (retain, nonatomic) Facebook *facebook;
+@property (strong, nonatomic) FBSession *facebookSession;
 
 - (BOOL)openURL:(NSURL *)url;
 

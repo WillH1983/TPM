@@ -29,6 +29,8 @@
 		BE8EFA3715C635CD00A383FD /* TPM_Default_Cell_Image.png in Resources */ = {isa = PBXBuildFile; fileRef = BE8EFA3615C635CD00A383FD /* TPM_Default_Cell_Image.png */; };
 		BE8EFA3A15C63B6400A383FD /* TPMRSSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8EFA3915C63B6400A383FD /* TPMRSSViewController.m */; };
 		BE96C0CD15E1FA71009A05DC /* libtheBlimpBaseClasses.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE443F2215D8A97F00A58FBA /* libtheBlimpBaseClasses.a */; };
+		BED7BDF315E357AE00EF45FC /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED7BDF215E357AE00EF45FC /* FacebookSDK.framework */; };
+		BED7BDF515E357B900EF45FC /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BED7BDF415E357B900EF45FC /* FacebookSDKResources.bundle */; };
 		BEEB0AB915D9E9830026DD5E /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEB0AB815D9E9830026DD5E /* Accounts.framework */; };
 		BEEDC99F15DB85D800D1CAA1 /* 112-group.png in Resources */ = {isa = PBXBuildFile; fileRef = BEEDC99E15DB85D800D1CAA1 /* 112-group.png */; };
 /* End PBXBuildFile section */
@@ -89,6 +91,8 @@
 		BE8EFA3615C635CD00A383FD /* TPM_Default_Cell_Image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TPM_Default_Cell_Image.png; sourceTree = "<group>"; };
 		BE8EFA3815C63B6400A383FD /* TPMRSSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPMRSSViewController.h; sourceTree = "<group>"; };
 		BE8EFA3915C63B6400A383FD /* TPMRSSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPMRSSViewController.m; sourceTree = "<group>"; };
+		BED7BDF215E357AE00EF45FC /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = "../facebook-ios-sdk/build/FacebookSDK.framework"; sourceTree = "<group>"; };
+		BED7BDF415E357B900EF45FC /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKResources.bundle; path = "../facebook-ios-sdk/build/FacebookSDK.framework/Versions/A/Resources/FacebookSDKResources.bundle"; sourceTree = "<group>"; };
 		BEEB0AB815D9E9830026DD5E /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		BEEDC99E15DB85D800D1CAA1 /* 112-group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "112-group.png"; path = "../../theBlimpBaseClasses/theBlimpBaseClasses/112-group.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +109,7 @@
 				BE72310415C5FA72002EE577 /* UIKit.framework in Frameworks */,
 				BE72310615C5FA72002EE577 /* Foundation.framework in Frameworks */,
 				BE72310815C5FA72002EE577 /* CoreGraphics.framework in Frameworks */,
+				BED7BDF315E357AE00EF45FC /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +172,8 @@
 		BE72310215C5FA72002EE577 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BED7BDF415E357B900EF45FC /* FacebookSDKResources.bundle */,
+				BED7BDF215E357AE00EF45FC /* FacebookSDK.framework */,
 				BEEB0AB815D9E9830026DD5E /* Accounts.framework */,
 				BE8CB75315CB7E4D0094F789 /* Twitter.framework */,
 				BE4C4AAD15C8C7F90091E3C1 /* CoreImage.framework */,
@@ -300,6 +307,7 @@
 				BE8CB74D15CB765F0094F789 /* twitterTabBarIcon@2x.png in Resources */,
 				BE8CB74F15CB779E0094F789 /* twitterTabBarIcon.png in Resources */,
 				BEEDC99F15DB85D800D1CAA1 /* 112-group.png in Resources */,
+				BED7BDF515E357B900EF45FC /* FacebookSDKResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,7 +371,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lsqlist3.0",
+				);
 				SDKROOT = iphoneos;
 				VALID_ARCHS = "armv6 armv7";
 			};
@@ -384,7 +395,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lsqlist3.0",
+				);
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -395,6 +409,10 @@
 		BE72311815C5FA72002EE577 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../facebook-ios-sdk/build\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TPM/TPM-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"../theBlimpBaseClasses/theBlimpBaseClasses\"";
@@ -403,7 +421,10 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/TPM\"",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lsqlite3.0",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -413,6 +434,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../facebook-ios-sdk/build\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TPM/TPM-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"../theBlimpBaseClasses/theBlimpBaseClasses\"";
@@ -421,7 +446,10 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/TPM\"",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lsqlite3.0",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;

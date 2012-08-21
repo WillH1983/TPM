@@ -59,5 +59,7 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
+	<key>FacebookAppID</key>
+	<string>268933006548697</string>
 </dict>
 </plist>
