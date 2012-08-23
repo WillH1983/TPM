@@ -8,6 +8,7 @@
 
 #import "TPMAppDelegate.h"
 #import "NSMutableDictionary+appConfiguration.h"
+#import "UAirship.h"
 
 @implementation TPMAppDelegate
 
@@ -28,7 +29,37 @@
     self.appConfiguration.twitterUserNameToRequest = @"techpoweredmath";
 
     application.statusBarStyle = UIStatusBarStyleBlackOpaque;
+    
+    //Init Airship launch options
+    NSMutableDictionary *takeOffOptions = [[NSMutableDictionary alloc] init];
+    [takeOffOptions setValue:launchOptions forKey:UAirshipTakeOffOptionsLaunchOptionsKey];
+    
+    // Create Airship singleton that's used to talk to Urban Airship servers.
+    // Please populate AirshipConfig.plist with your info from http://go.urbanairship.com
+    [UAirship takeOff:takeOffOptions];
+    
+    // Register for notifications
+    [[UIApplication sharedApplication]
+     registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
+                                         UIRemoteNotificationTypeSound |
+                                         UIRemoteNotificationTypeAlert)];
+    
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber: 1];
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber: 0];
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    
     return YES;
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:self.appConfiguration.appName message:[userInfo valueForKeyPath:@"aps.alert"] delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles: nil];
+    [alertView show];
+    /*[[UIApplication sharedApplication] setApplicationIconBadgeNumber: 1];
+     [[UIApplication sharedApplication] setApplicationIconBadgeNumber: 0];
+     [[UIApplication sharedApplication] cancelAllLocalNotifications];*/
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -57,12 +88,30 @@
     if (FBSession.activeSession.state == FBSessionStateCreatedOpening) {
         [FBSession.activeSession close]; // so we close our session and start over
     }
+    
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber: 1];
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber: 0];
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     [FBSession.activeSession close];
+    
+    [UAirship land];
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    // Updates the device token and registers the token with UA
+    [[UAirship shared] registerDeviceToken:deviceToken];
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+{
+    NSLog(@"%@", error);
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:self.appConfiguration.appName message:[error localizedDescription] delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles: nil];
+    [alertView show];
 }
 
 // For iOS 4.2+ support

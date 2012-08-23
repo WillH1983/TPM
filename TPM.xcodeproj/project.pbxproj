@@ -21,6 +21,17 @@
 		BE72311015C5FA72002EE577 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE72310F15C5FA72002EE577 /* main.m */; };
 		BE72311415C5FA72002EE577 /* TPMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE72311315C5FA72002EE577 /* TPMAppDelegate.m */; };
 		BE72312515C5FA8F002EE577 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE72311C15C5FA8F002EE577 /* iPhone.storyboard */; };
+		BE73F7FF15E5D772003B6FA1 /* libUAirship-1.2.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE73F7FE15E5D772003B6FA1 /* libUAirship-1.2.2.a */; };
+		BE73F80115E5D7F1003B6FA1 /* AirshipConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE73F80015E5D7F1003B6FA1 /* AirshipConfig.plist */; };
+		BE73F80315E5D9BB003B6FA1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE73F80215E5D9BB003B6FA1 /* CoreLocation.framework */; };
+		BE73F80515E5DA66003B6FA1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE73F80415E5DA66003B6FA1 /* CFNetwork.framework */; };
+		BE73F80715E5DA7E003B6FA1 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE73F80615E5DA7E003B6FA1 /* MobileCoreServices.framework */; };
+		BE73F80915E5DA86003B6FA1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE73F80815E5DA86003B6FA1 /* Security.framework */; };
+		BE73F80B15E5DA94003B6FA1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE73F80A15E5DA94003B6FA1 /* SystemConfiguration.framework */; };
+		BE73F80D15E5DAA0003B6FA1 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BE73F80C15E5DAA0003B6FA1 /* libz.dylib */; };
+		BE73F80F15E5DAB3003B6FA1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BE73F80E15E5DAB3003B6FA1 /* libsqlite3.dylib */; };
+		BE73F81115E5DABC003B6FA1 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE73F81015E5DABC003B6FA1 /* CoreTelephony.framework */; };
+		BE73F81315E5DAC3003B6FA1 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE73F81215E5DAC3003B6FA1 /* StoreKit.framework */; };
 		BE84D25215E5BB8D004F444F /* 112-group.png in Resources */ = {isa = PBXBuildFile; fileRef = BE84D25115E5BB8D004F444F /* 112-group.png */; };
 		BE8CB74D15CB765F0094F789 /* twitterTabBarIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE8CB74C15CB765F0094F789 /* twitterTabBarIcon@2x.png */; };
 		BE8CB74F15CB779E0094F789 /* twitterTabBarIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = BE8CB74E15CB779E0094F789 /* twitterTabBarIcon.png */; };
@@ -84,6 +95,17 @@
 		BE72311215C5FA72002EE577 /* TPMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPMAppDelegate.h; sourceTree = "<group>"; };
 		BE72311315C5FA72002EE577 /* TPMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPMAppDelegate.m; sourceTree = "<group>"; };
 		BE72311C15C5FA8F002EE577 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
+		BE73F7FE15E5D772003B6FA1 /* libUAirship-1.2.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libUAirship-1.2.2.a"; path = "../../Airship/libUAirship-1.2.2.a"; sourceTree = "<group>"; };
+		BE73F80015E5D7F1003B6FA1 /* AirshipConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = AirshipConfig.plist; sourceTree = "<group>"; };
+		BE73F80215E5D9BB003B6FA1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		BE73F80415E5DA66003B6FA1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		BE73F80615E5DA7E003B6FA1 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		BE73F80815E5DA86003B6FA1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		BE73F80A15E5DA94003B6FA1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		BE73F80C15E5DAA0003B6FA1 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		BE73F80E15E5DAB3003B6FA1 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		BE73F81015E5DABC003B6FA1 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		BE73F81215E5DAC3003B6FA1 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		BE84D25115E5BB8D004F444F /* 112-group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "112-group.png"; sourceTree = "<group>"; };
 		BE8CB74C15CB765F0094F789 /* twitterTabBarIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitterTabBarIcon@2x.png"; sourceTree = "<group>"; };
 		BE8CB74E15CB779E0094F789 /* twitterTabBarIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitterTabBarIcon.png; sourceTree = "<group>"; };
@@ -106,6 +128,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE73F80315E5D9BB003B6FA1 /* CoreLocation.framework in Frameworks */,
+				BE73F81315E5DAC3003B6FA1 /* StoreKit.framework in Frameworks */,
+				BE73F81115E5DABC003B6FA1 /* CoreTelephony.framework in Frameworks */,
+				BE73F80F15E5DAB3003B6FA1 /* libsqlite3.dylib in Frameworks */,
+				BE73F80D15E5DAA0003B6FA1 /* libz.dylib in Frameworks */,
+				BE73F80B15E5DA94003B6FA1 /* SystemConfiguration.framework in Frameworks */,
+				BE73F80915E5DA86003B6FA1 /* Security.framework in Frameworks */,
+				BE73F80715E5DA7E003B6FA1 /* MobileCoreServices.framework in Frameworks */,
+				BE72310815C5FA72002EE577 /* CoreGraphics.framework in Frameworks */,
+				BE73F80515E5DA66003B6FA1 /* CFNetwork.framework in Frameworks */,
 				BE01FE3A15E5BF3500E92654 /* QuartzCore.framework in Frameworks */,
 				BE96C0CD15E1FA71009A05DC /* libtheBlimpBaseClasses.a in Frameworks */,
 				BEEB0AB915D9E9830026DD5E /* Accounts.framework in Frameworks */,
@@ -113,8 +145,8 @@
 				BE4C4AAE15C8C7F90091E3C1 /* CoreImage.framework in Frameworks */,
 				BE72310415C5FA72002EE577 /* UIKit.framework in Frameworks */,
 				BE72310615C5FA72002EE577 /* Foundation.framework in Frameworks */,
-				BE72310815C5FA72002EE577 /* CoreGraphics.framework in Frameworks */,
 				BED7BDF315E357AE00EF45FC /* FacebookSDK.framework in Frameworks */,
+				BE73F7FF15E5D772003B6FA1 /* libUAirship-1.2.2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +209,15 @@
 		BE72310215C5FA72002EE577 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BE73F81215E5DAC3003B6FA1 /* StoreKit.framework */,
+				BE73F81015E5DABC003B6FA1 /* CoreTelephony.framework */,
+				BE73F80E15E5DAB3003B6FA1 /* libsqlite3.dylib */,
+				BE73F80C15E5DAA0003B6FA1 /* libz.dylib */,
+				BE73F80A15E5DA94003B6FA1 /* SystemConfiguration.framework */,
+				BE73F80815E5DA86003B6FA1 /* Security.framework */,
+				BE73F80615E5DA7E003B6FA1 /* MobileCoreServices.framework */,
+				BE73F80415E5DA66003B6FA1 /* CFNetwork.framework */,
+				BE73F80215E5D9BB003B6FA1 /* CoreLocation.framework */,
 				BE01FE3915E5BF3500E92654 /* QuartzCore.framework */,
 				BED7BDF415E357B900EF45FC /* FacebookSDKResources.bundle */,
 				BED7BDF215E357AE00EF45FC /* FacebookSDK.framework */,
@@ -225,6 +266,8 @@
 				BE72310C15C5FA72002EE577 /* InfoPlist.strings */,
 				BE72310F15C5FA72002EE577 /* main.m */,
 				BE72311115C5FA72002EE577 /* TPM-Prefix.pch */,
+				BE73F7FE15E5D772003B6FA1 /* libUAirship-1.2.2.a */,
+				BE73F80015E5D7F1003B6FA1 /* AirshipConfig.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -316,6 +359,7 @@
 				BED7BDF515E357B900EF45FC /* FacebookSDKResources.bundle in Resources */,
 				BE84D25215E5BB8D004F444F /* 112-group.png in Resources */,
 				BE01FE3F15E5C00200E92654 /* arrow.png in Resources */,
+				BE73F80115E5D7F1003B6FA1 /* AirshipConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +422,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "../Airship/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -401,6 +446,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "../Airship/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = (
@@ -423,11 +469,15 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TPM/TPM-Prefix.pch";
-				HEADER_SEARCH_PATHS = "\"../theBlimpBaseClasses/theBlimpBaseClasses\"";
+				HEADER_SEARCH_PATHS = (
+					"\"../theBlimpBaseClasses/theBlimpBaseClasses\"",
+					"../Airship/**",
+				);
 				INFOPLIST_FILE = "TPM/TPM-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/TPM\"",
+					"\"$(SRCROOT)/../Airship\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -448,11 +498,15 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TPM/TPM-Prefix.pch";
-				HEADER_SEARCH_PATHS = "\"../theBlimpBaseClasses/theBlimpBaseClasses\"";
+				HEADER_SEARCH_PATHS = (
+					"\"../theBlimpBaseClasses/theBlimpBaseClasses\"",
+					"../Airship/**",
+				);
 				INFOPLIST_FILE = "TPM/TPM-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/TPM\"",
+					"\"$(SRCROOT)/../Airship\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
