@@ -79,13 +79,18 @@
        {
            NSString *content = [dictionary valueForKeyPath:@"content:encoded.text"];
            NSURL *url = content.imageFromHTMLString;
-               NSData *picture = nil;
-               if (url)
-               {
-                   picture = [NSData dataWithContentsOfURL:url];
-                   UIImage *image = [UIImage imageWithData:picture];
-                   [self.pageImages addObject:image];
-               }
+           NSData *picture = nil;
+           UIImage *image = nil;
+           if (url)
+           {
+               picture = [NSData dataWithContentsOfURL:url];
+               image = [UIImage imageWithData:picture];
+           }
+           else 
+           {
+               image = [UIImage imageNamed:@"TPM_Default_Cell_Image@2x.png"];
+           }
+           [self.pageImages addObject:image];
        }
         dispatch_async(dispatch_get_main_queue(), ^{
             [bself loadPageControls];
