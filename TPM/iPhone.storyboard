@@ -358,6 +358,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Post" id="pBA-CC-C2q">
                             <connections>
                                 <action selector="postToWall:" destination="RXx-su-17j" id="sbh-sa-82l"/>
+                                <segue destination="rgA-dr-sSp" kind="modal" identifier="PostToPage" id="WPm-3Q-9BP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -365,7 +366,7 @@
                         <outlet property="logInOutButton" destination="SvJ-SG-gUp" id="to8-59-fDH"/>
                         <segue destination="AYI-80-p8y" kind="push" identifier="detailView" id="5ZW-OI-56m"/>
                         <segue destination="BdT-yz-PwX" kind="modal" identifier="Photo" id="JLI-W0-NPj"/>
-                        <segue destination="rgA-dr-sSp" kind="modal" identifier="textInput" id="0Th-a7-vgz"/>
+                        <segue destination="rgA-dr-sSp" kind="modal" identifier="CommentOnPost" id="0Th-a7-vgz"/>
                         <segue destination="3rO-41-YSS" kind="push" identifier="Web" id="q4o-QJ-iX2"/>
                     </connections>
                 </tableViewController>
@@ -823,7 +824,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="0Th-a7-vgz"/>
         <segue reference="q4o-QJ-iX2"/>
+        <segue reference="WPm-3Q-9BP"/>
     </inferredMetricsTieBreakers>
 </document>
