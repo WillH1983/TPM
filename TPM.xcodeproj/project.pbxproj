@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE01FE3A15E5BF3500E92654 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE01FE3915E5BF3500E92654 /* QuartzCore.framework */; };
+		BE01FE3F15E5C00200E92654 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = BE01FE3E15E5C00200E92654 /* arrow.png */; };
 		BE03E0B015CF6D6E007759B1 /* TPMSocialMediaDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE03E0AF15CF6D6E007759B1 /* TPMSocialMediaDetailViewController.m */; };
 		BE424C1B15CB316500146D29 /* MyApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = BE424C1915CB316500146D29 /* MyApplication.m */; };
 		BE4C4AAE15C8C7F90091E3C1 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4C4AAD15C8C7F90091E3C1 /* CoreImage.framework */; };
@@ -60,6 +62,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE01FE3915E5BF3500E92654 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		BE01FE3E15E5C00200E92654 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		BE03E0AE15CF6D6E007759B1 /* TPMSocialMediaDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPMSocialMediaDetailViewController.h; sourceTree = "<group>"; };
 		BE03E0AF15CF6D6E007759B1 /* TPMSocialMediaDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPMSocialMediaDetailViewController.m; sourceTree = "<group>"; };
 		BE424C1915CB316500146D29 /* MyApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyApplication.m; sourceTree = "<group>"; };
@@ -102,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE01FE3A15E5BF3500E92654 /* QuartzCore.framework in Frameworks */,
 				BE96C0CD15E1FA71009A05DC /* libtheBlimpBaseClasses.a in Frameworks */,
 				BEEB0AB915D9E9830026DD5E /* Accounts.framework in Frameworks */,
 				BE8CB75415CB7E4D0094F789 /* Twitter.framework in Frameworks */,
@@ -172,6 +177,7 @@
 		BE72310215C5FA72002EE577 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BE01FE3915E5BF3500E92654 /* QuartzCore.framework */,
 				BED7BDF415E357B900EF45FC /* FacebookSDKResources.bundle */,
 				BED7BDF215E357AE00EF45FC /* FacebookSDK.framework */,
 				BEEB0AB815D9E9830026DD5E /* Accounts.framework */,
@@ -201,6 +207,7 @@
 				BE8CB74C15CB765F0094F789 /* twitterTabBarIcon@2x.png */,
 				BE8CB74E15CB779E0094F789 /* twitterTabBarIcon.png */,
 				BE84D25115E5BB8D004F444F /* 112-group.png */,
+				BE01FE3E15E5C00200E92654 /* arrow.png */,
 				BE72310A15C5FA72002EE577 /* Supporting Files */,
 			);
 			path = TPM;
@@ -308,6 +315,7 @@
 				BE8CB74F15CB779E0094F789 /* twitterTabBarIcon.png in Resources */,
 				BED7BDF515E357B900EF45FC /* FacebookSDKResources.bundle in Resources */,
 				BE84D25215E5BB8D004F444F /* 112-group.png in Resources */,
+				BE01FE3F15E5C00200E92654 /* arrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
