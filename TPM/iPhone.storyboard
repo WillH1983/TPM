@@ -735,7 +735,7 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aBd-c7-7GI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="U4p-bM-1sO" customClass="TwitterConversationTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="118" sectionHeaderHeight="10" sectionFooterHeight="10" id="FEp-SL-CQJ">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="118" sectionHeaderHeight="10" sectionFooterHeight="10" id="FEp-SL-CQJ">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -894,7 +894,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="q4o-QJ-iX2"/>
-        <segue reference="WPm-3Q-9BP"/>
+        <segue reference="rbE-Uu-tlq"/>
+        <segue reference="Ulf-fg-jEC"/>
     </inferredMetricsTieBreakers>
 </document>
