@@ -43,7 +43,9 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>2</string>
+	<key>FacebookAppID</key>
+	<string>268933006548697</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIMainStoryboardFile</key>
@@ -59,7 +61,5 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
-	<key>FacebookAppID</key>
-	<string>268933006548697</string>
 </dict>
 </plist>

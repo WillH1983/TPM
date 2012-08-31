@@ -10,6 +10,7 @@
 		BE01FE3A15E5BF3500E92654 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE01FE3915E5BF3500E92654 /* QuartzCore.framework */; };
 		BE01FE3F15E5C00200E92654 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = BE01FE3E15E5C00200E92654 /* arrow.png */; };
 		BE03E0B015CF6D6E007759B1 /* TPMSocialMediaDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE03E0AF15CF6D6E007759B1 /* TPMSocialMediaDetailViewController.m */; };
+		BE29DDEE15F057B000B5DFE2 /* Libraries.txt in Resources */ = {isa = PBXBuildFile; fileRef = BE29DDED15F057B000B5DFE2 /* Libraries.txt */; };
 		BE424C1B15CB316500146D29 /* MyApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = BE424C1915CB316500146D29 /* MyApplication.m */; };
 		BE4C4AAE15C8C7F90091E3C1 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4C4AAD15C8C7F90091E3C1 /* CoreImage.framework */; };
 		BE4C4AB815C8F8620091E3C1 /* TPMFacebookTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4C4AB715C8F8620091E3C1 /* TPMFacebookTableViewController.m */; };
@@ -77,6 +78,7 @@
 		BE01FE3E15E5C00200E92654 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		BE03E0AE15CF6D6E007759B1 /* TPMSocialMediaDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPMSocialMediaDetailViewController.h; sourceTree = "<group>"; };
 		BE03E0AF15CF6D6E007759B1 /* TPMSocialMediaDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPMSocialMediaDetailViewController.m; sourceTree = "<group>"; };
+		BE29DDED15F057B000B5DFE2 /* Libraries.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Libraries.txt; sourceTree = "<group>"; };
 		BE424C1915CB316500146D29 /* MyApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyApplication.m; sourceTree = "<group>"; };
 		BE424C1A15CB316500146D29 /* MyApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyApplication.h; sourceTree = "<group>"; };
 		BE443F1C15D8A97F00A58FBA /* theBlimpBaseClasses.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = theBlimpBaseClasses.xcodeproj; path = ../theBlimpBaseClasses/theBlimpBaseClasses.xcodeproj; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				BE8CB74E15CB779E0094F789 /* twitterTabBarIcon.png */,
 				BE84D25115E5BB8D004F444F /* 112-group.png */,
 				BE01FE3E15E5C00200E92654 /* arrow.png */,
+				BE29DDED15F057B000B5DFE2 /* Libraries.txt */,
 				BE72310A15C5FA72002EE577 /* Supporting Files */,
 			);
 			path = TPM;
@@ -360,6 +363,7 @@
 				BE84D25215E5BB8D004F444F /* 112-group.png in Resources */,
 				BE01FE3F15E5C00200E92654 /* arrow.png in Resources */,
 				BE73F80115E5D7F1003B6FA1 /* AirshipConfig.plist in Resources */,
+				BE29DDEE15F057B000B5DFE2 /* Libraries.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

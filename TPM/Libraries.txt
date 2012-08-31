@@ -1,0 +1,2 @@
+theBlimpBaseClasses commit #c658743b7af9
+Facebook SDK 3.0 commit #d29e356570d9
