@@ -53,7 +53,7 @@
         <scene sceneID="P7K-8k-roX">
             <objects>
                 <tableViewController id="AYI-80-p8y" customClass="TPMSocialMediaDetailViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="80" sectionHeaderHeight="10" sectionFooterHeight="10" id="VFy-Q7-MY1">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="80" sectionHeaderHeight="10" sectionFooterHeight="10" id="VFy-Q7-MY1">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -894,7 +894,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="rbE-Uu-tlq"/>
-        <segue reference="Ulf-fg-jEC"/>
+        <segue reference="WPm-3Q-9BP"/>
+        <segue reference="q4o-QJ-iX2"/>
     </inferredMetricsTieBreakers>
 </document>
