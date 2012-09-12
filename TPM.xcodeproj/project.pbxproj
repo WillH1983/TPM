@@ -33,9 +33,7 @@
 		BE73F80F15E5DAB3003B6FA1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BE73F80E15E5DAB3003B6FA1 /* libsqlite3.dylib */; };
 		BE73F81115E5DABC003B6FA1 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE73F81015E5DABC003B6FA1 /* CoreTelephony.framework */; };
 		BE73F81315E5DAC3003B6FA1 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE73F81215E5DAC3003B6FA1 /* StoreKit.framework */; };
-		BE84D25215E5BB8D004F444F /* 112-group.png in Resources */ = {isa = PBXBuildFile; fileRef = BE84D25115E5BB8D004F444F /* 112-group.png */; };
-		BE8CB74D15CB765F0094F789 /* twitterTabBarIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE8CB74C15CB765F0094F789 /* twitterTabBarIcon@2x.png */; };
-		BE8CB74F15CB779E0094F789 /* twitterTabBarIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = BE8CB74E15CB779E0094F789 /* twitterTabBarIcon.png */; };
+		BE8878B7160016A100AB6BFE /* tpm-header@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE8878B6160016A100AB6BFE /* tpm-header@2x.png */; };
 		BE8CB75415CB7E4D0094F789 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8CB75315CB7E4D0094F789 /* Twitter.framework */; };
 		BE8CB75715CB9B4B0094F789 /* TPMTwitterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8CB75615CB9B4B0094F789 /* TPMTwitterTableViewController.m */; };
 		BE8EFA3115C6349400A383FD /* TPM - iPhone - Retina.png in Resources */ = {isa = PBXBuildFile; fileRef = BE8EFA3015C6349400A383FD /* TPM - iPhone - Retina.png */; };
@@ -44,6 +42,19 @@
 		BE8EFA3715C635CD00A383FD /* TPM_Default_Cell_Image.png in Resources */ = {isa = PBXBuildFile; fileRef = BE8EFA3615C635CD00A383FD /* TPM_Default_Cell_Image.png */; };
 		BE8EFA3A15C63B6400A383FD /* TPMRSSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8EFA3915C63B6400A383FD /* TPMRSSViewController.m */; };
 		BE96C0CD15E1FA71009A05DC /* libtheBlimpBaseClasses.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE443F2215D8A97F00A58FBA /* libtheBlimpBaseClasses.a */; };
+		BEBA71CD1600249200A89866 /* tabbar-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEBA71CB1600249200A89866 /* tabbar-bg@2x.png */; };
+		BEBA71D51600254300A89866 /* tabbar-active-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = BEBA71D31600254300A89866 /* tabbar-active-bg.png */; };
+		BEBA71D61600254300A89866 /* tabbar-active-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEBA71D41600254300A89866 /* tabbar-active-bg@2x.png */; };
+		BEBA71DC160033A700A89866 /* TabbarImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEBA71DB160033A700A89866 /* TabbarImage@2x.png */; };
+		BEBA71E31600370700A89866 /* 208-facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = BEBA71E11600370700A89866 /* 208-facebook.png */; };
+		BEBA71E41600370700A89866 /* 208-facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEBA71E21600370700A89866 /* 208-facebook@2x.png */; };
+		BEBA71E71600372900A89866 /* 210-twitterbird.png in Resources */ = {isa = PBXBuildFile; fileRef = BEBA71E51600372900A89866 /* 210-twitterbird.png */; };
+		BEBA71E81600372900A89866 /* 210-twitterbird@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEBA71E61600372900A89866 /* 210-twitterbird@2x.png */; };
+		BEBA71EB16003A0000A89866 /* 208-facebook-gray.png in Resources */ = {isa = PBXBuildFile; fileRef = BEBA71E916003A0000A89866 /* 208-facebook-gray.png */; };
+		BEBA71EC16003A0000A89866 /* 208-facebook-gray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEBA71EA16003A0000A89866 /* 208-facebook-gray@2x.png */; };
+		BEBA71EF16003A1A00A89866 /* 210-twitterbird-gray.png in Resources */ = {isa = PBXBuildFile; fileRef = BEBA71ED16003A1A00A89866 /* 210-twitterbird-gray.png */; };
+		BEBA71F016003A1A00A89866 /* 210-twitterbird-gray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEBA71EE16003A1A00A89866 /* 210-twitterbird-gray@2x.png */; };
+		BEBA71F216003C8000A89866 /* TabbarImage.png in Resources */ = {isa = PBXBuildFile; fileRef = BEBA71F116003C8000A89866 /* TabbarImage.png */; };
 		BED7BDF315E357AE00EF45FC /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED7BDF215E357AE00EF45FC /* FacebookSDK.framework */; };
 		BED7BDF515E357B900EF45FC /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BED7BDF415E357B900EF45FC /* FacebookSDKResources.bundle */; };
 		BEEB0AB915D9E9830026DD5E /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEB0AB815D9E9830026DD5E /* Accounts.framework */; };
@@ -108,9 +119,7 @@
 		BE73F80E15E5DAB3003B6FA1 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		BE73F81015E5DABC003B6FA1 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		BE73F81215E5DAC3003B6FA1 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		BE84D25115E5BB8D004F444F /* 112-group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "112-group.png"; sourceTree = "<group>"; };
-		BE8CB74C15CB765F0094F789 /* twitterTabBarIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitterTabBarIcon@2x.png"; sourceTree = "<group>"; };
-		BE8CB74E15CB779E0094F789 /* twitterTabBarIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitterTabBarIcon.png; sourceTree = "<group>"; };
+		BE8878B6160016A100AB6BFE /* tpm-header@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tpm-header@2x.png"; sourceTree = "<group>"; };
 		BE8CB75315CB7E4D0094F789 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		BE8CB75515CB9B4B0094F789 /* TPMTwitterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPMTwitterTableViewController.h; sourceTree = "<group>"; };
 		BE8CB75615CB9B4B0094F789 /* TPMTwitterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPMTwitterTableViewController.m; sourceTree = "<group>"; };
@@ -120,6 +129,19 @@
 		BE8EFA3615C635CD00A383FD /* TPM_Default_Cell_Image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TPM_Default_Cell_Image.png; sourceTree = "<group>"; };
 		BE8EFA3815C63B6400A383FD /* TPMRSSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPMRSSViewController.h; sourceTree = "<group>"; };
 		BE8EFA3915C63B6400A383FD /* TPMRSSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPMRSSViewController.m; sourceTree = "<group>"; };
+		BEBA71CB1600249200A89866 /* tabbar-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-bg@2x.png"; sourceTree = "<group>"; };
+		BEBA71D31600254300A89866 /* tabbar-active-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-active-bg.png"; sourceTree = "<group>"; };
+		BEBA71D41600254300A89866 /* tabbar-active-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-active-bg@2x.png"; sourceTree = "<group>"; };
+		BEBA71DB160033A700A89866 /* TabbarImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabbarImage@2x.png"; sourceTree = "<group>"; };
+		BEBA71E11600370700A89866 /* 208-facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "208-facebook.png"; sourceTree = "<group>"; };
+		BEBA71E21600370700A89866 /* 208-facebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "208-facebook@2x.png"; sourceTree = "<group>"; };
+		BEBA71E51600372900A89866 /* 210-twitterbird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "210-twitterbird.png"; sourceTree = "<group>"; };
+		BEBA71E61600372900A89866 /* 210-twitterbird@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "210-twitterbird@2x.png"; sourceTree = "<group>"; };
+		BEBA71E916003A0000A89866 /* 208-facebook-gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "208-facebook-gray.png"; sourceTree = "<group>"; };
+		BEBA71EA16003A0000A89866 /* 208-facebook-gray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "208-facebook-gray@2x.png"; sourceTree = "<group>"; };
+		BEBA71ED16003A1A00A89866 /* 210-twitterbird-gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "210-twitterbird-gray.png"; sourceTree = "<group>"; };
+		BEBA71EE16003A1A00A89866 /* 210-twitterbird-gray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "210-twitterbird-gray@2x.png"; sourceTree = "<group>"; };
+		BEBA71F116003C8000A89866 /* TabbarImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TabbarImage.png; sourceTree = "<group>"; };
 		BED7BDF215E357AE00EF45FC /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = "../facebook-ios-sdk/build/FacebookSDK.framework"; sourceTree = "<group>"; };
 		BED7BDF415E357B900EF45FC /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKResources.bundle; path = "../facebook-ios-sdk/build/FacebookSDK.framework/Versions/A/Resources/FacebookSDKResources.bundle"; sourceTree = "<group>"; };
 		BEEB0AB815D9E9830026DD5E /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -247,9 +269,6 @@
 				BE8EFA3915C63B6400A383FD /* TPMRSSViewController.m */,
 				BE4C4AB615C8F8610091E3C1 /* TPMFacebookTableViewController.h */,
 				BE4C4AB715C8F8620091E3C1 /* TPMFacebookTableViewController.m */,
-				BE8CB74C15CB765F0094F789 /* twitterTabBarIcon@2x.png */,
-				BE8CB74E15CB779E0094F789 /* twitterTabBarIcon.png */,
-				BE84D25115E5BB8D004F444F /* 112-group.png */,
 				BE01FE3E15E5C00200E92654 /* arrow.png */,
 				BE29DDED15F057B000B5DFE2 /* Libraries.txt */,
 				BE72310A15C5FA72002EE577 /* Supporting Files */,
@@ -260,6 +279,7 @@
 		BE72310A15C5FA72002EE577 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BEBA71F316003C8D00A89866 /* Images */,
 				BE4C4A8F15C8BD1C0091E3C1 /* Facebook */,
 				BE4C4A8B15C8B91E0091E3C1 /* Categories */,
 				BE4C4A8915C8B8E20091E3C1 /* Base Classes */,
@@ -273,6 +293,27 @@
 				BE73F80015E5D7F1003B6FA1 /* AirshipConfig.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BEBA71F316003C8D00A89866 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				BEBA71E11600370700A89866 /* 208-facebook.png */,
+				BEBA71E21600370700A89866 /* 208-facebook@2x.png */,
+				BEBA71E51600372900A89866 /* 210-twitterbird.png */,
+				BEBA71E61600372900A89866 /* 210-twitterbird@2x.png */,
+				BEBA71E916003A0000A89866 /* 208-facebook-gray.png */,
+				BEBA71EA16003A0000A89866 /* 208-facebook-gray@2x.png */,
+				BEBA71ED16003A1A00A89866 /* 210-twitterbird-gray.png */,
+				BEBA71EE16003A1A00A89866 /* 210-twitterbird-gray@2x.png */,
+				BEBA71D31600254300A89866 /* tabbar-active-bg.png */,
+				BEBA71D41600254300A89866 /* tabbar-active-bg@2x.png */,
+				BE8878B6160016A100AB6BFE /* tpm-header@2x.png */,
+				BEBA71CB1600249200A89866 /* tabbar-bg@2x.png */,
+				BEBA71DB160033A700A89866 /* TabbarImage@2x.png */,
+				BEBA71F116003C8000A89866 /* TabbarImage.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,13 +398,24 @@
 				BE8EFA3515C635BF00A383FD /* TPM_Default_Cell_Image@2x.png in Resources */,
 				BE8EFA3715C635CD00A383FD /* TPM_Default_Cell_Image.png in Resources */,
 				BE4C4ABC15C8FD1A0091E3C1 /* FacebookButton@2x.png in Resources */,
-				BE8CB74D15CB765F0094F789 /* twitterTabBarIcon@2x.png in Resources */,
-				BE8CB74F15CB779E0094F789 /* twitterTabBarIcon.png in Resources */,
 				BED7BDF515E357B900EF45FC /* FacebookSDKResources.bundle in Resources */,
-				BE84D25215E5BB8D004F444F /* 112-group.png in Resources */,
 				BE01FE3F15E5C00200E92654 /* arrow.png in Resources */,
 				BE73F80115E5D7F1003B6FA1 /* AirshipConfig.plist in Resources */,
 				BE29DDEE15F057B000B5DFE2 /* Libraries.txt in Resources */,
+				BE8878B7160016A100AB6BFE /* tpm-header@2x.png in Resources */,
+				BEBA71CD1600249200A89866 /* tabbar-bg@2x.png in Resources */,
+				BEBA71D51600254300A89866 /* tabbar-active-bg.png in Resources */,
+				BEBA71D61600254300A89866 /* tabbar-active-bg@2x.png in Resources */,
+				BEBA71DC160033A700A89866 /* TabbarImage@2x.png in Resources */,
+				BEBA71E31600370700A89866 /* 208-facebook.png in Resources */,
+				BEBA71E41600370700A89866 /* 208-facebook@2x.png in Resources */,
+				BEBA71E71600372900A89866 /* 210-twitterbird.png in Resources */,
+				BEBA71E81600372900A89866 /* 210-twitterbird@2x.png in Resources */,
+				BEBA71EB16003A0000A89866 /* 208-facebook-gray.png in Resources */,
+				BEBA71EC16003A0000A89866 /* 208-facebook-gray@2x.png in Resources */,
+				BEBA71EF16003A1A00A89866 /* 210-twitterbird-gray.png in Resources */,
+				BEBA71F016003A1A00A89866 /* 210-twitterbird-gray@2x.png in Resources */,
+				BEBA71F216003C8000A89866 /* TabbarImage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

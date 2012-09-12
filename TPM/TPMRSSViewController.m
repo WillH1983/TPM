@@ -45,6 +45,15 @@
     return self;
 }
 
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    
+    //Setup the tabbar with the background image, selected image
+    self.tabBarController.tabBar.backgroundImage = [UIImage imageNamed:@"TabbarImage.png"];
+    self.tabBarController.tabBar.selectionIndicatorImage = [UIImage imageNamed:@"tabbar-active-bg"];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -251,6 +260,13 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    //Set the Tech Powered Math logo to the title view of the navigation controler
+    //With the content mode set to AspectFit
+    UIImage *logoImage = [UIImage imageNamed:@"tpm-header.png"];
+    UIImageView *logoImageView = [[UIImageView alloc] initWithImage:logoImage];
+    logoImageView.contentMode = UIViewContentModeScaleAspectFit;
+    self.navigationItem.titleView = logoImageView;
     
     [[[self navigationController] navigationBar] setTintColor:[UIColor colorWithHue:0 saturation:0 brightness:0.30 alpha:1.0]];
     

@@ -29,6 +29,18 @@
 	// Do any additional setup after loading the view.
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    //Set the Tech Powered Math logo to the title view of the navigation controler
+    //With the content mode set to AspectFit
+    UIImage *logoImage = [UIImage imageNamed:@"tpm-header.png"];
+    UIImageView *logoImageView = [[UIImageView alloc] initWithImage:logoImage];
+    logoImageView.contentMode = UIViewContentModeScaleAspectFit;
+    self.navigationItem.titleView = logoImageView;
+}
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];
