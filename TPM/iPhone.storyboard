@@ -172,7 +172,7 @@
             </objects>
             <point key="canvasLocation" x="1464" y="541"/>
         </scene>
-        <!--Facebook Table View Controller - Tech Powered Math-->
+        <!--Facebook Table View Controller - Wall-->
         <scene sceneID="Qdd-tS-H2w">
             <objects>
                 <tableViewController id="RXx-su-17j" customClass="TPMFacebookTableViewController" sceneMemberID="viewController">
@@ -349,7 +349,7 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Tech Powered Math" id="dKH-YC-H5p">
+                    <navigationItem key="navigationItem" title="Wall" id="dKH-YC-H5p">
                         <barButtonItem key="leftBarButtonItem" title="Log In" id="SvJ-SG-gUp">
                             <connections>
                                 <action selector="LogOutInButtonClicked:" destination="RXx-su-17j" id="ISF-yY-PiJ"/>
@@ -393,7 +393,6 @@
         <!--Navigation Controller - Twitter-->
         <scene sceneID="27L-xQ-LcK">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rwU-Bn-Y8I" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="fLJ-j2-uNb" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Twitter" image="210-twitterbird.png" id="hd5-fl-gUq"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="J3A-5e-2YU">
@@ -403,13 +402,13 @@
                         <segue destination="L9U-u1-5xe" kind="relationship" relationship="rootViewController" id="Odr-LO-VkO"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rwU-Bn-Y8I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="441" y="1161"/>
         </scene>
         <!--Twitter Table View Controller - Twitter-->
         <scene sceneID="Js1-1j-mO9">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BjI-r5-TeB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="L9U-u1-5xe" customClass="TPMTwitterTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="118" sectionHeaderHeight="10" sectionFooterHeight="10" id="a9D-Ho-qux">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
@@ -520,6 +519,7 @@
                         <segue destination="rgA-dr-sSp" kind="modal" identifier="twitterReply" id="rbE-Uu-tlq"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BjI-r5-TeB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="913" y="1161"/>
         </scene>
@@ -690,13 +690,25 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="redraw" id="sMb-91-DBJ">
-                                <rect key="frame" x="20" y="62" width="280" height="114"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="Bee-g5-wFD">
+                                <rect key="frame" x="209" y="49" width="105" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" id="eB3-ek-ze0">
+                                <rect key="frame" x="0.0" y="44" width="320" height="144"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="redraw" id="sMb-91-DBJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="144"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                             <navigationBar contentMode="scaleToFill" id="GfJ-l8-RLW">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -719,8 +731,11 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="YEO-cj-E7K"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="imageView" destination="Bee-g5-wFD" id="sYF-4z-rse"/>
                         <outlet property="navigationBar" destination="GfJ-l8-RLW" id="aYY-5V-pE8"/>
                         <outlet property="submitButton" destination="ILL-BP-9fo" id="LJd-Z6-e37"/>
                         <outlet property="textView" destination="sMb-91-DBJ" id="QK9-NA-crh"/>
@@ -733,7 +748,6 @@
         <!--Twitter Conversation Table View Controller - Twitter-->
         <scene sceneID="6Gd-A1-eB6">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aBd-c7-7GI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="U4p-bM-1sO" customClass="TwitterConversationTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="118" sectionHeaderHeight="10" sectionFooterHeight="10" id="FEp-SL-CQJ">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
@@ -809,6 +823,7 @@
                     <tabBarItem key="tabBarItem" title="" image="210-twitterbird.png" id="mIP-EI-gvM"/>
                     <navigationItem key="navigationItem" title="Twitter" id="fVs-AX-Noe"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aBd-c7-7GI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1464" y="1161"/>
         </scene>
@@ -818,13 +833,84 @@
         <image name="210-twitterbird.png" width="22" height="22"/>
         <image name="FacebookButton@2x.png" width="94" height="37"/>
     </resources>
+    <classes>
+        <class className="FaceBookTableViewController" superclassName="PullRefreshTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FaceBookTableViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="logInOutButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="ImageViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ImageViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="navigationBar" candidateClass="UINavigationBar"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="PullRefreshTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PullRefreshTableViewController.h"/>
+        </class>
+        <class className="RSSTableView" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RSSTableView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="SocialMediaDetailViewController" superclassName="PullRefreshTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SocialMediaDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="profilePictureImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="TPMFacebookTableViewController" superclassName="FaceBookTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TPMFacebookTableViewController.h"/>
+        </class>
+        <class className="TPMRSSViewController" superclassName="RSSTableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TPMRSSViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="featureStoriesActivityIndicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="featuredStoriesLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="pageControl" candidateClass="UIPageControl"/>
+                <relationship kind="outlet" name="pagingScrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="TPMSocialMediaDetailViewController" superclassName="SocialMediaDetailViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TPMSocialMediaDetailViewController.h"/>
+        </class>
+        <class className="TPMTwitterTableViewController" superclassName="TwitterTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TPMTwitterTableViewController.h"/>
+        </class>
+        <class className="TextEntryViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TextEntryViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="navigationBar" candidateClass="UINavigationBar"/>
+                <relationship kind="outlet" name="submitButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="TwitterConversationTableViewController" superclassName="TwitterTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TwitterConversationTableViewController.h"/>
+        </class>
+        <class className="TwitterTableViewController" superclassName="PullRefreshTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TwitterTableViewController.h"/>
+        </class>
+        <class className="WebViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WebViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Ulf-fg-jEC"/>
-        <segue reference="rbE-Uu-tlq"/>
+        <segue reference="q4o-QJ-iX2"/>
+        <segue reference="WPm-3Q-9BP"/>
     </inferredMetricsTieBreakers>
 </document>

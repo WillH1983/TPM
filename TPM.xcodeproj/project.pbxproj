@@ -15,6 +15,8 @@
 		BE4C4AAE15C8C7F90091E3C1 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4C4AAD15C8C7F90091E3C1 /* CoreImage.framework */; };
 		BE4C4AB815C8F8620091E3C1 /* TPMFacebookTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4C4AB715C8F8620091E3C1 /* TPMFacebookTableViewController.m */; };
 		BE4C4ABC15C8FD1A0091E3C1 /* FacebookButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE4C4ABB15C8FD1A0091E3C1 /* FacebookButton@2x.png */; };
+		BE4E0A4B160185E80003B637 /* 86-camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE4E0A49160185E80003B637 /* 86-camera@2x.png */; };
+		BE4E0A4C160185E80003B637 /* 86-camera.png in Resources */ = {isa = PBXBuildFile; fileRef = BE4E0A4A160185E80003B637 /* 86-camera.png */; };
 		BE72310415C5FA72002EE577 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE72310315C5FA72002EE577 /* UIKit.framework */; };
 		BE72310615C5FA72002EE577 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE72310515C5FA72002EE577 /* Foundation.framework */; };
 		BE72310815C5FA72002EE577 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE72310715C5FA72002EE577 /* CoreGraphics.framework */; };
@@ -97,6 +99,8 @@
 		BE4C4AB615C8F8610091E3C1 /* TPMFacebookTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPMFacebookTableViewController.h; sourceTree = "<group>"; };
 		BE4C4AB715C8F8620091E3C1 /* TPMFacebookTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPMFacebookTableViewController.m; sourceTree = "<group>"; };
 		BE4C4ABB15C8FD1A0091E3C1 /* FacebookButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FacebookButton@2x.png"; sourceTree = "<group>"; };
+		BE4E0A49160185E80003B637 /* 86-camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "86-camera@2x.png"; sourceTree = "<group>"; };
+		BE4E0A4A160185E80003B637 /* 86-camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "86-camera.png"; sourceTree = "<group>"; };
 		BE7230FF15C5FA72002EE577 /* TPM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TPM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE72310315C5FA72002EE577 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BE72310515C5FA72002EE577 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -298,6 +302,8 @@
 		BEBA71F316003C8D00A89866 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				BE4E0A49160185E80003B637 /* 86-camera@2x.png */,
+				BE4E0A4A160185E80003B637 /* 86-camera.png */,
 				BEBA71E11600370700A89866 /* 208-facebook.png */,
 				BEBA71E21600370700A89866 /* 208-facebook@2x.png */,
 				BEBA71E51600372900A89866 /* 210-twitterbird.png */,
@@ -416,6 +422,8 @@
 				BEBA71EF16003A1A00A89866 /* 210-twitterbird-gray.png in Resources */,
 				BEBA71F016003A1A00A89866 /* 210-twitterbird-gray@2x.png in Resources */,
 				BEBA71F216003C8000A89866 /* TabbarImage.png in Resources */,
+				BE4E0A4B160185E80003B637 /* 86-camera@2x.png in Resources */,
+				BE4E0A4C160185E80003B637 /* 86-camera.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
