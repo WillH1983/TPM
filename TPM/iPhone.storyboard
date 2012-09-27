@@ -47,7 +47,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ycF-oF-wB8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2018" y="1161"/>
+            <point key="canvasLocation" x="2035" y="1943"/>
         </scene>
         <!--Social Media Detail View Controller-->
         <scene sceneID="P7K-8k-roX">
@@ -170,7 +170,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8wY-CH-zFE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1464" y="541"/>
+            <point key="canvasLocation" x="1481" y="1323"/>
         </scene>
         <!--Facebook Table View Controller - Wall-->
         <scene sceneID="Qdd-tS-H2w">
@@ -372,7 +372,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QCo-WS-BGt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="913" y="541"/>
+            <point key="canvasLocation" x="930" y="1323"/>
         </scene>
         <!--Navigation Controller - Facebook-->
         <scene sceneID="I6z-fz-w5r">
@@ -388,7 +388,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="quj-6D-358" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="460" y="541"/>
+            <point key="canvasLocation" x="477" y="1323"/>
         </scene>
         <!--Navigation Controller - Twitter-->
         <scene sceneID="27L-xQ-LcK">
@@ -404,7 +404,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rwU-Bn-Y8I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="441" y="1161"/>
+            <point key="canvasLocation" x="458" y="1943"/>
         </scene>
         <!--Twitter Table View Controller - Twitter-->
         <scene sceneID="Js1-1j-mO9">
@@ -521,7 +521,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BjI-r5-TeB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="913" y="1161"/>
+            <point key="canvasLocation" x="930" y="1943"/>
         </scene>
         <!--View Controller - Tech Powered Math-->
         <scene sceneID="JZP-5J-WEc">
@@ -531,73 +531,33 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="whiteLarge" id="rCK-Kx-7gM">
-                                <rect key="frame" x="141" y="60" width="37" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </activityIndicatorView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="81" sectionHeaderHeight="22" sectionFooterHeight="22" id="fXQ-mF-bYn">
-                                <rect key="frame" x="0.0" y="186" width="320" height="181"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="bottom" pagingEnabled="YES" id="6Ii-CI-GQs">
+                                <rect key="frame" x="0.0" y="-2" width="320" height="311"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="BaseRSSTableCell" textLabel="Pa3-Nt-x7v" detailTextLabel="M9Y-Eg-cFq" rowHeight="81" style="IBUITableViewCellStyleSubtitle" id="VQr-yo-oPk">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="81"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pa3-Nt-x7v">
-                                                    <rect key="frame" x="10" y="20" width="38" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M9Y-Eg-cFq">
-                                                    <rect key="frame" x="10" y="42" width="47" height="18"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="07Z-hp-ViY" id="s1n-EH-cAG"/>
-                                    <outlet property="delegate" destination="07Z-hp-ViY" id="fAr-5t-QaK"/>
-                                </connections>
-                            </tableView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" id="6Ii-CI-GQs">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="186"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                                <color key="backgroundColor" red="0.23401632905006409" green="0.23406125605106354" blue="0.23400880396366119" alpha="1" colorSpace="calibratedRGB"/>
                             </scrollView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="GnA-tK-a96">
-                                <rect key="frame" x="75" y="108" width="165" height="36"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </pageControl>
                             <view contentMode="scaleToFill" id="KKk-P9-TZj">
-                                <rect key="frame" x="0.0" y="137" width="320" height="47"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                                <rect key="frame" x="0.0" y="300" width="320" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                 <subviews>
-                                    <view alpha="0.50000000000000011" contentMode="scaleToFill" id="VfQ-v8-V7e">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="47"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    </view>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="oW5-57-yqe">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="oW5-57-yqe">
                                         <rect key="frame" x="20" y="13" width="280" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="GnA-tK-a96">
+                                        <rect key="frame" x="78" y="31" width="165" height="36"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </pageControl>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                             </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="whiteLarge" id="rCK-Kx-7gM">
+                                <rect key="frame" x="141" y="165" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -607,7 +567,6 @@
                         <outlet property="featuredStoriesLabel" destination="oW5-57-yqe" id="nKH-PY-wDY"/>
                         <outlet property="pageControl" destination="GnA-tK-a96" id="3xg-aT-pr1"/>
                         <outlet property="pagingScrollView" destination="6Ii-CI-GQs" id="Z4f-uG-Jk4"/>
-                        <outlet property="tableView" destination="fXQ-mF-bYn" id="XF4-0I-tuS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RZQ-13-Iae" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -626,13 +585,98 @@
                     </tabBar>
                     <connections>
                         <segue destination="9sB-ey-aQe" kind="relationship" relationship="viewControllers" id="6Wj-U9-dOT"/>
-                        <segue destination="rf2-3e-z64" kind="relationship" relationship="viewControllers" id="39t-rc-nKE"/>
-                        <segue destination="fLJ-j2-uNb" kind="relationship" relationship="viewControllers" id="M8x-eB-FCB"/>
+                        <segue destination="0c5-L3-XCy" kind="relationship" relationship="viewControllers" id="Kq4-hN-Nev"/>
+                        <segue destination="rf2-3e-z64" kind="relationship" relationship="viewControllers" id="vUB-PT-b6f"/>
+                        <segue destination="fLJ-j2-uNb" kind="relationship" relationship="viewControllers" id="R6W-fg-fNl"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VPc-Yg-HOy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-43" y="239"/>
+        </scene>
+        <!--Navigation Controller - Articles-->
+        <scene sceneID="MD8-XZ-OVN">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="0c5-L3-XCy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Articles" image="259-list.png" id="jXk-uT-WTV"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ieU-1y-bvg">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="oc9-9k-1jt" kind="relationship" relationship="rootViewController" id="Xeg-GG-wh6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s7c-rm-qES" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="460" y="610"/>
+        </scene>
+        <!--Word PressAPI Table View Controller - Articles-->
+        <scene sceneID="Cfv-HO-lwR">
+            <objects>
+                <tableViewController id="oc9-9k-1jt" customClass="WordPressAPITableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="82" sectionHeaderHeight="22" sectionFooterHeight="22" id="qGs-oN-xun">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" barStyle="blackTranslucent" id="HxM-4N-GNl">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="oc9-9k-1jt" id="eL0-1d-MFi"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="jsonAPICell" textLabel="G4D-Ae-73k" detailTextLabel="96D-1z-504" rowHeight="82" style="IBUITableViewCellStyleSubtitle" id="bWO-vQ-jYD">
+                                <rect key="frame" x="0.0" y="66" width="320" height="82"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="81"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="G4D-Ae-73k">
+                                            <rect key="frame" x="10" y="21" width="38" height="22"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="96D-1z-504">
+                                            <rect key="frame" x="10" y="43" width="47" height="18"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="oc9-9k-1jt" id="nh8-eM-Flj"/>
+                            <outlet property="delegate" destination="oc9-9k-1jt" id="5iE-Fd-07t"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Articles" id="Qzu-Gx-2co"/>
+                    <navigationItem key="navigationItem" title="Articles" id="TkK-bJ-Spt"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="sse-1l-iyE" id="KZn-uj-Hle"/>
+                        <segue destination="3rO-41-YSS" kind="push" identifier="webView" id="Una-tS-BC5"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yf1-9d-t4W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="sse-1l-iyE">
+                    <connections>
+                        <outlet property="delegate" destination="oc9-9k-1jt" id="73O-XH-91C"/>
+                        <outlet property="searchBar" destination="HxM-4N-GNl" id="4ya-MC-Ry0"/>
+                        <outlet property="searchContentsController" destination="oc9-9k-1jt" id="KaZ-o7-dum"/>
+                        <outlet property="searchResultsDataSource" destination="oc9-9k-1jt" id="6n1-rC-Tti"/>
+                        <outlet property="searchResultsDelegate" destination="oc9-9k-1jt" id="FfH-Nm-Ixr"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="930" y="610"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="3LD-pG-t86">
@@ -743,7 +787,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GVO-nH-Xbx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2018" y="541"/>
+            <point key="canvasLocation" x="2035" y="1323"/>
         </scene>
         <!--Twitter Conversation Table View Controller - Twitter-->
         <scene sceneID="6Gd-A1-eB6">
@@ -825,12 +869,13 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aBd-c7-7GI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1464" y="1161"/>
+            <point key="canvasLocation" x="1481" y="1943"/>
         </scene>
     </scenes>
     <resources>
         <image name="208-facebook.png" width="22" height="22"/>
         <image name="210-twitterbird.png" width="22" height="22"/>
+        <image name="259-list.png" width="20" height="14"/>
         <image name="FacebookButton@2x.png" width="94" height="37"/>
     </resources>
     <classes>
@@ -903,6 +948,9 @@
                 <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
         </class>
+        <class className="WordPressAPITableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WordPressAPITableViewController.h"/>
+        </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -910,7 +958,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="q4o-QJ-iX2"/>
-        <segue reference="WPm-3Q-9BP"/>
+        <segue reference="Una-tS-BC5"/>
+        <segue reference="rbE-Uu-tlq"/>
     </inferredMetricsTieBreakers>
 </document>

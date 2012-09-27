@@ -61,51 +61,50 @@
     
     [self.featureStoriesActivityIndicator startAnimating];
     
-    __block typeof(self) bself = self;
-    [self setFinishblock:^{
-        id tmpData = [self.RSSDataArray valueForKeyPath:@"category.text"];
-        NSArray *categories = nil;
-        if ([tmpData isKindOfClass:[NSArray class]]) categories = tmpData;
-        for(int n = 0; n < [categories count] || n < 3; n++)
+    dispatch_queue_t downloadQueue = dispatch_queue_create("downloader", NULL);
+    dispatch_async(downloadQueue, ^{
+        NSString *query = @"http://www.techpoweredmath.com/api/get_category_posts/?slug=featured&count=3";
+        NSData *jsonData = [[NSString stringWithContentsOfURL:[NSURL URLWithString:query] encoding:NSUTF8StringEncoding error:nil] dataUsingEncoding:NSUTF8StringEncoding];
+        NSError *error = nil;
+        NSMutableDictionary *jsonDictionary = jsonData ? [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers|NSJSONReadingMutableLeaves error:&error] : nil;
+        self.FeaturedStories = [jsonDictionary valueForKey:@"posts"];
+        [self.pageImages removeAllObjects];
+        for (NSDictionary *dictionary in self.FeaturedStories)
         {
-            id items = [categories objectAtIndex:n];
-            if ([items isKindOfClass:[NSArray class]])
+            NSURL *url = nil;
+            id images = [dictionary valueForKeyPath:@"images.full"];
+            if (images)
             {
-                for (NSString *category in items)
+                if ([images isKindOfClass:[NSArray class]])
                 {
-                    if ([category isEqualToString:@"Featured"])
-                    {
-                        if ([self.FeaturedStories count] < 3)
-                        {
-                            [self.FeaturedStories addObject:[self.RSSDataArray objectAtIndex:n]];
-                        }
-                    }
+                    url = [NSURL URLWithString:[[images valueForKey:@"url"] objectAtIndex:0]];
+                }
+                else
+                {
+                    url = [NSURL URLWithString:[images valueForKey:@"url"]];
                 }
             }
+            NSString *content = [dictionary valueForKeyPath:@"content"];
+            if (!url) url = content.imageFromHTMLString;
+            NSData *picture = nil;
+            UIImage *image = nil;
+            if (url)
+            {
+                picture = [NSData dataWithContentsOfURL:url];
+                image = [UIImage imageWithData:picture];
+            }
+            else
+            {
+                image = [UIImage imageNamed:@"TPM_Default_Cell_Image@2x.png"];
+            }
+            [self.pageImages addObject:image];
         }
-        [self.pageImages removeAllObjects];
-       for (NSDictionary *dictionary in self.FeaturedStories)
-       {
-           NSString *content = [dictionary valueForKeyPath:@"content:encoded.text"];
-           NSURL *url = content.imageFromHTMLString;
-           NSData *picture = nil;
-           UIImage *image = nil;
-           if (url)
-           {
-               picture = [NSData dataWithContentsOfURL:url];
-               image = [UIImage imageWithData:picture];
-           }
-           else 
-           {
-               image = [UIImage imageNamed:@"TPM_Default_Cell_Image@2x.png"];
-           }
-           [self.pageImages addObject:image];
-       }
         dispatch_async(dispatch_get_main_queue(), ^{
-            [bself loadPageControls];
+            [self loadPageControls];
             [self.featureStoriesActivityIndicator stopAnimating];
         });
-    }];
+    });
+
     
     self.tableViewFrameAtStartup = self.tableView.frame;
     
@@ -168,7 +167,7 @@
     // Update the page control
     self.pageControl.currentPage = page;
 
-    NSString *titleString = [[self.FeaturedStories objectAtIndex:page] valueForKeyPath:@"title.text"];
+    NSString *titleString = [[self.FeaturedStories objectAtIndex:page] valueForKeyPath:@"title"];
     self.featuredStoriesLabel.text = titleString;
     // Work out which pages you want to load
     NSInteger firstPage = page - 1;
@@ -252,7 +251,7 @@
 - (void)featuredStoriesSelected:(id)sender
 {
     WebViewController *wvc = [[WebViewController alloc] init];
-    NSURL *url = [[NSURL alloc] initWithString:[[self.FeaturedStories objectAtIndex:[self.pageControl currentPage]] valueForKeyPath:@"link.text"]];
+    NSURL *url = [[NSURL alloc] initWithString:[[self.FeaturedStories objectAtIndex:[self.pageControl currentPage]] valueForKeyPath:@"url"]];
     [wvc setUrlToLoad:url];
     [[self navigationController] pushViewController:wvc animated:YES];
 }

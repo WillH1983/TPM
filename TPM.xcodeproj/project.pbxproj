@@ -10,6 +10,9 @@
 		BE01FE3A15E5BF3500E92654 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE01FE3915E5BF3500E92654 /* QuartzCore.framework */; };
 		BE01FE3F15E5C00200E92654 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = BE01FE3E15E5C00200E92654 /* arrow.png */; };
 		BE03E0B015CF6D6E007759B1 /* TPMSocialMediaDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE03E0AF15CF6D6E007759B1 /* TPMSocialMediaDetailViewController.m */; };
+		BE19A2781613ECBA0001A4E1 /* WordPressAPITableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19A2771613ECBA0001A4E1 /* WordPressAPITableViewController.m */; };
+		BE19A27F1614057F0001A4E1 /* 259-list.png in Resources */ = {isa = PBXBuildFile; fileRef = BE19A27D1614057F0001A4E1 /* 259-list.png */; };
+		BE19A2801614057F0001A4E1 /* 259-list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE19A27E1614057F0001A4E1 /* 259-list@2x.png */; };
 		BE2270E1160E2A950051225B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE2270E0160E2A950051225B /* Default-568h@2x.png */; };
 		BE29DDEE15F057B000B5DFE2 /* Libraries.txt in Resources */ = {isa = PBXBuildFile; fileRef = BE29DDED15F057B000B5DFE2 /* Libraries.txt */; };
 		BE424C1B15CB316500146D29 /* MyApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = BE424C1915CB316500146D29 /* MyApplication.m */; };
@@ -92,6 +95,10 @@
 		BE01FE3E15E5C00200E92654 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		BE03E0AE15CF6D6E007759B1 /* TPMSocialMediaDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPMSocialMediaDetailViewController.h; sourceTree = "<group>"; };
 		BE03E0AF15CF6D6E007759B1 /* TPMSocialMediaDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPMSocialMediaDetailViewController.m; sourceTree = "<group>"; };
+		BE19A2761613ECBA0001A4E1 /* WordPressAPITableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordPressAPITableViewController.h; sourceTree = "<group>"; };
+		BE19A2771613ECBA0001A4E1 /* WordPressAPITableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordPressAPITableViewController.m; sourceTree = "<group>"; };
+		BE19A27D1614057F0001A4E1 /* 259-list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "259-list.png"; sourceTree = "<group>"; };
+		BE19A27E1614057F0001A4E1 /* 259-list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "259-list@2x.png"; sourceTree = "<group>"; };
 		BE2270E0160E2A950051225B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BE29DDED15F057B000B5DFE2 /* Libraries.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Libraries.txt; sourceTree = "<group>"; };
 		BE424C1915CB316500146D29 /* MyApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyApplication.m; sourceTree = "<group>"; };
@@ -265,6 +272,8 @@
 		BE72310915C5FA72002EE577 /* TPM */ = {
 			isa = PBXGroup;
 			children = (
+				BE19A2761613ECBA0001A4E1 /* WordPressAPITableViewController.h */,
+				BE19A2771613ECBA0001A4E1 /* WordPressAPITableViewController.m */,
 				BE72311215C5FA72002EE577 /* TPMAppDelegate.h */,
 				BE72311315C5FA72002EE577 /* TPMAppDelegate.m */,
 				BE72311C15C5FA8F002EE577 /* iPhone.storyboard */,
@@ -305,6 +314,8 @@
 		BEBA71F316003C8D00A89866 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				BE19A27D1614057F0001A4E1 /* 259-list.png */,
+				BE19A27E1614057F0001A4E1 /* 259-list@2x.png */,
 				BE4E0A49160185E80003B637 /* 86-camera@2x.png */,
 				BE4E0A4A160185E80003B637 /* 86-camera.png */,
 				BEBA71E11600370700A89866 /* 208-facebook.png */,
@@ -428,6 +439,8 @@
 				BE4E0A4B160185E80003B637 /* 86-camera@2x.png in Resources */,
 				BE4E0A4C160185E80003B637 /* 86-camera.png in Resources */,
 				BE2270E1160E2A950051225B /* Default-568h@2x.png in Resources */,
+				BE19A27F1614057F0001A4E1 /* 259-list.png in Resources */,
+				BE19A2801614057F0001A4E1 /* 259-list@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +458,7 @@
 				BE424C1B15CB316500146D29 /* MyApplication.m in Sources */,
 				BE8CB75715CB9B4B0094F789 /* TPMTwitterTableViewController.m in Sources */,
 				BE03E0B015CF6D6E007759B1 /* TPMSocialMediaDetailViewController.m in Sources */,
+				BE19A2781613ECBA0001A4E1 /* WordPressAPITableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
