@@ -267,18 +267,11 @@
     logoImageView.contentMode = UIViewContentModeScaleAspectFit;
     self.navigationItem.titleView = logoImageView;
     
+    UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"black_textured_background_seamless.jpg"]];
+    self.pagingScrollView.backgroundColor = background;
+    
     [[[self navigationController] navigationBar] setTintColor:[UIColor colorWithHue:0 saturation:0 brightness:0.30 alpha:1.0]];
     
-    if (self.interfaceOrientation == UIInterfaceOrientationLandscapeLeft || self.interfaceOrientation == UIInterfaceOrientationLandscapeRight)
-    {
-        self.tableView.frame = self.view.frame;
-        [self.view bringSubviewToFront:self.tableView];
-    }
-    else {
-        self.tableView.frame = self.tableViewFrameAtStartup;
-        [self.view sendSubviewToBack:self.tableView];
-    }
-
 }
 
 
@@ -290,16 +283,13 @@
 
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
-    if (toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft || toInterfaceOrientation == UIInterfaceOrientationLandscapeRight)
-    {
-        self.tableView.frame = self.view.frame;
-        [self.view bringSubviewToFront:self.tableView];
-    }
-    else 
-    {
-        self.tableView.frame = self.tableViewFrameAtStartup;
-        [self.view sendSubviewToBack:self.tableView];
-    }
+    //[self.pageViews removeAllObjects];
+    NSArray *views = [self.pagingScrollView subviews];
+    for (id view in views) [view removeFromSuperview];
+    [self loadPageControls];
+    UIView *pageView = [self.pageViews objectAtIndex: [self.pageControl currentPage]];
+    CGRect pageRect = pageView.frame;
+    self.pagingScrollView.contentOffset = CGPointMake(pageRect.origin.x, pageRect.origin.y);
 }
 
 @end

@@ -64,6 +64,7 @@
 		BED7BDF315E357AE00EF45FC /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED7BDF215E357AE00EF45FC /* FacebookSDK.framework */; };
 		BED7BDF515E357B900EF45FC /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BED7BDF415E357B900EF45FC /* FacebookSDKResources.bundle */; };
 		BEEB0AB915D9E9830026DD5E /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEB0AB815D9E9830026DD5E /* Accounts.framework */; };
+		BEEC081A1614F9F900962644 /* black_textured_background_seamless.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BEEC08191614F9F900962644 /* black_textured_background_seamless.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +159,7 @@
 		BED7BDF215E357AE00EF45FC /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = "../facebook-ios-sdk/build/FacebookSDK.framework"; sourceTree = "<group>"; };
 		BED7BDF415E357B900EF45FC /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKResources.bundle; path = "../facebook-ios-sdk/build/FacebookSDK.framework/Versions/A/Resources/FacebookSDKResources.bundle"; sourceTree = "<group>"; };
 		BEEB0AB815D9E9830026DD5E /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		BEEC08191614F9F900962644 /* black_textured_background_seamless.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = black_textured_background_seamless.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -314,6 +316,7 @@
 		BEBA71F316003C8D00A89866 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				BEEC08191614F9F900962644 /* black_textured_background_seamless.jpg */,
 				BE19A27D1614057F0001A4E1 /* 259-list.png */,
 				BE19A27E1614057F0001A4E1 /* 259-list@2x.png */,
 				BE4E0A49160185E80003B637 /* 86-camera@2x.png */,
@@ -441,6 +444,7 @@
 				BE2270E1160E2A950051225B /* Default-568h@2x.png in Resources */,
 				BE19A27F1614057F0001A4E1 /* 259-list.png in Resources */,
 				BE19A2801614057F0001A4E1 /* 259-list@2x.png in Resources */,
+				BEEC081A1614F9F900962644 /* black_textured_background_seamless.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
