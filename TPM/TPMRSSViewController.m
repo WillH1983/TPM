@@ -104,9 +104,6 @@
             [self.featureStoriesActivityIndicator stopAnimating];
         });
     });
-
-    
-    self.tableViewFrameAtStartup = self.tableView.frame;
     
     self.pagingScrollView.delegate = self;
     self.featuredStoriesLabel.userInteractionEnabled = NO;
@@ -287,9 +284,7 @@
     NSArray *views = [self.pagingScrollView subviews];
     for (id view in views) [view removeFromSuperview];
     [self loadPageControls];
-    UIView *pageView = [self.pageViews objectAtIndex: [self.pageControl currentPage]];
-    CGRect pageRect = pageView.frame;
-    self.pagingScrollView.contentOffset = CGPointMake(pageRect.origin.x, pageRect.origin.y);
+    self.pagingScrollView.contentOffset = CGPointMake(0, 0);
 }
 
 @end

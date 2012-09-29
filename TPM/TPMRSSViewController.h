@@ -8,7 +8,7 @@
 
 #import "RSSTableView.h"
 
-@interface TPMRSSViewController : RSSTableView <UIScrollViewDelegate>
+@interface TPMRSSViewController : UIViewController <UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *pagingScrollView;
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 
