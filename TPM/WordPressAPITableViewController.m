@@ -11,6 +11,7 @@
 #import "TPMAppDelegate.h"
 #import "WebViewController.h"
 #import "NSString+HTML.h"
+#import "MBProgressHUD.h"
 
 @interface WordPressAPITableViewController ()
 @property (nonatomic, strong) UIActivityIndicatorView *activityIndicator;
@@ -21,6 +22,8 @@
 @synthesize articlesArray = _articlesArray;
 @synthesize activityIndicator = _activityIndicator;
 @synthesize oldBarButtonItem = _oldBarButtonItem;
+@synthesize searchResultsArray = _searchResultsArray;
+@synthesize searchActivityIndicator = _searchActivityIndicator;
 
 - (NSArray *)articlesArray
 {
@@ -33,6 +36,14 @@
     _articlesArray = articlesArray;
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.tableView reloadData];
+    });
+}
+
+- (void)setSearchResultsArray:(NSArray *)searchResultsArray
+{
+    _searchResultsArray = searchResultsArray;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.searchDisplayController.searchResultsTableView reloadData];
     });
 }
 
@@ -61,6 +72,8 @@
     
     //Set the right navigation bar button item to the activity indicator
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.activityIndicator];
+    
+    self.searchActivityIndicator = [[MBProgressHUD alloc] initWithView:self.searchDisplayController.searchResultsTableView];
     
     [self downloadData];
 
@@ -93,13 +106,30 @@
         NSData *jsonData = [[NSString stringWithContentsOfURL:[NSURL URLWithString:query] encoding:NSUTF8StringEncoding error:nil] dataUsingEncoding:NSUTF8StringEncoding];
         NSError *error = nil;
         NSMutableDictionary *jsonDictionary = jsonData ? [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers|NSJSONReadingMutableLeaves error:&error] : nil;
-        self.articlesArray = [jsonDictionary valueForKey:@"posts"];
         dispatch_async(dispatch_get_main_queue(), ^{
+            self.articlesArray = [jsonDictionary valueForKey:@"posts"];
             [self.activityIndicator stopAnimating];
             self.navigationItem.rightBarButtonItem = self.oldBarButtonItem;
         });
     });
                    
+}
+
+- (void)searchForString:(NSString *)string
+{
+    dispatch_queue_t downloadQueue = dispatch_queue_create("downloader", NULL);
+    dispatch_async(downloadQueue, ^{
+        //NSString *query = @"http://www.techpoweredmath.com/api/get_recent_posts/?page=1&count=30";
+        NSString *query = [NSString stringWithFormat:@"http://www.techpoweredmath.com/api/get_search_results/?search=%@", string];
+        NSData *jsonData = [[NSString stringWithContentsOfURL:[NSURL URLWithString:query] encoding:NSUTF8StringEncoding error:nil] dataUsingEncoding:NSUTF8StringEncoding];
+        NSError *error = nil;
+        NSMutableDictionary *jsonDictionary = jsonData ? [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers|NSJSONReadingMutableLeaves error:&error] : nil;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.searchResultsArray = [jsonDictionary valueForKey:@"posts"];
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+            self.navigationItem.rightBarButtonItem = self.oldBarButtonItem;
+        });
+    });
 }
 
 - (void)didReceiveMemoryWarning
@@ -119,7 +149,11 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.articlesArray count];
+    if (tableView == self.searchDisplayController.searchResultsTableView)
+    {
+        return [self.searchResultsArray count];
+    }
+    else return [self.articlesArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -137,9 +171,18 @@
         cell.selectionStyle = UITableViewCellSelectionStyleGray;
         
     }
+    id dictionaryForCell = nil;
     
-    //Retrieve the corresponding dictionary to the index row requested
-    id dictionaryForCell = [self.articlesArray objectAtIndex:[indexPath row]];
+    if (tableView == self.searchDisplayController.searchResultsTableView)
+    {
+        //Retrieve the corresponding dictionary to the index row requested
+        dictionaryForCell = [self.searchResultsArray objectAtIndex:indexPath.row];
+    }
+    else
+    {
+        dictionaryForCell = [self.articlesArray objectAtIndex:[indexPath row]];
+    }
+    
     NSString *mainTextLabel = nil;
     NSString *detailTextLabel = nil;
     
@@ -169,7 +212,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self performSegueWithIdentifier:@"webView" sender:[self.articlesArray objectAtIndex:indexPath.row]];
+    if (tableView == self.searchDisplayController.searchResultsTableView)
+    {
+        [self performSegueWithIdentifier:@"webView" sender:[self.searchResultsArray objectAtIndex:indexPath.row]];
+    }
+    else
+    {
+        [self performSegueWithIdentifier:@"webView" sender:[self.articlesArray objectAtIndex:indexPath.row]];
+    }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -194,7 +244,15 @@
 - (void)tableView:(UITableView *)tableview willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     __block NSURL *url = nil;
-    NSDictionary *RSSContentDictionary = [self.articlesArray objectAtIndex:indexPath.row];
+    NSDictionary *RSSContentDictionary = nil;
+    if (tableview == self.searchDisplayController.searchResultsTableView)
+    {
+        RSSContentDictionary = [self.searchResultsArray objectAtIndex:indexPath.row];
+    }
+    else
+    {
+        RSSContentDictionary = [self.articlesArray objectAtIndex:indexPath.row];
+    }
     url = [NSURL URLWithString:[RSSContentDictionary valueForKey:@"thumbnail"]];
     dispatch_queue_t downloadQueue = dispatch_queue_create("Profile Image Downloader", NULL);
     dispatch_async(downloadQueue, ^{
@@ -210,7 +268,15 @@
             picture = [NSData dataWithContentsOfURL:url];
             
             dispatch_async(dispatch_get_main_queue(), ^{
-                NSArray *tmpArray = [self.tableView indexPathsForVisibleRows];
+                NSArray *tmpArray = nil;
+                if (tableview == self.searchDisplayController.searchResultsTableView)
+                {
+                    tmpArray = [self.searchDisplayController.searchResultsTableView indexPathsForVisibleRows];
+                }
+                else
+                {
+                    tmpArray = [self.tableView indexPathsForVisibleRows];
+                }
                 if ([tmpArray containsObject:indexPath])
                 {
                     UIImage *image = [UIImage imageWithData:picture];
@@ -224,6 +290,25 @@
     });
     dispatch_release(downloadQueue);
     
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.labelText = @"Loading Search Results";
+    [self searchForString:searchBar.text];
+}
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    
+    // Return YES to cause the search result table view to be reloaded.
+    return NO;
+}
+
+- (void)searchDisplayController:(UISearchDisplayController *)controller willShowSearchResultsTableView:(UITableView *)tableView
+{
+    self.searchResultsArray = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

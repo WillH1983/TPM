@@ -10,6 +10,7 @@
 		BE01FE3A15E5BF3500E92654 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE01FE3915E5BF3500E92654 /* QuartzCore.framework */; };
 		BE01FE3F15E5C00200E92654 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = BE01FE3E15E5C00200E92654 /* arrow.png */; };
 		BE03E0B015CF6D6E007759B1 /* TPMSocialMediaDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE03E0AF15CF6D6E007759B1 /* TPMSocialMediaDetailViewController.m */; };
+		BE073FCB1616A6CA00C8DD90 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = BE073FCA1616A6CA00C8DD90 /* MBProgressHUD.m */; };
 		BE19A2781613ECBA0001A4E1 /* WordPressAPITableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19A2771613ECBA0001A4E1 /* WordPressAPITableViewController.m */; };
 		BE19A27F1614057F0001A4E1 /* 259-list.png in Resources */ = {isa = PBXBuildFile; fileRef = BE19A27D1614057F0001A4E1 /* 259-list.png */; };
 		BE19A2801614057F0001A4E1 /* 259-list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE19A27E1614057F0001A4E1 /* 259-list@2x.png */; };
@@ -96,6 +97,8 @@
 		BE01FE3E15E5C00200E92654 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		BE03E0AE15CF6D6E007759B1 /* TPMSocialMediaDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPMSocialMediaDetailViewController.h; sourceTree = "<group>"; };
 		BE03E0AF15CF6D6E007759B1 /* TPMSocialMediaDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPMSocialMediaDetailViewController.m; sourceTree = "<group>"; };
+		BE073FC91616A6CA00C8DD90 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		BE073FCA1616A6CA00C8DD90 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		BE19A2761613ECBA0001A4E1 /* WordPressAPITableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordPressAPITableViewController.h; sourceTree = "<group>"; };
 		BE19A2771613ECBA0001A4E1 /* WordPressAPITableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordPressAPITableViewController.m; sourceTree = "<group>"; };
 		BE19A27D1614057F0001A4E1 /* 259-list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "259-list.png"; sourceTree = "<group>"; };
@@ -274,6 +277,8 @@
 		BE72310915C5FA72002EE577 /* TPM */ = {
 			isa = PBXGroup;
 			children = (
+				BE073FC91616A6CA00C8DD90 /* MBProgressHUD.h */,
+				BE073FCA1616A6CA00C8DD90 /* MBProgressHUD.m */,
 				BE19A2761613ECBA0001A4E1 /* WordPressAPITableViewController.h */,
 				BE19A2771613ECBA0001A4E1 /* WordPressAPITableViewController.m */,
 				BE72311215C5FA72002EE577 /* TPMAppDelegate.h */,
@@ -463,6 +468,7 @@
 				BE8CB75715CB9B4B0094F789 /* TPMTwitterTableViewController.m in Sources */,
 				BE03E0B015CF6D6E007759B1 /* TPMSocialMediaDetailViewController.m in Sources */,
 				BE19A2781613ECBA0001A4E1 /* WordPressAPITableViewController.m in Sources */,
+				BE073FCB1616A6CA00C8DD90 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,7 +500,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: William Hindenburg (LC2B394T3G)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -514,6 +520,7 @@
 					"-ObjC",
 					"-lsqlist3.0",
 				);
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "62B5CFAE-5FD7-4495-BD37-0953C83038CF";
 				SDKROOT = iphoneos;
 				VALID_ARCHS = "armv6 armv7";
 			};
@@ -549,6 +556,7 @@
 		BE72311815C5FA72002EE577 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: William Hindenburg (LC2B394T3G)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../facebook-ios-sdk/build\"",
@@ -570,6 +578,7 @@
 					"-lsqlite3.0",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "62B5CFAE-5FD7-4495-BD37-0953C83038CF";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;

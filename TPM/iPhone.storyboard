@@ -881,6 +881,7 @@
         <class className="FaceBookTableViewController" superclassName="PullRefreshTableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FaceBookTableViewController.h"/>
             <relationships>
+                <relationship kind="action" name="LogOutInButtonClicked:"/>
                 <relationship kind="outlet" name="logInOutButton" candidateClass="UIBarButtonItem"/>
             </relationships>
         </class>

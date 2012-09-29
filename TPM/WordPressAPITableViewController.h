@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MBProgressHUD.h"
 
-@interface WordPressAPITableViewController : UITableViewController
+@interface WordPressAPITableViewController : UITableViewController <UISearchDisplayDelegate>
 
 @property (nonatomic, strong) NSArray *articlesArray;
+@property (nonatomic, strong) NSArray *searchResultsArray;
+@property (nonatomic, strong) MBProgressHUD *searchActivityIndicator;
 
 @end
