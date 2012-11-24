@@ -27,6 +27,7 @@
     self.appConfiguration.facebookID = FACEBOOK_APP_ID;
     self.appConfiguration.facebookFeedToRequest = @"techpoweredmath";
     self.appConfiguration.twitterUserNameToRequest = @"techpoweredmath";
+    self.appConfiguration.facebookCommentButtonImageTitle = @"FacebookButton";
 
     application.statusBarStyle = UIStatusBarStyleBlackOpaque;
     
