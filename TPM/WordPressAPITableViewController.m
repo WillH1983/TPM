@@ -102,7 +102,7 @@
 {
     dispatch_queue_t downloadQueue = dispatch_queue_create("downloader", NULL);
     dispatch_async(downloadQueue, ^{
-        NSString *query = @"http://www.techpoweredmath.com/api/get_recent_posts/?page=1&count=30";
+        NSString *query = @"http://www.techpoweredmath.com/api/get_recent_posts/?page=1&count=15";
         NSData *jsonData = [[NSString stringWithContentsOfURL:[NSURL URLWithString:query] encoding:NSUTF8StringEncoding error:nil] dataUsingEncoding:NSUTF8StringEncoding];
         NSError *error = nil;
         NSMutableDictionary *jsonDictionary = jsonData ? [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers|NSJSONReadingMutableLeaves error:&error] : nil;
@@ -112,6 +112,7 @@
             self.navigationItem.rightBarButtonItem = self.oldBarButtonItem;
         });
     });
+    dispatch_release(downloadQueue);
                    
 }
 
@@ -130,6 +131,7 @@
             self.navigationItem.rightBarButtonItem = self.oldBarButtonItem;
         });
     });
+    dispatch_release(downloadQueue);
 }
 
 - (void)didReceiveMemoryWarning

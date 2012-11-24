@@ -69,8 +69,11 @@
         NSMutableDictionary *jsonDictionary = jsonData ? [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers|NSJSONReadingMutableLeaves error:&error] : nil;
         self.FeaturedStories = [jsonDictionary valueForKey:@"posts"];
         [self.pageImages removeAllObjects];
+        dispatch_queue_t downloadQueue2 = dispatch_queue_create("downloadImages", NULL);
+        
         for (NSDictionary *dictionary in self.FeaturedStories)
         {
+            dispatch_async(downloadQueue2, ^{
             NSURL *url = nil;
             id images = [dictionary valueForKeyPath:@"images.full"];
             if (images)
@@ -98,12 +101,16 @@
                 image = [UIImage imageNamed:@"TPM_Default_Cell_Image@2x.png"];
             }
             [self.pageImages addObject:image];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self loadPageControls];
+                    [self.featureStoriesActivityIndicator stopAnimating];
+                });
+            });
+            if ([self.pageImages count] == 3) dispatch_release(downloadQueue2);
         }
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self loadPageControls];
-            [self.featureStoriesActivityIndicator stopAnimating];
-        });
+        
     });
+    dispatch_release(downloadQueue);
     
     self.pagingScrollView.delegate = self;
     self.featuredStoriesLabel.userInteractionEnabled = NO;
