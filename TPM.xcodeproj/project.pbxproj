@@ -62,6 +62,7 @@
 		BEBA71EF16003A1A00A89866 /* 210-twitterbird-gray.png in Resources */ = {isa = PBXBuildFile; fileRef = BEBA71ED16003A1A00A89866 /* 210-twitterbird-gray.png */; };
 		BEBA71F016003A1A00A89866 /* 210-twitterbird-gray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEBA71EE16003A1A00A89866 /* 210-twitterbird-gray@2x.png */; };
 		BEBA71F216003C8000A89866 /* TabbarImage.png in Resources */ = {isa = PBXBuildFile; fileRef = BEBA71F116003C8000A89866 /* TabbarImage.png */; };
+		BECA806B168C1CC800C2625F /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = BECA806A168C1CC800C2625F /* style.css */; };
 		BED7BDF315E357AE00EF45FC /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED7BDF215E357AE00EF45FC /* FacebookSDK.framework */; };
 		BED7BDF515E357B900EF45FC /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BED7BDF415E357B900EF45FC /* FacebookSDKResources.bundle */; };
 		BEEB0AB915D9E9830026DD5E /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEB0AB815D9E9830026DD5E /* Accounts.framework */; };
@@ -159,6 +160,7 @@
 		BEBA71ED16003A1A00A89866 /* 210-twitterbird-gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "210-twitterbird-gray.png"; sourceTree = "<group>"; };
 		BEBA71EE16003A1A00A89866 /* 210-twitterbird-gray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "210-twitterbird-gray@2x.png"; sourceTree = "<group>"; };
 		BEBA71F116003C8000A89866 /* TabbarImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TabbarImage.png; sourceTree = "<group>"; };
+		BECA806A168C1CC800C2625F /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
 		BED7BDF215E357AE00EF45FC /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = "../facebook-ios-sdk/build/FacebookSDK.framework"; sourceTree = "<group>"; };
 		BED7BDF415E357B900EF45FC /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKResources.bundle; path = "../facebook-ios-sdk/build/FacebookSDK.framework/Versions/A/Resources/FacebookSDKResources.bundle"; sourceTree = "<group>"; };
 		BEEB0AB815D9E9830026DD5E /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -307,6 +309,7 @@
 				BE4C4A8B15C8B91E0091E3C1 /* Categories */,
 				BE4C4A8915C8B8E20091E3C1 /* Base Classes */,
 				BE8EFA3415C635BF00A383FD /* TPM_Default_Cell_Image@2x.png */,
+				BECA806A168C1CC800C2625F /* style.css */,
 				BE8EFA3615C635CD00A383FD /* TPM_Default_Cell_Image.png */,
 				BE72310B15C5FA72002EE577 /* TPM-Info.plist */,
 				BE72310C15C5FA72002EE577 /* InfoPlist.strings */,
@@ -450,6 +453,7 @@
 				BE19A27F1614057F0001A4E1 /* 259-list.png in Resources */,
 				BE19A2801614057F0001A4E1 /* 259-list@2x.png in Resources */,
 				BEEC081A1614F9F900962644 /* black_textured_background_seamless.jpg in Resources */,
+				BECA806B168C1CC800C2625F /* style.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,6 +572,7 @@
 					"../Airship/**",
 				);
 				INFOPLIST_FILE = "TPM/TPM-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/TPM\"",
@@ -579,6 +584,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -598,6 +604,7 @@
 					"../Airship/**",
 				);
 				INFOPLIST_FILE = "TPM/TPM-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/TPM\"",
@@ -609,6 +616,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

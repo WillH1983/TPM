@@ -1,0 +1,35 @@
+
+
+body {
+    background-color: rgb(76,76,76);
+	font-family: helvetica, sans-serif;
+	font-size: 1.0em;
+	line-height: 1.5em;
+    margin: 15px auto;
+	width: 90%;
+}
+
+p, h1, h2, h3, h4, ul, ol { 
+    color: rgb(255,255,255);
+}
+
+h1 {
+	line-height: 1em;
+}
+
+img {
+	float: right;
+	margin-left: 5px;
+    max-width: 100%; 
+    height: auto;
+}
+
+img.floatRightClear { 
+    float: right; 
+    clear: right; 
+    margin: 4px; 
+}
+
+.location {
+	font-weight: bold;
+}

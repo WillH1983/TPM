@@ -229,6 +229,10 @@
     if ([segue.identifier isEqualToString:@"webView"])
     {
         [segue.destinationViewController setUrlToLoad:[NSURL URLWithString:[sender valueForKey:@"url"]]];
+        NSString *htmlString = [sender valueForKeyPath:@"content"];
+        [segue.destinationViewController setHtmlString:htmlString];
+        
+        [segue.destinationViewController setHtmlTitle:[sender valueForKey:@"title"]];
     }
 }
 

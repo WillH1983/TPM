@@ -28,6 +28,7 @@
     self.appConfiguration.facebookFeedToRequest = @"techpoweredmath";
     self.appConfiguration.twitterUserNameToRequest = @"techpoweredmath";
     self.appConfiguration.facebookCommentButtonImageTitle = @"FacebookButton";
+    self.appConfiguration.appNavigationBarLogoName = @"tpm-header";
 
     application.statusBarStyle = UIStatusBarStyleBlackOpaque;
     
