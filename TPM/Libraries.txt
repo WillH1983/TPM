@@ -1,2 +1,2 @@
-theBlimpBaseClasses commit #aca0c45180c883e55c8b2a2d0ceb488b3540f662 - 9/15/2012 - 10:02 PM
+theBlimpBaseClasses commit #35528d53e0fb2dd38ba5a798706d1b0f4a28796f - December 28th, 2012 - 2:11AM
 Facebook SDK 3.0 commit #d29e356570d9
