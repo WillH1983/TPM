@@ -255,8 +255,14 @@
 - (void)featuredStoriesSelected:(id)sender
 {
     WebViewController *wvc = [[WebViewController alloc] init];
-    NSURL *url = [[NSURL alloc] initWithString:[[self.FeaturedStories objectAtIndex:[self.pageControl currentPage]] valueForKeyPath:@"url"]];
+    NSMutableDictionary *featuredStory = [self.FeaturedStories objectAtIndex:[self.pageControl currentPage]];
+    NSURL *url = [[NSURL alloc] initWithString:[featuredStory valueForKeyPath:@"url"]];
     [wvc setUrlToLoad:url];
+    
+    NSString *htmlString = [featuredStory valueForKeyPath:@"content"];
+    [wvc setHtmlString:htmlString];
+    
+    [wvc setHtmlTitle:[featuredStory valueForKey:@"title"]];
     [[self navigationController] pushViewController:wvc animated:YES];
 }
 

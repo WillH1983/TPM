@@ -17,6 +17,11 @@ h1 {
 	line-height: 1em;
 }
 
+a {
+	color: rgb(86,242,18);
+	text-decoration: underline;
+}
+
 img {
 	float: right;
 	margin-left: 5px;
@@ -32,4 +37,8 @@ img.floatRightClear {
 
 .location {
 	font-weight: bold;
+}
+
+html {
+      -webkit-text-size-adjust: none; /* Never autoresize text */
 }
