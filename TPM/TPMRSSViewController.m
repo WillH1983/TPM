@@ -172,7 +172,7 @@
     self.pageControl.currentPage = page;
 
     NSString *titleString = [[self.FeaturedStories objectAtIndex:page] valueForKeyPath:@"title"];
-    self.featuredStoriesLabel.text = titleString;
+    self.featuredStoriesLabel.text = [titleString stringByDecodingXMLEntities];
     // Work out which pages you want to load
     NSInteger firstPage = page - 1;
     NSInteger lastPage = page + 1;
